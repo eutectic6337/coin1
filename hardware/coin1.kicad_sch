@@ -1553,40 +1553,46 @@
 		)
 	)
 	(junction
-		(at 207.01 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2be3896b-f164-4645-9e98-fde317bd713f")
-	)
-	(junction
 		(at 217.17 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "39f5c1e9-c965-4415-901f-9627442399e1")
-	)
-	(junction
-		(at 186.69 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4b78cc7d-5733-407b-9931-583b570a054c")
-	)
-	(junction
-		(at 238.76 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6ad949a7-f939-424a-a8fc-505a13f2db4c")
-	)
-	(junction
-		(at 196.85 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a2c71a37-e74e-4a3e-8e11-527a0779657f")
+		(uuid "0709d902-9451-47ae-9605-a4935bddc89b")
 	)
 	(junction
 		(at 228.6 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b8b81eb6-6da6-4bb3-ab99-1cb9672d64ff")
+		(uuid "1889fff5-7595-4b43-8787-76bbd0854977")
+	)
+	(junction
+		(at 238.76 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3bba9408-9bde-45fb-b579-c92e478ece69")
+	)
+	(junction
+		(at 196.85 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4ef75fb7-e028-43e8-80b4-d2e965c81704")
+	)
+	(junction
+		(at 207.01 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4faf0677-5fa5-400c-8b54-be8e9d8e7963")
+	)
+	(junction
+		(at 186.69 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5442d574-3051-4c63-8501-8457dba158fa")
+	)
+	(junction
+		(at 176.53 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aa24c857-a4b1-4eb5-926b-5f527c44f0b2")
 	)
 	(junction
 		(at 166.37 158.75)
@@ -1598,13 +1604,7 @@
 		(at 248.92 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d1ba1a19-1469-46f5-ba50-2c5901a788d6")
-	)
-	(junction
-		(at 176.53 158.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d9cfe820-173e-4832-af67-76a8e685dfe8")
+		(uuid "e04c4212-b8d1-4341-a342-90ceb6135007")
 	)
 	(wire
 		(pts
@@ -1625,16 +1625,6 @@
 			(type default)
 		)
 		(uuid "0297782d-6c46-4061-913c-cfee513be99d")
-	)
-	(wire
-		(pts
-			(xy 248.92 158.75) (xy 259.08 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0335bf1b-f54c-422a-b559-3b96ae324e58")
 	)
 	(wire
 		(pts
@@ -1668,13 +1658,13 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 158.75) (xy 228.6 158.75)
+			(xy 238.76 158.75) (xy 248.92 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0e72d25b-93dc-4172-bbeb-c0b96d1ba4e6")
+		(uuid "0d26a12e-eed9-4a2d-8813-0d0727fb824b")
 	)
 	(wire
 		(pts
@@ -1698,23 +1688,13 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 158.75) (xy 217.17 158.75)
+			(xy 176.53 158.75) (xy 186.69 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1408547e-aab2-4f33-bbef-0654c34d96c2")
-	)
-	(wire
-		(pts
-			(xy 186.69 158.75) (xy 196.85 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "15bc0572-084e-4256-b376-7f3123ed5a86")
+		(uuid "20ab2627-3e02-4a79-9d6d-625bfb475e3d")
 	)
 	(wire
 		(pts
@@ -1748,6 +1728,16 @@
 	)
 	(wire
 		(pts
+			(xy 196.85 158.75) (xy 207.01 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35b94e2c-a55d-4f77-85e3-15942235925a")
+	)
+	(wire
+		(pts
 			(xy 62.23 80.01) (xy 57.15 80.01)
 		)
 		(stroke
@@ -1778,16 +1768,6 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 158.75) (xy 176.53 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3dff140d-ad14-40a3-b659-fa719118a36b")
-	)
-	(wire
-		(pts
 			(xy 39.37 49.53) (xy 52.07 49.53)
 		)
 		(stroke
@@ -1808,6 +1788,16 @@
 	)
 	(wire
 		(pts
+			(xy 228.6 158.75) (xy 238.76 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f3d3171-3a2f-4dd0-8295-ed9ccedeee62")
+	)
+	(wire
+		(pts
 			(xy 196.85 148.59) (xy 196.85 151.13)
 		)
 		(stroke
@@ -1818,13 +1808,13 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 158.75) (xy 207.01 158.75)
+			(xy 186.69 158.75) (xy 196.85 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5bd63d82-1d30-41b4-80e3-e6db2d866862")
+		(uuid "6015d69f-a04e-4d7b-9028-a428d8e32719")
 	)
 	(wire
 		(pts
@@ -1835,6 +1825,16 @@
 			(type default)
 		)
 		(uuid "635ac503-15c8-426e-a470-77a15b4d350c")
+	)
+	(wire
+		(pts
+			(xy 217.17 158.75) (xy 228.6 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6375b432-6495-4969-adcd-a42592e2e45f")
 	)
 	(wire
 		(pts
@@ -1998,6 +1998,16 @@
 	)
 	(wire
 		(pts
+			(xy 207.01 158.75) (xy 217.17 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a00e0b27-1b0b-4ba2-bc3e-60e6fd98130f")
+	)
+	(wire
+		(pts
 			(xy 217.17 148.59) (xy 217.17 151.13)
 		)
 		(stroke
@@ -2108,16 +2118,6 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 158.75) (xy 248.92 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bfb64a5e-8f32-4686-8f5a-24e42b5f5588")
-	)
-	(wire
-		(pts
 			(xy 76.2 69.85) (xy 88.9 69.85)
 		)
 		(stroke
@@ -2168,16 +2168,6 @@
 	)
 	(wire
 		(pts
-			(xy 176.53 158.75) (xy 186.69 158.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd114bdc-a004-4045-8aff-001cb711d474")
-	)
-	(wire
-		(pts
 			(xy 248.92 140.97) (xy 248.92 72.39)
 		)
 		(stroke
@@ -2218,7 +2208,17 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 158.75) (xy 238.76 158.75)
+			(xy 248.92 158.75) (xy 259.08 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db308fb1-1205-4a5f-aaa8-514de4c33df2")
+	)
+	(wire
+		(pts
+			(xy 166.37 158.75) (xy 176.53 158.75)
 		)
 		(stroke
 			(width 0)
@@ -2550,16 +2550,16 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 238.76 144.78 0)
+		(at 217.17 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "190b0fd8-a9c6-46c9-80d1-2fb7a1c71704")
-		(property "Reference" "R8"
-			(at 241.3 143.5099 0)
+		(uuid "0bb24d6f-b2e9-4291-b90c-fd4ed64227b3")
+		(property "Reference" "R6"
+			(at 219.71 143.5099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2567,8 +2567,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
-			(at 241.3 146.0499 0)
+		(property "Value" "47R"
+			(at 219.71 146.0499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2577,7 +2577,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 236.982 144.78 90)
+			(at 215.392 144.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2585,8 +2585,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 238.76 144.78 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
+			(at 217.17 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2595,7 +2595,16 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 238.76 144.78 0)
+			(at 217.17 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C620443"
+			(at 217.17 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2604,15 +2613,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "8500e1e7-f5dd-4e5f-978b-bbd4ac60dc23")
+			(uuid "5540fd62-6599-41de-bef6-f5f252b7836e")
 		)
 		(pin "2"
-			(uuid "5563f37e-d210-4c50-a042-0e64f4b4ee3f")
+			(uuid "043fcb57-429d-46de-b9d4-4a9d27f2a323")
 		)
 		(instances
 			(project "coin1"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "R8")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -2685,6 +2694,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 207.01 154.94 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "237350de-2267-48f4-a858-dcc344bca456")
+		(property "Reference" "D5"
+			(at 210.82 155.2574 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 210.82 157.7974 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
+			(at 207.01 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
+			(at 207.01 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 207.01 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C3646923"
+			(at 207.01 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f68776a3-d96f-4d3c-a3f1-5381ca87fb62")
+		)
+		(pin "1"
+			(uuid "0527cf2c-f0c3-4d27-bf3d-9860d2aa8d89")
+		)
+		(instances
+			(project "coin1"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 166.37 161.29 0)
 		(unit 1)
@@ -2745,76 +2833,6 @@
 			(project "coin1"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 217.17 154.94 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "30d73235-8fa7-4994-b4d4-d21d36664e29")
-		(property "Reference" "D6"
-			(at 220.98 155.2574 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED"
-			(at 220.98 157.7974 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
-			(at 217.17 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 217.17 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 217.17 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "0728bc06-a195-480d-99ef-13718aa12c26")
-		)
-		(pin "1"
-			(uuid "b44dfafd-50a6-45d7-9218-50d46df4eb36")
-		)
-		(instances
-			(project "coin1"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -2895,6 +2913,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 207.01 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "339eae60-78fa-4682-8958-398d26d3ca80")
+		(property "Reference" "R5"
+			(at 209.55 143.5099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47R"
+			(at 209.55 146.0499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+			(at 205.232 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
+			(at 207.01 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 207.01 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C620443"
+			(at 207.01 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "af6ed8f3-8907-4391-9997-5d34489e9e5b")
+		)
+		(pin "2"
+			(uuid "1a0019b1-81d5-4b23-b18a-fa265888331d")
+		)
+		(instances
+			(project "coin1"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 107.95 83.82 0)
 		(unit 1)
@@ -2962,16 +3059,16 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 217.17 144.78 0)
+		(at 186.69 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "4cafeb67-62f3-4df7-8c6c-81a651be05a7")
-		(property "Reference" "R6"
-			(at 219.71 143.5099 0)
+		(uuid "368565b2-0476-4edf-aca7-1d2dc9a47515")
+		(property "Reference" "R3"
+			(at 189.23 143.5099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2979,8 +3076,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
-			(at 219.71 146.0499 0)
+		(property "Value" "47R"
+			(at 189.23 146.0499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2989,7 +3086,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 215.392 144.78 90)
+			(at 184.912 144.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2997,8 +3094,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 217.17 144.78 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
+			(at 186.69 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3007,7 +3104,16 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 217.17 144.78 0)
+			(at 186.69 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C620443"
+			(at 186.69 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3016,15 +3122,252 @@
 			)
 		)
 		(pin "1"
-			(uuid "d6635d9b-f38c-420f-b1f7-12d3704974dc")
+			(uuid "78d2d5eb-2e9c-4191-9339-97bb8c6bf173")
 		)
 		(pin "2"
-			(uuid "30e7c43b-adaf-4f0f-aa86-4363b0049423")
+			(uuid "faae8ab3-da80-4a2b-bc00-10ba32fb7c0b")
 		)
 		(instances
 			(project "coin1"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "R6")
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 259.08 154.94 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "39cea4de-f087-4907-a4a9-fb7bfc620885")
+		(property "Reference" "D10"
+			(at 262.89 155.2574 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 262.89 157.7974 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
+			(at 259.08 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
+			(at 259.08 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 259.08 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C3646923"
+			(at 259.08 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "16a507ee-c7b5-48c2-a4dc-bc66173890a7")
+		)
+		(pin "1"
+			(uuid "890d07a5-3389-4902-b191-45c40ad80de7")
+		)
+		(instances
+			(project "coin1"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 186.69 154.94 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "43cb7369-9aa6-497b-a6b9-7be5db5d5ab9")
+		(property "Reference" "D3"
+			(at 190.5 155.2574 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 190.5 157.7974 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
+			(at 186.69 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
+			(at 186.69 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 186.69 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C3646923"
+			(at 186.69 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "daf34052-95fe-4455-afc3-62c6cd07186d")
+		)
+		(pin "1"
+			(uuid "5aeeaa7c-78fe-4bce-8940-bfac91e46c27")
+		)
+		(instances
+			(project "coin1"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 248.92 154.94 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4c09978f-cbb9-4b7b-9d71-f844a01ad336")
+		(property "Reference" "D9"
+			(at 252.73 155.2574 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 252.73 157.7974 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
+			(at 248.92 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
+			(at 248.92 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 248.92 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C3646923"
+			(at 248.92 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "330bf274-68cd-4916-983b-16da032b1a9e")
+		)
+		(pin "1"
+			(uuid "f1434585-70ef-4005-9edd-828f2f5b49b1")
+		)
+		(instances
+			(project "coin1"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -3097,87 +3440,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 207.01 144.78 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5afefb87-c6e7-480e-bef9-296b7e3125a6")
-		(property "Reference" "R5"
-			(at 209.55 143.5099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "R"
-			(at 209.55 146.0499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 205.232 144.78 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 207.01 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 207.01 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "379fb28a-6361-48b8-b990-9a7ac3777b98")
-		)
-		(pin "2"
-			(uuid "e38d0341-d479-4ee9-821e-4260448d8589")
-		)
-		(instances
-			(project "coin1"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
-		(at 248.92 154.94 90)
+		(at 217.17 154.94 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "60195f65-ad18-409e-a2fa-b97ce8419676")
-		(property "Reference" "D9"
-			(at 252.73 155.2574 90)
+		(uuid "53c9b9a7-8003-43f8-ae18-f7fbf70d05a5")
+		(property "Reference" "D6"
+			(at 220.98 155.2574 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3186,7 +3459,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 252.73 157.7974 90)
+			(at 220.98 157.7974 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3195,7 +3468,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
-			(at 248.92 154.94 0)
+			(at 217.17 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3203,78 +3476,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 248.92 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 248.92 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "8238c265-54ac-4c3c-9c11-cc5e09f8ebf0")
-		)
-		(pin "1"
-			(uuid "2fb0fc54-2dbe-4b7c-969c-38e80f627984")
-		)
-		(instances
-			(project "coin1"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "D9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 196.85 154.94 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6308e806-23fc-4563-ad97-88e853398cea")
-		(property "Reference" "D4"
-			(at 200.66 155.2574 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED"
-			(at 200.66 157.7974 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
-			(at 196.85 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 196.85 154.94 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
+			(at 217.17 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3283,7 +3486,16 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 196.85 154.94 0)
+			(at 217.17 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C3646923"
+			(at 217.17 154.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3292,15 +3504,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "2a8dad2e-b4d8-4a6d-88d7-8adf73ea2312")
+			(uuid "7d7627c0-bf5b-43f3-aedd-079b1bfdb2b7")
 		)
 		(pin "1"
-			(uuid "27ed86ae-0078-4111-bc6c-8e5dab9963fb")
+			(uuid "b52190a9-3598-4c9f-a5c5-04ca7b9be0f8")
 		)
 		(instances
 			(project "coin1"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "D4")
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -3315,7 +3527,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6e84aaa8-a338-4bc3-b86f-b38359ef0cf2")
+		(uuid "58ca8eeb-a2b4-46ea-8235-2c4abc87e984")
 		(property "Reference" "R9"
 			(at 251.46 143.5099 0)
 			(effects
@@ -3325,7 +3537,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "47R"
 			(at 251.46 146.0499 0)
 			(effects
 				(font
@@ -3343,7 +3555,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
 			(at 248.92 144.78 0)
 			(effects
 				(font
@@ -3361,16 +3573,104 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C620443"
+			(at 248.92 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "0492eedb-fc72-4341-9acb-b3b109c30d5e")
+			(uuid "5bed2cd4-d1b0-45bb-be77-babb9c4065d1")
 		)
 		(pin "2"
-			(uuid "da4335f5-43a9-4100-8fa1-7d76a472277f")
+			(uuid "f32883cc-7bda-470b-a37d-ee4dc4ef7728")
 		)
 		(instances
 			(project "coin1"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 259.08 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "65a2a753-6ec4-4c13-989b-cf2c185d13fc")
+		(property "Reference" "R10"
+			(at 261.62 143.5099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47R"
+			(at 261.62 146.0499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+			(at 257.302 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
+			(at 259.08 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 259.08 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C620443"
+			(at 259.08 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8f049c89-e062-49a0-a571-19462f008be8")
+		)
+		(pin "2"
+			(uuid "3c826e2a-5fb6-4daa-bb43-ed2fb8c94647")
+		)
+		(instances
+			(project "coin1"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -3486,7 +3786,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
 			(at 166.37 154.94 0)
 			(effects
 				(font
@@ -3497,6 +3797,15 @@
 		)
 		(property "Description" "Light emitting diode"
 			(at 166.37 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C3646923"
+			(at 166.37 154.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3514,76 +3823,6 @@
 			(project ""
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 238.76 154.94 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8342b5af-6fa9-438f-944c-89f125a41f18")
-		(property "Reference" "D8"
-			(at 242.57 155.2574 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED"
-			(at 242.57 157.7974 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
-			(at 238.76 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 238.76 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 238.76 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "4cb970e0-bcca-4b5a-abf1-3ee937c6fb8a")
-		)
-		(pin "1"
-			(uuid "09d9e50d-79ae-4016-93ae-c6732ee2f65b")
-		)
-		(instances
-			(project "coin1"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -3716,146 +3955,6 @@
 			(project "coin1"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 186.69 154.94 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8b5507e1-7a72-4763-8aec-13355b53fda7")
-		(property "Reference" "D3"
-			(at 190.5 155.2574 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED"
-			(at 190.5 157.7974 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
-			(at 186.69 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 186.69 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 186.69 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "7b9bca3a-8e92-4008-a7d9-8263fd4f6e71")
-		)
-		(pin "1"
-			(uuid "faeb7d69-fd0b-4223-938b-4ceef42a13aa")
-		)
-		(instances
-			(project "coin1"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 186.69 144.78 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "964e6e83-541b-41c2-94b4-e489ad6ed4a8")
-		(property "Reference" "R3"
-			(at 189.23 143.5099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "R"
-			(at 189.23 146.0499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 184.912 144.78 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 186.69 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 186.69 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "706ee811-3062-4d76-b53e-e7a0323c2872")
-		)
-		(pin "2"
-			(uuid "79d55649-8ba4-40b8-89b3-d64b5a8dfa78")
-		)
-		(instances
-			(project "coin1"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -3995,76 +4094,6 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 228.6 144.78 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a37127ce-7d82-4e44-baf8-f2a09f6d60e6")
-		(property "Reference" "R7"
-			(at 231.14 143.5099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "R"
-			(at 231.14 146.0499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 226.822 144.78 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 228.6 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 228.6 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "22451c74-7091-40eb-aefb-2876cbe3ce5c")
-		)
-		(pin "2"
-			(uuid "0487533a-192a-4fcd-8b67-a9a4c74851ce")
-		)
-		(instances
-			(project "coin1"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "R7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
 		(at 176.53 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4072,7 +4101,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a63a1e5e-6054-4caa-b3ce-d01c43c646d1")
+		(uuid "a56997d9-c76c-4ead-8e11-63af5a9e08fa")
 		(property "Reference" "R2"
 			(at 179.07 143.5099 0)
 			(effects
@@ -4082,7 +4111,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "47R"
 			(at 179.07 146.0499 0)
 			(effects
 				(font
@@ -4100,7 +4129,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
 			(at 176.53 144.78 0)
 			(effects
 				(font
@@ -4118,11 +4147,20 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C620443"
+			(at 176.53 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "d17dacf1-955a-416a-97e5-60fbc78bfcb0")
+			(uuid "53c7e6e8-0fd1-4e0c-8ddd-34340c8f2c89")
 		)
 		(pin "2"
-			(uuid "79b38fd6-d93b-47b2-910e-cfe2edf72930")
+			(uuid "73428c2a-6f4b-4f10-9883-0b00b8249ed9")
 		)
 		(instances
 			(project "coin1"
@@ -4135,16 +4173,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 207.01 154.94 90)
+		(at 176.53 154.94 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ba67ab57-8564-4814-8fc6-9a1b47ace003")
-		(property "Reference" "D5"
-			(at 210.82 155.2574 90)
+		(uuid "b14b74f0-688c-4e79-b9d9-36d604729778")
+		(property "Reference" "D2"
+			(at 180.34 155.2574 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4153,7 +4191,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 210.82 157.7974 90)
+			(at 180.34 157.7974 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4162,7 +4200,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
-			(at 207.01 154.94 0)
+			(at 176.53 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4170,78 +4208,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 207.01 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Light emitting diode"
-			(at 207.01 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "950b32f6-6cba-4522-8345-fa1739338368")
-		)
-		(pin "1"
-			(uuid "f92fae60-9b57-44b4-9dea-cb35d1823c9b")
-		)
-		(instances
-			(project "coin1"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "D5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 259.08 154.94 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c11fa61c-c698-4ba5-b803-a206c233a1e6")
-		(property "Reference" "D10"
-			(at 262.89 155.2574 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "LED"
-			(at 262.89 157.7974 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
-			(at 259.08 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 259.08 154.94 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
+			(at 176.53 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4250,7 +4218,16 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 259.08 154.94 0)
+			(at 176.53 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C3646923"
+			(at 176.53 154.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4259,15 +4236,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "5f536659-7f0f-429f-ba28-c22a5fa80664")
+			(uuid "306d674a-6cfe-4ec3-81b7-5afff2c4500b")
 		)
 		(pin "1"
-			(uuid "7d31c035-3bd7-4641-b939-696433971c72")
+			(uuid "d785aa29-25c8-4ef3-a0a6-776b0947f942")
 		)
 		(instances
 			(project "coin1"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "D10")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -4341,16 +4318,16 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 259.08 144.78 0)
+		(at 196.85 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d18810a5-41d3-4850-8064-0fc176a2a656")
-		(property "Reference" "R10"
-			(at 261.62 143.5099 0)
+		(uuid "d1675a35-81a7-48ad-920f-c3ecb6e8296c")
+		(property "Reference" "R4"
+			(at 199.39 143.5099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4358,8 +4335,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
-			(at 261.62 146.0499 0)
+		(property "Value" "47R"
+			(at 199.39 146.0499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4368,7 +4345,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 257.302 144.78 90)
+			(at 195.072 144.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4376,8 +4353,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 259.08 144.78 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
+			(at 196.85 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4386,7 +4363,16 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 259.08 144.78 0)
+			(at 196.85 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C620443"
+			(at 196.85 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4395,59 +4381,50 @@
 			)
 		)
 		(pin "1"
-			(uuid "3e1e5011-8439-4f70-bd72-f34e3b25d842")
+			(uuid "8f045cdc-8670-4494-9f32-7cd246a795be")
 		)
 		(pin "2"
-			(uuid "dd49b073-89df-4291-96bf-077b5043bb06")
+			(uuid "a8350848-658c-4e4b-b460-6a282a52efa2")
 		)
 		(instances
 			(project "coin1"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "R10")
+					(reference "R4")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 228.6 154.94 90)
+		(lib_id "Device:R")
+		(at 238.76 144.78 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d9070f0d-6f0d-4640-9ad7-8fc6e99d9b65")
-		(property "Reference" "D7"
-			(at 232.41 155.2574 90)
+		(uuid "de869c40-27bf-43c4-8cdd-2e616586202e")
+		(property "Reference" "R8"
+			(at 241.3 143.5099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Value" "LED"
-			(at 232.41 157.7974 90)
+		(property "Value" "47R"
+			(at 241.3 146.0499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
-			(at 228.6 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 228.6 154.94 0)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+			(at 236.982 144.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4455,8 +4432,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Light emitting diode"
-			(at 228.6 154.94 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
+			(at 238.76 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4464,16 +4441,113 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
-			(uuid "be733132-25e0-45ac-a58a-db8cfe6903a3")
+		(property "Description" "Resistor"
+			(at 238.76 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C620443"
+			(at 238.76 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(pin "1"
-			(uuid "61aad46f-1b67-442b-909c-1665c6a69632")
+			(uuid "213cc94a-c2a1-492b-b244-bb454c1c37d6")
+		)
+		(pin "2"
+			(uuid "4c12cf24-0092-4081-a50f-05bc80735577")
 		)
 		(instances
 			(project "coin1"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "D7")
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 228.6 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e14d7164-598e-4150-8130-2d8090406fca")
+		(property "Reference" "R7"
+			(at 231.14 143.5099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47R"
+			(at 231.14 146.0499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+			(at 226.822 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
+			(at 228.6 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 228.6 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C620443"
+			(at 228.6 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ac23906f-0e9a-468c-955d-f40289db34ac")
+		)
+		(pin "2"
+			(uuid "7bce1325-d4eb-4aa5-aa6b-a846cd0af711")
+		)
+		(instances
+			(project "coin1"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -4527,6 +4601,15 @@
 			)
 		)
 		(property "Description" "industrial-grade general-purpose microcontroller"
+			(at 107.95 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C5299908"
 			(at 107.95 62.23 0)
 			(effects
 				(font
@@ -4615,16 +4698,16 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 176.53 154.94 90)
+		(at 228.6 154.94 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "e3eb334a-84aa-4e98-bc38-7ac79b7e98f0")
-		(property "Reference" "D2"
-			(at 180.34 155.2574 90)
+		(uuid "e8cd2d8d-1f85-4914-84ee-3937f10eaa06")
+		(property "Reference" "D7"
+			(at 232.41 155.2574 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4633,7 +4716,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 180.34 157.7974 90)
+			(at 232.41 157.7974 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4642,7 +4725,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
-			(at 176.53 154.94 0)
+			(at 228.6 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4650,8 +4733,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 176.53 154.94 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
+			(at 228.6 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4660,7 +4743,16 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 176.53 154.94 0)
+			(at 228.6 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C3646923"
+			(at 228.6 154.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4669,59 +4761,50 @@
 			)
 		)
 		(pin "2"
-			(uuid "5c287703-987c-46e3-8188-55143c66cebd")
+			(uuid "e52798ef-ff56-4f5b-a1da-680341f7ec57")
 		)
 		(pin "1"
-			(uuid "b09d0541-2f11-4047-9507-fa50863657c4")
+			(uuid "1d2b5ef1-42a2-4ca3-a084-b060db7d8d3c")
 		)
 		(instances
 			(project "coin1"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "D2")
+					(reference "D7")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 196.85 144.78 0)
+		(lib_id "Device:LED")
+		(at 238.76 154.94 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "e42509da-bd3c-440a-885e-3656d0f55d28")
-		(property "Reference" "R4"
-			(at 199.39 143.5099 0)
+		(uuid "f03fb8be-7c21-4839-a605-569509f5cdfa")
+		(property "Reference" "D8"
+			(at 242.57 155.2574 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "R"
-			(at 199.39 146.0499 0)
+		(property "Value" "LED"
+			(at 242.57 157.7974 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 195.072 144.78 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 196.85 144.78 0)
+		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
+			(at 238.76 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4729,8 +4812,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Resistor"
-			(at 196.85 144.78 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
+			(at 238.76 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4738,16 +4821,34 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "d5dae0df-b97b-494a-8c92-aee69baa52ef")
+		(property "Description" "Light emitting diode"
+			(at 238.76 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C3646923"
+			(at 238.76 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(pin "2"
-			(uuid "3c27294a-0416-4efb-ab4a-9f0d3668538f")
+			(uuid "383d3aab-bbb7-4c32-b80b-8f7b38767ad5")
+		)
+		(pin "1"
+			(uuid "08aa95ca-9cd7-4b0f-9915-e2f13abc3dc4")
 		)
 		(instances
 			(project "coin1"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "R4")
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -4820,6 +4921,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:LED")
+		(at 196.85 154.94 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f69f140a-3b4b-4d3b-a7bb-167fec3fe2b0")
+		(property "Reference" "D4"
+			(at 200.66 155.2574 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LED"
+			(at 200.66 157.7974 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0201_0603Metric"
+			(at 196.85 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
+			(at 196.85 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 196.85 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C3646923"
+			(at 196.85 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "eab47286-a37b-4fc5-ba3c-84c22c409dcf")
+		)
+		(pin "1"
+			(uuid "2f865260-92af-4547-897c-63ac1ab184c3")
+		)
+		(instances
+			(project "coin1"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 166.37 144.78 0)
 		(unit 1)
@@ -4838,7 +5018,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "47R"
 			(at 168.91 146.0499 0)
 			(effects
 				(font
@@ -4856,7 +5036,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
 			(at 166.37 144.78 0)
 			(effects
 				(font
@@ -4866,6 +5046,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 166.37 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C620443"
 			(at 166.37 144.78 0)
 			(effects
 				(font

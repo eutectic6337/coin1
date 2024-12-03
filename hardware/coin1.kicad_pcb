@@ -110,6 +110,7 @@
 	(net 28 "/TX")
 	(net 29 "/touch2")
 	(net 30 "/touch1")
+	(net 31 "VSS")
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
 		(layer "F.Cu")
 		(uuid "07498fb1-04cd-4b38-81b9-b604a923b1f0")
@@ -253,7 +254,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -279,8 +280,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C3646923"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "be5d908b-6fdf-4693-ae95-03e64aff015f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
-		(path "/8b5507e1-7a72-4763-8aec-13355b53fda7")
+		(path "/43cb7369-9aa6-497b-a6b9-7be5db5d5ab9")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -675,7 +689,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
 			(at 0 0 -150)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -701,8 +715,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C3646923"
+			(at 0 0 -150)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b2ccae09-c29e-4318-a03c-32466840590f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
-		(path "/c11fa61c-c698-4ba5-b803-a206c233a1e6")
+		(path "/39cea4de-f087-4907-a4a9-fb7bfc620885")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -915,7 +942,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
 			(at 0 0 -120)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -941,8 +968,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C3646923"
+			(at 0 0 -120)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9f2eaf20-3622-423a-961f-7c3d5fd7ae39")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
-		(path "/60195f65-ad18-409e-a2fa-b97ce8419676")
+		(path "/4c09978f-cbb9-4b7b-9d71-f844a01ad336")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -1539,7 +1579,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "47R"
 			(at 0 1.05 0)
 			(layer "F.Fab")
 			(uuid "98882b8e-0c37-4fb2-9043-79f8c7911925")
@@ -1563,7 +1603,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1589,8 +1629,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C620443"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "08b0a3b3-99f5-4919-8008-06fcbb5de2bc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
-		(path "/6e84aaa8-a338-4bc3-b86f-b38359ef0cf2")
+		(path "/58ca8eeb-a2b4-46ea-8235-2c4abc87e984")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -1848,7 +1901,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "47R"
 			(at 0 1.05 0)
 			(layer "F.Fab")
 			(uuid "6e72391d-f5f3-4a51-8ee3-58aefecb101d")
@@ -1872,7 +1925,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1894,6 +1947,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C620443"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "162f884a-9055-4803-8fd7-c4136da96108")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -2536,7 +2602,7 @@
 			(size 1.65 1.65)
 			(property pad_prop_heatsink)
 			(layers "F.Cu" "F.Mask")
-			(net 2 "GND")
+			(net 31 "VSS")
 			(pinfunction "VSS")
 			(pintype "power_in")
 			(zone_connect 2)
@@ -3003,7 +3069,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
 			(at 0 0 120)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3029,8 +3095,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C3646923"
+			(at 0 0 120)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a9314ec0-3a08-494e-b321-8695fd1bd877")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
-		(path "/e3eb334a-84aa-4e98-bc38-7ac79b7e98f0")
+		(path "/b14b74f0-688c-4e79-b9d9-36d604729778")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -4241,7 +4320,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
 			(at 0 0 -30)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4267,8 +4346,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C3646923"
+			(at 0 0 -30)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "600b1876-a60b-444c-a66f-4bb95a17fe4d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
-		(path "/30d73235-8fa7-4994-b4d4-d21d36664e29")
+		(path "/53c9b9a7-8003-43f8-ae18-f7fbf70d05a5")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -4741,7 +4833,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "47R"
 			(at 0 1.05 0)
 			(layer "F.Fab")
 			(uuid "8c7fcee0-5dc3-4713-a868-9a111924938a")
@@ -4765,7 +4857,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4791,8 +4883,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C620443"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "25548f1e-2807-414d-b2b4-d72abbd438ac")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
-		(path "/964e6e83-541b-41c2-94b4-e489ad6ed4a8")
+		(path "/368565b2-0476-4edf-aca7-1d2dc9a47515")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -5039,7 +5144,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "47R"
 			(at 0 1.05 0)
 			(layer "F.Fab")
 			(uuid "c2b752b9-e142-4eb5-be0e-f2b22953fa48")
@@ -5063,7 +5168,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5089,8 +5194,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C620443"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "37f56fe3-91ea-41e5-8c99-98bb285fb346")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
-		(path "/a37127ce-7d82-4e44-baf8-f2a09f6d60e6")
+		(path "/e14d7164-598e-4150-8130-2d8090406fca")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -5246,7 +5364,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "47R"
 			(at 0 1.05 0)
 			(layer "F.Fab")
 			(uuid "ffa38a53-0d90-4e7b-918b-5714778b3c82")
@@ -5270,7 +5388,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5296,8 +5414,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C620443"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c9cb56e1-fbee-4483-b369-ae802f40fd24")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
-		(path "/190b0fd8-a9c6-46c9-80d1-2fb7a1c71704")
+		(path "/de869c40-27bf-43c4-8cdd-2e616586202e")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -5477,7 +5608,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
 			(at 0 0 60)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5503,8 +5634,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C3646923"
+			(at 0 0 60)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1f1fb10f-be63-44c1-8a7c-c2a9b89856fa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
-		(path "/6308e806-23fc-4563-ad97-88e853398cea")
+		(path "/f69f140a-3b4b-4d3b-a7bb-167fec3fe2b0")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -5717,7 +5861,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
 			(at 0 0 30)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5743,8 +5887,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C3646923"
+			(at 0 0 30)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c09d8013-5c65-44cd-bc25-e12bba6fa423")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
-		(path "/ba67ab57-8564-4814-8fc6-9a1b47ace003")
+		(path "/237350de-2267-48f4-a858-dcc344bca456")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -5933,7 +6090,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "47R"
 			(at 0 1.05 0)
 			(layer "F.Fab")
 			(uuid "1525e65b-bd0c-4dac-8214-bafb701e4814")
@@ -5957,7 +6114,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5983,8 +6140,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C620443"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6f8f0cad-3081-4064-953d-c4f81c821004")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
-		(path "/5afefb87-c6e7-480e-bef9-296b7e3125a6")
+		(path "/339eae60-78fa-4682-8958-398d26d3ca80")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -6368,7 +6538,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
 			(at 0 0 150)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6390,6 +6560,19 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C3646923"
+			(at 0 0 150)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "278daad2-f0f3-4d5c-ab07-25f7807044b4")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 			)
@@ -7220,7 +7403,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
 			(at 0 0 -60)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7246,8 +7429,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C3646923"
+			(at 0 0 -60)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5a32d93d-f356-4a20-b50c-8e2d43a77546")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
-		(path "/d9070f0d-6f0d-4640-9ad7-8fc6e99d9b65")
+		(path "/e8cd2d8d-1f85-4914-84ee-3937f10eaa06")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -7527,7 +7723,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "47R"
 			(at 0 1.05 0)
 			(layer "F.Fab")
 			(uuid "4380af33-3ac4-4898-a2c4-ad433e9c9eb8")
@@ -7551,7 +7747,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7577,8 +7773,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C620443"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "958e7639-05c2-4c37-85bc-4c57a9c1a12d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
-		(path "/d18810a5-41d3-4850-8064-0fc176a2a656")
+		(path "/65a2a753-6ec4-4c13-989b-cf2c185d13fc")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -8178,7 +8387,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2402181504_XINGLIGHT-XL-0201SURC_C3646923.pdf"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8204,8 +8413,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C3646923"
+			(at 0 0 -90)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "adc36138-5961-4f8c-8d5c-f3bf35063051")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
-		(path "/8342b5af-6fa9-438f-944c-89f125a41f18")
+		(path "/f03fb8be-7c21-4839-a605-569509f5cdfa")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -8394,7 +8616,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "47R"
 			(at 0 1.05 0)
 			(layer "F.Fab")
 			(uuid "fd36017d-9142-4f42-a82d-c479bbb757a3")
@@ -8418,7 +8640,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8444,8 +8666,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C620443"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c1a94c8a-6db5-4e97-83f6-07674cf14bda")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
-		(path "/4cafeb67-62f3-4df7-8c6c-81a651be05a7")
+		(path "/0bb24d6f-b2e9-4291-b90c-fd4ed64227b3")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -9102,7 +9337,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "47R"
 			(at 0 1.05 0)
 			(layer "F.Fab")
 			(uuid "799ec0ad-2b01-421f-95da-c2bb7ee64866")
@@ -9126,7 +9361,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9152,8 +9387,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C620443"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a3c9b0ef-ce0b-4fc9-8aee-4c96fd4043f0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
-		(path "/e42509da-bd3c-440a-885e-3656d0f55d28")
+		(path "/d1675a35-81a7-48ad-920f-c3ecb6e8296c")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)
@@ -9309,7 +9557,7 @@
 				)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "47R"
 			(at 0 1.049999 0)
 			(layer "F.Fab")
 			(uuid "9084e837-eb4d-4db0-b60a-509388dd4764")
@@ -9333,7 +9581,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0201WMF470JTEE_C620443.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9359,8 +9607,21 @@
 				)
 			)
 		)
+		(property "LCSC" "C620443"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4a094780-fa3e-46b9-88e8-ebe753782006")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
-		(path "/a63a1e5e-6054-4caa-b3ce-d01c43c646d1")
+		(path "/a56997d9-c76c-4ead-8e11-63af5a9e08fa")
 		(sheetname "Root")
 		(sheetfile "coin1.kicad_sch")
 		(attr smd)

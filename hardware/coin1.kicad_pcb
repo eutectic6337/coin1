@@ -10706,7 +10706,7 @@
 			(uuid "00dc675d-7c52-488a-99a2-bafe406fe858")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 -3.81 360)
+			(at 0 -3.81 0)
 			(layer "B.Fab")
 			(uuid "da12347c-ab8f-4438-9598-9bed56d3d054")
 			(effects
@@ -10772,6 +10772,17 @@
 				(xyz 0 0 0)
 			)
 		)
+	)
+	(gr_rect
+		(start 145 42)
+		(end 155 52)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.SilkS")
+		(uuid "bc0b2c84-4a80-497b-98e6-fc01d532c43f")
 	)
 	(gr_poly
 		(pts
@@ -11022,6 +11033,30 @@
 		(fill none)
 		(layer "User.2")
 		(uuid "f63c82c1-7a2e-4f03-8f1b-abe68407ed13")
+	)
+	(gr_text "JLCJLCJLCJLC"
+		(at 107 47 0)
+		(layer "F.SilkS")
+		(uuid "2fae092e-4800-4a66-a01f-327cffb7c01b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "JLCJLCJLCJLC"
+		(at 57 47 0)
+		(layer "F.SilkS")
+		(uuid "cebf98db-ec52-4268-8cc5-617d4fd4d2fd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
 	)
 	(segment
 		(start 40.25 59.6)

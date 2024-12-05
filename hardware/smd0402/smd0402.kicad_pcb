@@ -12409,6 +12409,17 @@
 		(layer "F.SilkS")
 		(uuid "bc0b2c84-4a80-497b-98e6-fc01d532c43f")
 	)
+	(gr_rect
+		(start 132.6 48.3)
+		(end 167.4 51.4)
+		(stroke
+			(width 1)
+			(type solid)
+		)
+		(fill solid)
+		(layer "F.Mask")
+		(uuid "058aa38a-4cee-44f9-bcef-04a005e0ed55")
+	)
 	(gr_poly
 		(pts
 			(xy 118.724697 42.972504) (xy 119.02113 43.81966) (xy 119.279257 44.679263) (xy 119.498558 45.549581)

@@ -1,4 +1,4 @@
-"Reference","Value","Footprint","LCSC"
+"Reference","Comment","Footprint","LCSC Part Number"
 "C1,C2,C3,C4,C5,C6","10n","Capacitor_SMD:C_0402_1005Metric","C696856"
 "D1,D2,D3,D4,D5,D6,D7,D8,D9,D10","LED","LED_SMD:LED_0402_1005Metric","C965790"
 "R1,R2,R3,R4,R5,R6,R7,R8,R9,R10","47R","Resistor_SMD:R_0402_1005Metric","C2909362"

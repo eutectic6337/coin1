@@ -3048,6 +3048,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 196.85 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "18c43281-4275-421a-b88c-a877e144fcb6")
 		)
@@ -3120,6 +3129,15 @@
 		)
 		(property "LCSC" "C965790"
 			(at 186.69 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
+			(at 186.69 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3272,6 +3290,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 196.85 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e1042de3-218c-4b62-bfce-e22a1432ce69")
 		)
@@ -3344,6 +3371,15 @@
 		)
 		(property "LCSC" "C965790"
 			(at 248.92 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
+			(at 248.92 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3477,6 +3513,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 52.07 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
 			(at 52.07 69.85 0)
 			(effects
 				(font
@@ -3636,6 +3681,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 217.17 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "d1ea43ad-5553-4af0-8316-47138a00186f")
 		)
@@ -3707,6 +3761,15 @@
 			)
 		)
 		(property "LCSC" "C696856"
+			(at 81.28 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
 			(at 81.28 146.05 0)
 			(effects
 				(font
@@ -3794,6 +3857,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 259.08 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1a02c936-66b5-43c3-8a3c-7ec02e08178a")
 		)
@@ -3855,6 +3927,15 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 71.12 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
 			(at 71.12 49.53 0)
 			(effects
 				(font
@@ -4005,6 +4086,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 248.92 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "00606cd1-1f06-4693-bed4-fdc8d96ae1a4")
 		)
@@ -4077,6 +4167,15 @@
 		)
 		(property "LCSC" "C965790"
 			(at 238.76 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
+			(at 238.76 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4163,6 +4262,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 228.6 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "fd50745b-8408-41b0-b116-bcd710c2e0e7")
 		)
@@ -4234,6 +4342,15 @@
 			)
 		)
 		(property "LCSC" "C696856"
+			(at 121.92 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
 			(at 121.92 146.05 0)
 			(effects
 				(font
@@ -4321,6 +4438,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "0402"
+			(at 52.07 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "edcaa6f1-70d7-461d-b196-79ad3e7cb6a1")
 		)
@@ -4383,6 +4509,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 148.59 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
 			(at 148.59 57.15 0)
 			(effects
 				(font
@@ -4473,6 +4608,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 95.25 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b7de2e4e-fa59-4b3e-a67a-8dab7a1dc914")
 		)
@@ -4545,6 +4689,15 @@
 		)
 		(property "LCSC" "C965790"
 			(at 166.37 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "0402"
+			(at 166.37 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4631,6 +4784,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 228.6 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "06893346-09ac-4c9b-a77a-8f2f6862a8d0")
 		)
@@ -4703,6 +4865,15 @@
 		)
 		(property "LCSC" "C965790"
 			(at 207.01 154.94 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
+			(at 207.01 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4855,6 +5026,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 176.53 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4bc2023b-b52a-4deb-81be-7dc8c8879682")
 		)
@@ -4982,6 +5162,15 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 135.89 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
 			(at 135.89 49.53 0)
 			(effects
 				(font
@@ -5124,6 +5313,15 @@
 			)
 		)
 		(property "LCSC" "C696856"
+			(at 107.95 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
 			(at 107.95 146.05 0)
 			(effects
 				(font
@@ -5277,6 +5475,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 259.08 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9c304ab8-8b04-438a-bec4-772ebf1184b2")
 		)
@@ -5356,6 +5563,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 176.53 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "643dcc5c-69d3-4ef7-9d0c-8a24e475648c")
 		)
@@ -5427,6 +5643,15 @@
 			)
 		)
 		(property "LCSC" "C696856"
+			(at 67.31 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
 			(at 67.31 146.05 0)
 			(effects
 				(font
@@ -5514,6 +5739,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 217.17 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "29365b7a-6efb-40bf-a795-6b6364680408")
 		)
@@ -5593,6 +5827,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 207.01 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ac27c818-2e1c-4ede-b436-3dd528af51a4")
 		)
@@ -5654,6 +5897,15 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 39.37 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
 			(at 39.37 49.53 0)
 			(effects
 				(font
@@ -5731,6 +5983,15 @@
 			)
 		)
 		(property "LCSC" "C5299908"
+			(at 107.95 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
 			(at 107.95 62.23 0)
 			(effects
 				(font
@@ -5873,6 +6134,15 @@
 			)
 		)
 		(property "LCSC" "C2909362"
+			(at 238.76 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
 			(at 238.76 144.78 0)
 			(effects
 				(font
@@ -6026,6 +6296,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" ""
+			(at 186.69 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8a3c9928-91b5-4725-bbcf-a418c18fc84a")
 		)
@@ -6105,6 +6384,15 @@
 				(hide yes)
 			)
 		)
+		(property "JLC" "0402"
+			(at 166.37 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1b54d285-f7a3-4ace-8ef5-18c581e1ddcf")
 		)
@@ -6166,6 +6454,15 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 31.75 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
 			(at 31.75 49.53 0)
 			(effects
 				(font

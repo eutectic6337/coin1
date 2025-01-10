@@ -31,7 +31,7 @@ int main(void)
 
         GPIO_WriteBit(GPIOC, GPIO_Pin_3, LED1 = !LED1);
         if (LED1) {
-        	GPIO_WriteBit(GPIOD, GPIO_Pin_1, LED2 = !LED2);
+        	GPIO_WriteBit(GPIOD, GPIO_Pin_3, LED2 = !LED2);
         }
     }
 }

@@ -1,17 +1,49 @@
 #include "debug.h"
 
-//this is an affront to programming - never write code like this
-#define LED1	GPIOC, GPIO_Pin_3
-#define LED2	GPIOC, GPIO_Pin_2
-#define LED3	GPIOD, GPIO_Pin_0
-#define LED4	GPIOD, GPIO_Pin_6
-#define LED5	GPIOD, GPIO_Pin_5
-#define LED6	GPIOD, GPIO_Pin_3
-#define LED7	GPIOD, GPIO_Pin_2
-#define LED8	GPIOC, GPIO_Pin_7
-#define LED9	GPIOC, GPIO_Pin_6
-#define LED10	GPIOC, GPIO_Pin_5
 
+void adjust_LED(int n, int target) {
+	switch(n) {
+	case 1:
+		GPIO_WriteBit(GPIOC, GPIO_Pin_3, target);
+		break;
+	case 2:
+		GPIO_WriteBit(GPIOC, GPIO_Pin_2, target);
+		break;
+	case 3:
+		GPIO_WriteBit(GPIOD, GPIO_Pin_0, target);
+		break;
+	case 4:
+		GPIO_WriteBit(GPIOD, GPIO_Pin_6, target);
+		break;
+	case 5:
+		GPIO_WriteBit(GPIOD, GPIO_Pin_5, target);
+		break;
+	case 6:
+		GPIO_WriteBit(GPIOD, GPIO_Pin_3, target);
+		break;
+	case 7:
+		GPIO_WriteBit(GPIOD, GPIO_Pin_2, target);
+		break;
+	case 8:
+		GPIO_WriteBit(GPIOC, GPIO_Pin_7, target);
+		break;
+	case 9:
+		GPIO_WriteBit(GPIOC, GPIO_Pin_6, target);
+		break;
+	case 10:
+		GPIO_WriteBit(GPIOC, GPIO_Pin_5, target);
+		break;
+	}
+}
+
+void LED_on(int n) {
+	if (n < 1 || n > 10) return;
+	adjust_LED(n, 1);
+}
+void LED_off(int n) {
+	if (n < 1 || n > 10) return;
+	adjust_LED(n, 0);
+}
 
 void GPIO_Toggle_INIT(void)
 {
@@ -38,48 +70,48 @@ int main(void)
 
 	GPIO_Toggle_INIT();
 
-    GPIO_WriteBit(LED1, 1);
+    LED_on(1);
     while(1)
     {
         Delay_Ms(100);
-        GPIO_WriteBit(LED2, 1);
+        LED_on(2);
         Delay_Ms(100);
-        GPIO_WriteBit(LED1, 0);
+        LED_off(1);
         Delay_Ms(100);
-        GPIO_WriteBit(LED3, 1);
+        LED_on(3);
         Delay_Ms(100);
-        GPIO_WriteBit(LED2, 0);
+        LED_off(2);
         Delay_Ms(100);
-        GPIO_WriteBit(LED4, 1);
+        LED_on(4);
         Delay_Ms(100);
-        GPIO_WriteBit(LED3, 0);
+        LED_off(3);
         Delay_Ms(100);
-        GPIO_WriteBit(LED5, 1);
+        LED_on(5);
         Delay_Ms(100);
-        GPIO_WriteBit(LED4, 0);
+        LED_off(4);
         Delay_Ms(100);
-        GPIO_WriteBit(LED6, 1);
+        LED_on(6);
         Delay_Ms(100);
-        GPIO_WriteBit(LED5, 0);
+        LED_off(5);
         Delay_Ms(100);
-        GPIO_WriteBit(LED7, 1);
+        LED_on(7);
         Delay_Ms(100);
-        GPIO_WriteBit(LED6, 0);
+        LED_off(6);
         Delay_Ms(100);
-        GPIO_WriteBit(LED8, 1);
+        LED_on(8);
         Delay_Ms(100);
-        GPIO_WriteBit(LED7, 0);
+        LED_off(7);
         Delay_Ms(100);
-        GPIO_WriteBit(LED9, 1);
+        LED_on(9);
         Delay_Ms(100);
-        GPIO_WriteBit(LED8, 0);
+        LED_off(8);
         Delay_Ms(100);
-        GPIO_WriteBit(LED10, 1);
+        LED_on(10);
         Delay_Ms(100);
-        GPIO_WriteBit(LED9, 0);
+        LED_off(9);
         Delay_Ms(100);
-        GPIO_WriteBit(LED1, 1);
+        LED_on(1);
         Delay_Ms(100);
-        GPIO_WriteBit(LED10, 0);
+        LED_off(10);
     }
 }

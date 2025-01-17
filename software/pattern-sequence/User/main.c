@@ -1,8 +1,8 @@
 #include "debug.h"
 
 struct pattern {
-	int bright[10];
-	int time;
+	int bright[10];// percentage of full
+	int time;// milliseconds
 };
 
 struct pattern chase[] = {
@@ -105,48 +105,8 @@ int main(void)
 
 	GPIO_Toggle_INIT();
 
-    LED_on(1);
     while(1)
     {
-        Delay_Ms(100);
-        LED_on(2);
-        Delay_Ms(100);
-        LED_off(1);
-        Delay_Ms(100);
-        LED_on(3);
-        Delay_Ms(100);
-        LED_off(2);
-        Delay_Ms(100);
-        LED_on(4);
-        Delay_Ms(100);
-        LED_off(3);
-        Delay_Ms(100);
-        LED_on(5);
-        Delay_Ms(100);
-        LED_off(4);
-        Delay_Ms(100);
-        LED_on(6);
-        Delay_Ms(100);
-        LED_off(5);
-        Delay_Ms(100);
-        LED_on(7);
-        Delay_Ms(100);
-        LED_off(6);
-        Delay_Ms(100);
-        LED_on(8);
-        Delay_Ms(100);
-        LED_off(7);
-        Delay_Ms(100);
-        LED_on(9);
-        Delay_Ms(100);
-        LED_off(8);
-        Delay_Ms(100);
-        LED_on(10);
-        Delay_Ms(100);
-        LED_off(9);
-        Delay_Ms(100);
-        LED_on(1);
-        Delay_Ms(100);
-        LED_off(10);
+    	run_sequence();
     }
 }

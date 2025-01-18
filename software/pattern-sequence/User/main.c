@@ -8,6 +8,10 @@ struct pattern {
 	int time;// milliseconds
 };
 
+// chip has 2 Timer channels with 4 Output Compare channels each
+// that can drive PWM outputs,
+// so we can have at most 8 LEDs at >0 <100 brightness
+
 struct pattern chase[] = {
 	{{100,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
 	{{100,100,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
@@ -39,48 +43,177 @@ struct pattern heartbeat[] = {
 
 
 
-void adjust_LED(int n, int target) {
-	switch(n) {
-	case 1:
-		GPIO_WriteBit(GPIOC, GPIO_Pin_3, target);
+/* PWM Output Mode Definition */
+#define PWM_MODE1   0
+#define PWM_MODE2   1
+
+/* PWM Output Mode Selection */
+//#define PWM_MODE PWM_MODE1
+#define PWM_MODE PWM_MODE2
+
+void set_LED_dutycycle(int led, int duty)
+{
+	if (duty < 1 || duty > 99) { // full off, or full on
+		int value = duty > 99;
+
+		GPIO_TypeDef *GPIOx;
+	    uint16_t GPIO_Pin_x;
+
+	    switch(led) {
+		case 1:	GPIOx = GPIOC;
+		    GPIO_Pin_x = GPIO_Pin_3;
+			break;
+		case 2:	GPIOx = GPIOC;
+		    GPIO_Pin_x = GPIO_Pin_2;
+			break;
+		case 3:	GPIOx = GPIOD;
+		    GPIO_Pin_x = GPIO_Pin_0;
+			break;
+		case 4:	GPIOx = GPIOD;
+		    GPIO_Pin_x = GPIO_Pin_6;
+			break;
+		case 5:	GPIOx = GPIOD;
+		    GPIO_Pin_x = GPIO_Pin_5;
+			break;
+		case 6: GPIOx = GPIOD;
+		    GPIO_Pin_x = GPIO_Pin_3;
+			break;
+		case 7:	GPIOx = GPIOD;
+		    GPIO_Pin_x = GPIO_Pin_2;
+			break;
+		case 8:	GPIOx = GPIOC;
+		    GPIO_Pin_x = GPIO_Pin_7;
+			break;
+		case 9:	GPIOx = GPIOC;
+		    GPIO_Pin_x = GPIO_Pin_6;
+			break;
+		case 10: GPIOx = GPIOC;
+		    GPIO_Pin_x = GPIO_Pin_5;
+			break;
+		}
+	    GPIO_InitTypeDef GPIO_InitStructure = {
+	    	.GPIO_Pin = GPIO_Pin_x,
+	    	.GPIO_Mode = GPIO_Mode_Out_PP,
+			.GPIO_Speed = GPIO_Speed_30MHz
+	    };
+	    GPIO_Init(GPIOx, &GPIO_InitStructure);
+		GPIO_WriteBit(GPIOx, GPIO_Pin_x, value);
+		return;
+	}
+
+	TIM_OCInitTypeDef TIM_OCInitStructure = {
+		.TIM_OCMode =
+#if (PWM_MODE == PWM_MODE1)
+				TIM_OCMode_PWM1
+#elif (PWM_MODE == PWM_MODE2)
+				TIM_OCMode_PWM2
+#endif
+				,
+		.TIM_OutputState = TIM_OutputState_Enable,
+		.TIM_Pulse = duty,
+		.TIM_OCPolarity = TIM_OCPolarity_High
+	};
+
+	GPIO_TypeDef *GPIOx;
+    uint16_t GPIO_Pin_x;
+    TIM_TypeDef *TIMx;
+    void (*OCxInit)(TIM_TypeDef *TIMx, TIM_OCInitTypeDef *TIM_OCInitStruct);
+    void (*OCxPreloadConfig)(TIM_TypeDef *TIMx, uint16_t TIM_OCPreload);
+	switch(led) {
+	case 1: GPIOx = GPIOC;
+	    GPIO_Pin_x = GPIO_Pin_3;
+		//T1CH3
+		TIMx = TIM1;
+		OCxInit = TIM_OC3Init;
+		OCxPreloadConfig = TIM_OC3PreloadConfig;
 		break;
-	case 2:
-		GPIO_WriteBit(GPIOC, GPIO_Pin_2, target);
+	case 2: GPIOx = GPIOC;
+	    GPIO_Pin_x = GPIO_Pin_2;
+		// -- T2CH2_1
+		TIMx = TIM2;
+		OCxInit = TIM_OC2Init;
+		OCxPreloadConfig = TIM_OC2PreloadConfig;
 		break;
-	case 3:
-		GPIO_WriteBit(GPIOD, GPIO_Pin_0, target);
+	case 3: GPIOx = GPIOD;
+	    GPIO_Pin_x = GPIO_Pin_0;
+		//T1CH1N
+		TIMx = TIM1;
+		OCxInit = TIM_OC1Init;
+		OCxPreloadConfig = TIM_OC1PreloadConfig;
 		break;
-	case 4:
-		GPIO_WriteBit(GPIOD, GPIO_Pin_6, target);
+	case 4: GPIOx = GPIOD;
+	    GPIO_Pin_x = GPIO_Pin_6;
+		// -- T2CH3_3
+		TIMx = TIM2;
+		OCxInit = TIM_OC3Init;
+		OCxPreloadConfig = TIM_OC3PreloadConfig;
 		break;
-	case 5:
-		GPIO_WriteBit(GPIOD, GPIO_Pin_5, target);
+	case 5: GPIOx = GPIOD;
+	    GPIO_Pin_x = GPIO_Pin_5;
+		// -- T2CH4_3
+		TIMx = TIM2;
+		OCxInit = TIM_OC4Init;
+		OCxPreloadConfig = TIM_OC4PreloadConfig;
 		break;
-	case 6:
-		GPIO_WriteBit(GPIOD, GPIO_Pin_3, target);
+	case 6: GPIOx = GPIOD;
+	    GPIO_Pin_x = GPIO_Pin_3;
+		//T2CH2
+		TIMx = TIM2;
+		OCxInit = TIM_OC2Init;
+		OCxPreloadConfig = TIM_OC2PreloadConfig;
 		break;
-	case 7:
-		GPIO_WriteBit(GPIOD, GPIO_Pin_2, target);
+	case 7: GPIOx = GPIOD;
+	    GPIO_Pin_x = GPIO_Pin_2;
+		//T1CH1
+		TIMx = TIM1;
+		OCxInit = TIM_OC1Init;
+		OCxPreloadConfig = TIM_OC1PreloadConfig;
 		break;
-	case 8:
-		GPIO_WriteBit(GPIOC, GPIO_Pin_7, target);
+	case 8: GPIOx = GPIOC;
+	    GPIO_Pin_x = GPIO_Pin_7;
+		// -- T1CH2_1 / T2CH2_3 / T1CH2_3
+		TIMx = TIM1;
+		OCxInit = TIM_OC2Init;
+		OCxPreloadConfig = TIM_OC2PreloadConfig;
 		break;
-	case 9:
-		GPIO_WriteBit(GPIOC, GPIO_Pin_6, target);
+	case 9: GPIOx = GPIOC;
+	    GPIO_Pin_x = GPIO_Pin_6;
+		// -- T1CH1_1 / T1CH3N_3
+		TIMx = TIM1;
+		OCxInit = TIM_OC1Init;
+		OCxPreloadConfig = TIM_OC1PreloadConfig;
 		break;
-	case 10:
-		GPIO_WriteBit(GPIOC, GPIO_Pin_5, target);
+	case 10: GPIOx = GPIOC;
+	    GPIO_Pin_x = GPIO_Pin_5;
+		// -- T1CH3_3
+		TIMx = TIM1;
+		OCxInit = TIM_OC3Init;
+		OCxPreloadConfig = TIM_OC3PreloadConfig;
 		break;
 	}
+    GPIO_InitTypeDef GPIO_InitStructure = {
+    	.GPIO_Pin = GPIO_Pin_x,
+    	.GPIO_Mode = GPIO_Mode_AF_PP,
+		.GPIO_Speed = GPIO_Speed_30MHz
+    };
+    GPIO_Init(GPIOx, &GPIO_InitStructure);
+
+    OCxInit(TIMx, &TIM_OCInitStructure);
+
+    TIM_CtrlPWMOutputs(TIMx, ENABLE);
+    OCxPreloadConfig(TIMx, TIM_OCPreload_Disable);
+    TIM_ARRPreloadConfig(TIMx, ENABLE);
+    TIM_Cmd(TIMx, ENABLE);
 }
+
 
 void LED_on(int n) {
 	if (n < 1 || n > NUM_LEDS) return;
-	adjust_LED(n, 1);
+	set_LED_dutycycle(n, 100);
 }
 void LED_off(int n) {
 	if (n < 1 || n > NUM_LEDS) return;
-	adjust_LED(n, 0);
+	set_LED_dutycycle(n, 0);
 }
 
 
@@ -91,11 +224,23 @@ int get_current_time_ms(void)
 }
 
 
-void setup_LEDs(void)
-{
-    GPIO_InitTypeDef GPIO_InitStructure = {0};
+struct pattern *sequence_start;
+int sequence_length;
 
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC | RCC_APB2Periph_GPIOD, ENABLE);
+int sequence_step;
+int next_step_ms;
+
+void setup(void)
+{
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
+	SystemCoreClockUpdate();
+
+    RCC_APB2PeriphClockCmd(
+    		RCC_APB2Periph_GPIOC | RCC_APB2Periph_GPIOD |
+			RCC_APB2Periph_TIM1 | RCC_APB2Periph_TIM1,
+    		ENABLE);
+
+    GPIO_InitTypeDef GPIO_InitStructure = {0};
 
     GPIO_InitStructure.GPIO_Pin = GPIO_Pin_3 | GPIO_Pin_2 | GPIO_Pin_7 | GPIO_Pin_6 | GPIO_Pin_5;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
@@ -107,30 +252,22 @@ void setup_LEDs(void)
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_30MHz;
     GPIO_Init(GPIOD, &GPIO_InitStructure);
 
-    //FIXME: PWM
-}
-void loop_LEDs(void)
-{
-	//FIXME: PWM
-}
-void set_LED_brightness(int led, int bright)
-{
-	//FIXME: PWM
-}
+	int arr = 100;
+	unsigned psc = 480-1;
+	TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure={0};
+
+	TIM_TimeBaseInitStructure.TIM_Period = arr;
+	TIM_TimeBaseInitStructure.TIM_Prescaler = psc;
+	TIM_TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+	TIM_TimeBaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
+	TIM_TimeBaseInit(TIM1, &TIM_TimeBaseInitStructure);
+	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseInitStructure);
 
 
-struct pattern *sequence_start;
-int sequence_length;
-
-int sequence_step;
-int next_step_ms;
-
-void setup_sequence(void)
-{
 	sequence_start = chase;
 	sequence_length = NUM_ARRAY_ELEMS(chase);
 }
-void loop_sequence(void)
+void loop(void)
 {
 	if (!sequence_start) return;
 
@@ -147,22 +284,16 @@ void loop_sequence(void)
 		next_step_ms = current_time + s->time;
 
 		for (int i = 0; i < NUM_LEDS; i++) {
-			set_LED_brightness(i, s->bright[i]);
+			set_LED_dutycycle(i, s->bright[i]);
 		}
 	}
 }
 
 int main(void)
 {
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
-	SystemCoreClockUpdate();
-	Delay_Init();
-
-	setup_LEDs();
-	setup_sequence();
+	setup();
     while(1)
     {
-    	loop_sequence();
-    	loop_LEDs();
+    	loop();
     }
 }

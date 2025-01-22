@@ -212,19 +212,20 @@ void set_LED_dutycycle(int led, int duty)
 		TIMx = TIM1;
 		OCxInit = TIM_OC2Init;
 		OCxPreloadConfig = TIM_OC2PreloadConfig;
+		OTHER;
 		break;
 	case 9: GPIOx = GPIOC;
 	    GPIO_Pin_x = GPIO_Pin_6;
 		// -- T1CH1_1 / T1CH3N_3
-	    if (LED_pwm[2-1]) {
-			LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=1, .oc=1};
-			TIMx = TIM1;
-			OCxInit = TIM_OC1Init;
-			OCxPreloadConfig = TIM_OC1PreloadConfig;
-			OTHER;
-			break;
-	    }
-	    if (LED_pwm[1-1]) {
+	    if ((LED_pwm[2-1].tim==1 && LED_pwm[2-1].oc==1) ||
+	    		(LED_pwm[7-1].tim==1 && LED_pwm[7-1].oc==1)) {
+	    	//T1CH1 is already used
+		    if (LED_pwm[1-1].tim==1 && LED_pwm[1-1].oc==3) {
+		    	// punt to on/off if Timer+OC channel is already used
+		    	set_LED_dutycycle(led, duty>50? 100: 0);
+		    	return;
+		    }
+		    //but T1CH3 is available
 			LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=1, .oc=3};
 			TIMx = TIM1;
 			OCxInit = TIM_OC3Init;
@@ -233,9 +234,21 @@ void set_LED_dutycycle(int led, int duty)
 			N;
 			break;
 	    }
+		LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=1, .oc=1};
+		TIMx = TIM1;
+		OCxInit = TIM_OC1Init;
+		OCxPreloadConfig = TIM_OC1PreloadConfig;
+		OTHER;
+		break;
 	case 10: GPIOx = GPIOC;
 	    GPIO_Pin_x = GPIO_Pin_5;
 		// -- T1CH3_3
+	    if ((LED_pwm[1-1].tim==1 && LED_pwm[1-1].oc==3) ||
+	    		(LED_pwm[9-1].tim==1 && LED_pwm[9-1].oc==3)) {
+	    	// punt to on/off if Timer+OC channel is already used
+	    	set_LED_dutycycle(led, duty>50? 100: 0);
+	    	return;
+	    }
 		LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=1, .oc=3};
 		TIMx = TIM1;
 		OCxInit = TIM_OC3Init;

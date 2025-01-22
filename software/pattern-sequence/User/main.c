@@ -408,7 +408,7 @@ void setup(void)
 
     RCC_APB2PeriphClockCmd(
     		RCC_APB2Periph_GPIOC | RCC_APB2Periph_GPIOD |
-			RCC_APB2Periph_TIM1 | RCC_APB2Periph_TIM1,
+			RCC_APB2Periph_TIM1 | RCC_APB2Periph_TIM2,
     		ENABLE);
 
     GPIO_InitTypeDef GPIO_InitStructure = {0};

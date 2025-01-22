@@ -37,12 +37,117 @@ struct pattern chase[] = {
 	{{100,  0,  0,  0,  0,  0,  0,  0,  0,100}, 100},
 };
 
+struct pattern heartbeat[] = {
+    // First beat
+    {{ 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 }, 50},   // Dim start
+    {{ 50, 50, 50, 50, 50, 50, 50, 50, 50, 50 }, 100},  // Rising
+    {{100,100,100,100,100,100,100,100,100,100 }, 150},  // Peak brightness
+    {{ 50, 50, 50, 50, 50, 50, 50, 50, 50, 50 }, 100},  // Falling
+    {{ 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 }, 50},   // Back to dim
+    // Second beat
+    {{ 20, 20, 20, 20, 20, 20, 20, 20, 20, 20 }, 50},   // Slightly stronger start
+    {{ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 }, 100},  // Rising
+    {{100,100,100,100,100,100,100,100,100,100 }, 150},  // Peak brightness
+    {{ 70, 70, 70, 70, 70, 70, 70, 70, 70, 70 }, 100},  // Falling
+    {{ 20, 20, 20, 20, 20, 20, 20, 20, 20, 20 }, 50},   // Back to dim
+    // Pause between beats
+    {{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0 }, 200},  // Rest period
+};
+
+// This will be a practice in PWM or PWM emulation. The 'head' will be at 70-80% brightness, while the tail (3-5 segments) will be at 30-50% Brightness
+// If the pattern isn't working as intended, we can simplify it by simply making the snake moving around the radius of the coin
+struct pattern snake[] = {
+    // Snake starting at D5
+    {{ 80, 40, 30, 30, 30,  0,  0,  0,  0,  0 }, 100},  // Head at D5, body follows
+    {{ 40, 80, 40, 30, 30,  0,  0,  0,  0,  0 }, 100},  // Head at D4
+    {{ 30, 40, 80, 40, 30,  0,  0,  0,  0,  0 }, 100},  // Head at D3
+    {{ 30, 30, 40, 80, 40,  0,  0,  0,  0,  0 }, 100},  // Head at D2
+    {{ 30, 30, 30, 40, 80,  0,  0,  0,  0,  0 }, 100},  // Head at D1
+
+    // Transition to D10
+    {{  0, 30, 30, 30, 40, 80, 40, 30,  0,  0 }, 100},  // Head at D10
+    {{  0,  0, 30, 30, 30, 40, 80, 40, 30,  0 }, 100},  // Head at D9
+    {{  0,  0,  0, 30, 30, 30, 40, 80, 40, 30 }, 100},  // Head at D8
+    {{  0,  0,  0,  0, 30, 30, 30, 40, 80, 40 }, 100},  // Head at D7
+    {{  0,  0,  0,  0,  0, 30, 30, 30, 40, 80 }, 100},  // Head at D6
+
+    // Complete the circle, back to D5
+    {{ 40,  0,  0,  0,  0, 30, 30, 30, 30, 80 }, 100},  // Head at D5
+};
+
+// Simple alternating patten between the labeled D1-D10 (Evens and Odds)
+struct pattern alternate_pulsate[] = {
+    // Even LEDs increasing brightness, Odd LEDs decreasing brightness
+    {{ 20,  80,  20,  80,  20,  80,  20,  80,  20,  80 }, 100},
+    {{ 40,  60,  40,  60,  40,  60,  40,  60,  40,  60 }, 100},
+    {{ 60,  40,  60,  40,  60,  40,  60,  40,  60,  40 }, 100},
+    {{ 80,  20,  80,  20,  80,  20,  80,  20,  80,  20 }, 100},
+    {{100,   0, 100,   0, 100,   0, 100,   0, 100,   0 }, 100}, // Even fully ON, Odd fully OFF
+    // Reverse: Odd LEDs increasing brightness, Even LEDs decreasing brightness
+    {{ 80,  20,  80,  20,  80,  20,  80,  20,  80,  20 }, 100},
+    {{ 60,  40,  60,  40,  60,  40,  60,  40,  60,  40 }, 100},
+    {{ 40,  60,  40,  60,  40,  60,  40,  60,  40,  60 }, 100},
+    {{ 20,  80,  20,  80,  20,  80,  20,  80,  20,  80 }, 100},
+    {{  0, 100,   0, 100,   0, 100,   0, 100,   0, 100 }, 100}, // Odd fully ON, Even fully OFF
+};
+
+// If holding the Coin at 45 degrees, you can see a five-point star form, pulsate, then repeat
+
+// First pattern: Tracing the star
+#define STAR_TRACE \
+	{{  0,  0,  0,100,  0,  0,  0,  0,  0,  0}, 200}, /* D4 */ \
+	{{  0,  0,  0,  0,  0,  0,  0,100,  0,  0}, 200}, /* D8 */ \
+	{{  0,  0,100,  0,  0,  0,  0,  0,  0,  0}, 200}, /* D2 */ \
+	{{  0,  0,  0,  0,  0,  0,100,  0,  0,  0}, 200}, /* D6 */ \
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,100}, 200}, /* D10 */ \
+	{{  0,  0,  0,100,  0,  0,  0,  0,  0,  0}, 200} /* Back to D4 */
+struct pattern star_trace[] = { STAR_TRACE };
+// Second pattern: Keep traced LEDs at 80% brightness
+#define STAR_HOLD \
+	{{  0,  0, 80, 80,  0,  0, 80, 80,  0, 80}, 500}, \
+	{{  0,  0, 80, 80,  0,  0, 80, 80,  0, 80}, 500}
+struct pattern star_hold[] = { STAR_HOLD };
+// Third pattern: Pulsate the 5 traced LEDs from 80% to 100%
+#define STAR_PULSATE \
+	{{  0,  0, 80, 80,  0,  0, 80, 80,  0, 80}, 100}, \
+	{{  0,  0, 100,100,  0,  0,100,100,  0,100}, 100}, \
+	{{  0,  0, 80, 80,  0,  0, 80, 80,  0, 80}, 100}, \
+	{{  0,  0, 100,100,  0,  0,100,100,  0,100}, 100}, \
+	{{  0,  0, 80, 80,  0,  0, 80, 80,  0, 80}, 100}
+struct pattern star_pulsate[] = { STAR_PULSATE };
+
+// Fourth pattern: Taper down the brightness in the traced order
+#define STAR_TAPER \
+	{{  0,  0,  0,100,  0,  0,  0,  0,  0,  0}, 200}, /* D4 */ \
+	{{  0,  0,  0,  0,  0,  0,  0,100,  0,  0}, 200}, /* D8 */ \
+	{{  0,  0,100,  0,  0,  0,  0,  0,  0,  0}, 200}, /* D2 */ \
+	{{  0,  0,  0,  0,  0,  0,100,  0,  0,  0}, 200}, /* D6 */ \
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,100}, 200}, /* D10 */ \
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 200} /* All off */
+struct pattern star_taper[] = { STAR_TAPER };
+
+struct pattern star [] = {
+		STAR_TRACE,
+		STAR_HOLD,
+		STAR_PULSATE,
+		STAR_TAPER
+};
+
+// 9-3, 2-10, 4-7, starburst timer
+struct pattern starburst [] = {
+};
+
+//Bomb timer count down d5, d4, d3, d2, d1, d10, d9, d8, d7, d6 >> Explosion effect
+struct pattern bomb [] = {
+};
+
+//Chasing Stars - two 100% LEDs with 1 1/2 length tails chasing each other around the coin
+struct pattern starchase [] = {
+};
+
+// Seeing the coin as a clock face > Sweep from 9 to 3 and 3 to 9 (can do an up down sweep as well with 11 and 1 down to 7 and 5 and back up)
 struct pattern sweep[] = {
 };
-
-struct pattern heartbeat[] = {
-};
-
 
 
 /* PWM Output Mode Definition */

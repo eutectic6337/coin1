@@ -15,7 +15,7 @@ struct pattern {
 // 5 simultaneous PWMs available
 
 struct pattern chase[] = {
-	{{100,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{100,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},//[0]
 	{{100,100,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
 	{{  0,100,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
 	{{  0,100,100,  0,  0,  0,  0,  0,  0,  0}, 100},
@@ -34,7 +34,7 @@ struct pattern chase[] = {
 	{{  0,  0,  0,  0,  0,  0,  0,  0,100,  0}, 100},
 	{{  0,  0,  0,  0,  0,  0,  0,  0,100,100}, 100},
 	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,100}, 100},
-	{{100,  0,  0,  0,  0,  0,  0,  0,  0,100}, 100},
+	{{100,  0,  0,  0,  0,  0,  0,  0,  0,100}, 100},//[19]
 };
 
 struct pattern heartbeat[] = {
@@ -164,6 +164,10 @@ struct pwm_in_use {
 	unsigned oc:3;
 } LED_pwm[NUM_LEDS];
 
+//FIXME
+#define REMAP
+#define N
+
 void set_LED_dutycycle(int led, int duty)
 {
 	// first call after all have been set, clear the flags
@@ -176,8 +180,8 @@ void set_LED_dutycycle(int led, int duty)
 
 		LED_pwm[led-1] = (struct pwm_in_use){.gp=1, .tim=0, .oc=0};
 
-		GPIO_TypeDef *GPIOx;
-	    uint16_t GPIO_Pin_x;
+		GPIO_TypeDef *GPIOx = 0;
+	    uint16_t GPIO_Pin_x = 0;
 
 	    switch(led) {
 		case 1:	GPIOx = GPIOC;
@@ -234,15 +238,15 @@ void set_LED_dutycycle(int led, int duty)
 		.TIM_OCPolarity = TIM_OCPolarity_High
 	};
 
-	GPIO_TypeDef *GPIOx;
-    uint16_t GPIO_Pin_x;
-    TIM_TypeDef *TIMx;
-    void (*OCxInit)(TIM_TypeDef *TIMx, TIM_OCInitTypeDef *TIM_OCInitStruct);
-    void (*OCxPreloadConfig)(TIM_TypeDef *TIMx, uint16_t TIM_OCPreload);
+	GPIO_TypeDef *GPIOx = 0;
+    uint16_t GPIO_Pin_x = 0;
+    TIM_TypeDef *TIMx = 0;
+    void (*OCxInit)(TIM_TypeDef *TIMx, TIM_OCInitTypeDef *TIM_OCInitStruct) = 0;
+    void (*OCxPreloadConfig)(TIM_TypeDef *TIMx, uint16_t TIM_OCPreload) = 0;
 	switch(led) {
 	case 1: GPIOx = GPIOC;
 	    GPIO_Pin_x = GPIO_Pin_3;
-		//T1CH3
+		//T1CH3 -- T1CH1
 		LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=1, .oc=3};
 		TIMx = TIM1;
 		OCxInit = TIM_OC3Init;
@@ -255,7 +259,7 @@ void set_LED_dutycycle(int led, int duty)
 		TIMx = TIM2;
 		OCxInit = TIM_OC2Init;
 		OCxPreloadConfig = TIM_OC2PreloadConfig;
-		OTHER;
+		REMAP;
 		break;
 	case 3: GPIOx = GPIOD;
 	    GPIO_Pin_x = GPIO_Pin_0;
@@ -273,7 +277,7 @@ void set_LED_dutycycle(int led, int duty)
 		TIMx = TIM2;
 		OCxInit = TIM_OC3Init;
 		OCxPreloadConfig = TIM_OC3PreloadConfig;
-		OTHER;
+		REMAP;
 		break;
 	case 5: GPIOx = GPIOD;
 	    GPIO_Pin_x = GPIO_Pin_5;
@@ -282,7 +286,7 @@ void set_LED_dutycycle(int led, int duty)
 		TIMx = TIM2;
 		OCxInit = TIM_OC4Init;
 		OCxPreloadConfig = TIM_OC4PreloadConfig;
-		OTHER;
+		REMAP;
 		break;
 	case 6: GPIOx = GPIOD;
 	    GPIO_Pin_x = GPIO_Pin_3;
@@ -317,7 +321,7 @@ void set_LED_dutycycle(int led, int duty)
 		TIMx = TIM1;
 		OCxInit = TIM_OC2Init;
 		OCxPreloadConfig = TIM_OC2PreloadConfig;
-		OTHER;
+		REMAP;
 		break;
 	case 9: GPIOx = GPIOC;
 	    GPIO_Pin_x = GPIO_Pin_6;
@@ -335,7 +339,7 @@ void set_LED_dutycycle(int led, int duty)
 			TIMx = TIM1;
 			OCxInit = TIM_OC3Init;
 			OCxPreloadConfig = TIM_OC3PreloadConfig;
-			OTHER;
+			REMAP;
 			N;
 			break;
 	    }
@@ -343,7 +347,7 @@ void set_LED_dutycycle(int led, int duty)
 		TIMx = TIM1;
 		OCxInit = TIM_OC1Init;
 		OCxPreloadConfig = TIM_OC1PreloadConfig;
-		OTHER;
+		REMAP;
 		break;
 	case 10: GPIOx = GPIOC;
 	    GPIO_Pin_x = GPIO_Pin_5;
@@ -358,7 +362,7 @@ void set_LED_dutycycle(int led, int duty)
 		TIMx = TIM1;
 		OCxInit = TIM_OC3Init;
 		OCxPreloadConfig = TIM_OC3PreloadConfig;
-		OTHER;
+		REMAP;
 		break;
 	}
 
@@ -375,16 +379,6 @@ void set_LED_dutycycle(int led, int duty)
     OCxPreloadConfig(TIMx, TIM_OCPreload_Disable);
     TIM_ARRPreloadConfig(TIMx, ENABLE);
     TIM_Cmd(TIMx, ENABLE);
-}
-
-
-void LED_on(int n) {
-	if (n < 1 || n > NUM_LEDS) return;
-	set_LED_dutycycle(n, 100);
-}
-void LED_off(int n) {
-	if (n < 1 || n > NUM_LEDS) return;
-	set_LED_dutycycle(n, 0);
 }
 
 
@@ -408,7 +402,7 @@ void setup(void)
 
     RCC_APB2PeriphClockCmd(
     		RCC_APB2Periph_GPIOC | RCC_APB2Periph_GPIOD |
-			RCC_APB2Periph_TIM1 | RCC_APB2Periph_TIM2,
+			RCC_APB2Periph_TIM1 | RCC_APB1Periph_TIM2,
     		ENABLE);
 
     GPIO_InitTypeDef GPIO_InitStructure = {0};
@@ -444,7 +438,7 @@ void loop(void)
 
 	int current_time = get_current_time_ms();
 	if (current_time >= next_step_ms) {
-		if (sequence_length > sequence_step) {
+		if (sequence_step < sequence_length-1) {
 			sequence_step++;
 		}
 		else {

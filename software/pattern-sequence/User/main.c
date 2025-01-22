@@ -14,6 +14,8 @@ struct pattern {
 // but our specific pin choices for LEDs mean we have only
 // 5 simultaneous PWMs available
 
+#define SELECTED_SEQUENCE chase
+
 struct pattern chase[] = {
 	{{100,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},//[0]
 	{{100,100,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
@@ -429,8 +431,8 @@ void setup(void)
 	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseInitStructure);
 
 
-	sequence_start = chase;
-	sequence_length = NUM_ARRAY_ELEMS(chase);
+	sequence_start = SELECTED_SEQUENCE;
+	sequence_length = NUM_ARRAY_ELEMS(SELECTED_SEQUENCE);
 }
 void loop(void)
 {

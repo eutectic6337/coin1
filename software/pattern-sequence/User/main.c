@@ -11,6 +11,8 @@ struct pattern {
 // chip has 2 Timer channels with 4 Output Compare channels each
 // that can drive PWM outputs,
 // so we can have at most 8 LEDs at >0 <100 brightness
+// but our specific pin choices for LEDs mean we have only
+// 5 simultaneous PWMs available
 
 struct pattern chase[] = {
 	{{100,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
@@ -51,10 +53,23 @@ struct pattern heartbeat[] = {
 //#define PWM_MODE PWM_MODE1
 #define PWM_MODE PWM_MODE2
 
+struct pwm_in_use {
+	unsigned gp:1;
+	unsigned tim:2;
+	unsigned oc:3;
+} LED_pwm[NUM_LEDS];
+
 void set_LED_dutycycle(int led, int duty)
 {
+	// first call after all have been set, clear the flags
+	if (LED_pwm[NUM_LEDS-1].gp || LED_pwm[NUM_LEDS-1].tim) {
+		for (int i=0; i<NUM_LEDS; i++) LED_pwm[i] = (struct pwm_in_use){0};
+	}
+
 	if (duty < 1 || duty > 99) { // full off, or full on
 		int value = duty > 99;
+
+		LED_pwm[led-1] = (struct pwm_in_use){.gp=1, .tim=0, .oc=0};
 
 		GPIO_TypeDef *GPIOx;
 	    uint16_t GPIO_Pin_x;
@@ -123,6 +138,7 @@ void set_LED_dutycycle(int led, int duty)
 	case 1: GPIOx = GPIOC;
 	    GPIO_Pin_x = GPIO_Pin_3;
 		//T1CH3
+		LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=1, .oc=3};
 		TIMx = TIM1;
 		OCxInit = TIM_OC3Init;
 		OCxPreloadConfig = TIM_OC3PreloadConfig;
@@ -130,41 +146,61 @@ void set_LED_dutycycle(int led, int duty)
 	case 2: GPIOx = GPIOC;
 	    GPIO_Pin_x = GPIO_Pin_2;
 		// -- T2CH2_1
+		LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=2, .oc=2};
 		TIMx = TIM2;
 		OCxInit = TIM_OC2Init;
 		OCxPreloadConfig = TIM_OC2PreloadConfig;
+		OTHER;
 		break;
 	case 3: GPIOx = GPIOD;
 	    GPIO_Pin_x = GPIO_Pin_0;
 		//T1CH1N
+		LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=1, .oc=1};
 		TIMx = TIM1;
 		OCxInit = TIM_OC1Init;
 		OCxPreloadConfig = TIM_OC1PreloadConfig;
+		N;
 		break;
 	case 4: GPIOx = GPIOD;
 	    GPIO_Pin_x = GPIO_Pin_6;
 		// -- T2CH3_3
+		LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=2, .oc=3};
 		TIMx = TIM2;
 		OCxInit = TIM_OC3Init;
 		OCxPreloadConfig = TIM_OC3PreloadConfig;
+		OTHER;
 		break;
 	case 5: GPIOx = GPIOD;
 	    GPIO_Pin_x = GPIO_Pin_5;
 		// -- T2CH4_3
+		LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=2, .oc=4};
 		TIMx = TIM2;
 		OCxInit = TIM_OC4Init;
 		OCxPreloadConfig = TIM_OC4PreloadConfig;
+		OTHER;
 		break;
 	case 6: GPIOx = GPIOD;
 	    GPIO_Pin_x = GPIO_Pin_3;
+	    if (LED_pwm[2-1].tim==2 && LED_pwm[2-1].oc==2) {
+	    	// punt to on/off if Timer+OC channel is already used
+	    	set_LED_dutycycle(led, duty>50? 100: 0);
+	    	return;
+	    }
 		//T2CH2
+		LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=2, .oc=2};
 		TIMx = TIM2;
 		OCxInit = TIM_OC2Init;
 		OCxPreloadConfig = TIM_OC2PreloadConfig;
 		break;
 	case 7: GPIOx = GPIOD;
 	    GPIO_Pin_x = GPIO_Pin_2;
+	    if (LED_pwm[3-1].tim==1 && LED_pwm[3-1].oc==1) {
+	    	// punt to on/off if Timer+OC channel is already used
+	    	set_LED_dutycycle(led, duty>50? 100: 0);
+	    	return;
+	    }
 		//T1CH1
+		LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=1, .oc=1};
 		TIMx = TIM1;
 		OCxInit = TIM_OC1Init;
 		OCxPreloadConfig = TIM_OC1PreloadConfig;
@@ -172,6 +208,7 @@ void set_LED_dutycycle(int led, int duty)
 	case 8: GPIOx = GPIOC;
 	    GPIO_Pin_x = GPIO_Pin_7;
 		// -- T1CH2_1 / T2CH2_3 / T1CH2_3
+		LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=1, .oc=2};
 		TIMx = TIM1;
 		OCxInit = TIM_OC2Init;
 		OCxPreloadConfig = TIM_OC2PreloadConfig;
@@ -179,19 +216,35 @@ void set_LED_dutycycle(int led, int duty)
 	case 9: GPIOx = GPIOC;
 	    GPIO_Pin_x = GPIO_Pin_6;
 		// -- T1CH1_1 / T1CH3N_3
-		TIMx = TIM1;
-		OCxInit = TIM_OC1Init;
-		OCxPreloadConfig = TIM_OC1PreloadConfig;
-		break;
+	    if (LED_pwm[2-1]) {
+			LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=1, .oc=1};
+			TIMx = TIM1;
+			OCxInit = TIM_OC1Init;
+			OCxPreloadConfig = TIM_OC1PreloadConfig;
+			OTHER;
+			break;
+	    }
+	    if (LED_pwm[1-1]) {
+			LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=1, .oc=3};
+			TIMx = TIM1;
+			OCxInit = TIM_OC3Init;
+			OCxPreloadConfig = TIM_OC3PreloadConfig;
+			OTHER;
+			N;
+			break;
+	    }
 	case 10: GPIOx = GPIOC;
 	    GPIO_Pin_x = GPIO_Pin_5;
 		// -- T1CH3_3
+		LED_pwm[led-1] = (struct pwm_in_use){.gp=0, .tim=1, .oc=3};
 		TIMx = TIM1;
 		OCxInit = TIM_OC3Init;
 		OCxPreloadConfig = TIM_OC3PreloadConfig;
+		OTHER;
 		break;
 	}
-    GPIO_InitTypeDef GPIO_InitStructure = {
+
+	GPIO_InitTypeDef GPIO_InitStructure = {
     	.GPIO_Pin = GPIO_Pin_x,
     	.GPIO_Mode = GPIO_Mode_AF_PP,
 		.GPIO_Speed = GPIO_Speed_30MHz

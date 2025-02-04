@@ -1711,46 +1711,28 @@
 		(uuid "03b0c606-99b9-4cd0-8b1b-7b86a7d212f4")
 	)
 	(junction
-		(at 107.95 149.86)
+		(at 78.74 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "20452689-3fa8-4ce9-9bfc-3bcd99024ed2")
+		(uuid "12c379ec-03a3-4f85-8c91-df9a81bd0090")
 	)
 	(junction
-		(at 81.28 142.24)
+		(at 88.9 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "2799ddbd-23d3-4438-ba6b-ecfe6e44d3fa")
+		(uuid "1f086a76-da94-41e3-ae0c-297e98242743")
 	)
 	(junction
-		(at 67.31 142.24)
+		(at 48.26 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "4a2a49c8-e712-4149-82be-150321ffaa32")
+		(uuid "36392fc6-5ce7-4917-a314-c1553f203074")
 	)
 	(junction
-		(at 52.07 149.86)
+		(at 68.58 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "53080d32-7460-43ce-b1a6-c1ed49f27478")
-	)
-	(junction
-		(at 107.95 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6b787ee1-cf2f-41e9-a214-d88e87af26bd")
-	)
-	(junction
-		(at 67.31 149.86)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "79f5d920-a39f-4bf6-8f05-406c16da0146")
-	)
-	(junction
-		(at 95.25 149.86)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7a66d412-55c3-41ef-9dcc-98264804c182")
+		(uuid "39f53fba-5cfa-4b3e-92c1-8830f7b758e5")
 	)
 	(junction
 		(at 176.53 161.29)
@@ -1765,16 +1747,10 @@
 		(uuid "8095adff-d70a-40f5-a5b5-82f90a5f27a3")
 	)
 	(junction
-		(at 81.28 149.86)
+		(at 68.58 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "828a1e7e-06cb-422e-98b2-11564ebcd116")
-	)
-	(junction
-		(at 52.07 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "96b2eaa4-d1a9-4c32-89e1-a14a6ff360c0")
+		(uuid "88b561a2-c2b2-4712-bb3b-d10bc2fad282")
 	)
 	(junction
 		(at 166.37 161.29)
@@ -1789,10 +1765,34 @@
 		(uuid "ae61ad58-0519-4e3a-8110-4c5b07b8690c")
 	)
 	(junction
+		(at 48.26 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "afe262cb-de7a-45b7-bad5-b3504b67b79f")
+	)
+	(junction
 		(at 217.17 161.29)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b0ac6355-5145-478a-8e64-ae6cf947ad70")
+	)
+	(junction
+		(at 88.9 149.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b0ad2b6a-59da-457e-b6e3-bc4fd94d18ed")
+	)
+	(junction
+		(at 58.42 149.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "db8edab9-ac87-494a-acd2-17f4a46eeddc")
+	)
+	(junction
+		(at 58.42 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e1b746ec-e4f9-46bb-9bc8-549f086547f9")
 	)
 	(junction
 		(at 248.92 161.29)
@@ -1801,10 +1801,10 @@
 		(uuid "e1b747d7-5320-47df-8429-1a4205a8d678")
 	)
 	(junction
-		(at 95.25 142.24)
+		(at 78.74 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "eaae3d1b-04b4-4e7f-8824-bcd0aa178747")
+		(uuid "e2767923-ec81-4ff1-9759-d10d6161f4df")
 	)
 	(wire
 		(pts
@@ -1968,7 +1968,7 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 142.24) (xy 81.28 142.24)
+			(xy 43.18 142.24) (xy 48.26 142.24)
 		)
 		(stroke
 			(width 0)
@@ -2038,6 +2038,16 @@
 	)
 	(wire
 		(pts
+			(xy 58.42 142.24) (xy 68.58 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b49e573-da01-4672-9edd-5490da49cfcd")
+	)
+	(wire
+		(pts
 			(xy 78.74 106.68) (xy 228.6 106.68)
 		)
 		(stroke
@@ -2058,7 +2068,7 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 149.86) (xy 95.25 149.86)
+			(xy 43.18 149.86) (xy 48.26 149.86)
 		)
 		(stroke
 			(width 0)
@@ -2088,13 +2098,13 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 142.24) (xy 95.25 142.24)
+			(xy 48.26 149.86) (xy 58.42 149.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "484cf72a-c01d-484a-b084-c613826ea1d0")
+		(uuid "5008eb28-67b9-4614-be6c-4f0284bcd735")
 	)
 	(wire
 		(pts
@@ -2115,16 +2125,6 @@
 			(type default)
 		)
 		(uuid "579811e3-33a9-48cc-a3a6-7851d0f275fa")
-	)
-	(wire
-		(pts
-			(xy 43.18 149.86) (xy 52.07 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5b4ba01b-ea1a-4846-b3c4-c4d91bb14e39")
 	)
 	(wire
 		(pts
@@ -2155,16 +2155,6 @@
 			(type default)
 		)
 		(uuid "5fd0ef34-c9ba-47a1-877e-d9421440f29e")
-	)
-	(wire
-		(pts
-			(xy 43.18 142.24) (xy 52.07 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6076ec5d-c50a-4c33-a2f3-6f28b2291d78")
 	)
 	(wire
 		(pts
@@ -2248,13 +2238,13 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 149.86) (xy 107.95 149.86)
+			(xy 68.58 149.86) (xy 78.74 149.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "81db29b9-06f8-48b9-9970-6dd4c6135430")
+		(uuid "80d1c964-20a2-45ca-a1fa-4a883a88b56c")
 	)
 	(wire
 		(pts
@@ -2268,13 +2258,13 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 142.24) (xy 67.31 142.24)
+			(xy 58.42 149.86) (xy 68.58 149.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8978a498-5e88-424c-b9cd-ba35f0da0e5a")
+		(uuid "8fa64aa5-fd45-4e43-ace9-1a42d53d37b9")
 	)
 	(wire
 		(pts
@@ -2318,13 +2308,23 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 149.86) (xy 121.92 149.86)
+			(xy 68.58 142.24) (xy 78.74 142.24)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9e3a0c67-cb63-47b6-bc5b-b74c4d249ca1")
+		(uuid "9b52f7af-6489-42b3-86b3-1ee0bfd4b83b")
+	)
+	(wire
+		(pts
+			(xy 78.74 149.86) (xy 88.9 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b6ec54b-a8e7-45a8-9955-fb7eeeedf64f")
 	)
 	(wire
 		(pts
@@ -2355,16 +2355,6 @@
 			(type default)
 		)
 		(uuid "a5e31132-c3e1-4746-966b-0f17ec3bea62")
-	)
-	(wire
-		(pts
-			(xy 52.07 149.86) (xy 67.31 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a6a3db10-3d0f-4d6d-b0e6-f47ec34ed6da")
 	)
 	(wire
 		(pts
@@ -2458,6 +2448,16 @@
 	)
 	(wire
 		(pts
+			(xy 88.9 142.24) (xy 99.06 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c145c76c-9ad0-4ebb-8455-a2a71ef08d2e")
+	)
+	(wire
+		(pts
 			(xy 186.69 148.59) (xy 186.69 151.13)
 		)
 		(stroke
@@ -2528,6 +2528,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 142.24) (xy 58.42 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9780350-636e-43e6-b84a-33b7b4078949")
+	)
+	(wire
+		(pts
 			(xy 228.6 158.75) (xy 228.6 161.29)
 		)
 		(stroke
@@ -2538,26 +2548,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 142.24) (xy 121.92 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "da46085b-342f-4d14-8cef-57a1683a4924")
-	)
-	(wire
-		(pts
-			(xy 67.31 149.86) (xy 81.28 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db8d1496-95c5-4315-aac7-20dad614f8f3")
-	)
-	(wire
-		(pts
 			(xy 176.53 158.75) (xy 176.53 161.29)
 		)
 		(stroke
@@ -2565,16 +2555,6 @@
 			(type default)
 		)
 		(uuid "dbdb1d3e-3417-48cf-beaf-c0f714da5b66")
-	)
-	(wire
-		(pts
-			(xy 95.25 142.24) (xy 107.95 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dee07609-5d05-405f-8cf9-d4b7782442a1")
 	)
 	(wire
 		(pts
@@ -2645,6 +2625,26 @@
 			(type default)
 		)
 		(uuid "eb8c17d9-2e50-4a7e-b8fb-b287f6de5077")
+	)
+	(wire
+		(pts
+			(xy 88.9 149.86) (xy 99.06 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec5dd02e-f63a-4a50-9f28-769e9e93bddc")
+	)
+	(wire
+		(pts
+			(xy 78.74 142.24) (xy 88.9 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee4e68ad-0465-4943-9a13-65cce451bd2f")
 	)
 	(wire
 		(pts
@@ -3093,6 +3093,94 @@
 			(project "coin2"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 58.42 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1aaa5da5-1838-4ef7-9a34-29d4467e9f20")
+		(property "Reference" "C2"
+			(at 62.23 144.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 62.23 147.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 59.3852 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121534_CCTC-TCC0402X5R105M160AT_C7393851.pdf"
+			(at 58.42 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 58.42 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C7393851"
+			(at 58.42 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
+			(at 58.42 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "99388b48-ba1e-4b72-bf76-dcb5e751fce4")
+		)
+		(pin "1"
+			(uuid "04e7f28e-88fd-4abe-80c4-f0dc135cfb6d")
+		)
+		(instances
+			(project "smd0402"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -3556,6 +3644,94 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 88.9 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "36765a08-6066-49d4-aff7-82d53e790aea")
+		(property "Reference" "C5"
+			(at 92.71 144.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 92.71 147.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 89.8652 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121534_CCTC-TCC0402X5R105M160AT_C7393851.pdf"
+			(at 88.9 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 88.9 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C7393851"
+			(at 88.9 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
+			(at 88.9 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d6fc1d5d-ebe4-4227-ba94-067d3693603c")
+		)
+		(pin "1"
+			(uuid "f572b062-45c0-4dd4-b7d6-4f85de379424")
+		)
+		(instances
+			(project "smd0402"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 217.17 154.94 90)
 		(unit 1)
@@ -3638,94 +3814,6 @@
 			(project "coin2"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "D6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 81.28 146.05 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "413dd8e8-5cd3-4c8a-8885-434389dddf7d")
-		(property "Reference" "C3"
-			(at 85.09 144.7799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10n"
-			(at 85.09 147.3199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 82.2452 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_CCTC-TCC0402X7R103M500AT_C696856.pdf"
-			(at 81.28 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 81.28 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C696856"
-			(at 81.28 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" ""
-			(at 81.28 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "3deb0a70-5385-480f-9c72-eeeb810caf16")
-		)
-		(pin "1"
-			(uuid "ac0ac007-cba8-47be-86c7-8520de6db46a")
-		)
-		(instances
-			(project "coin2"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -4226,7 +4314,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 121.92 146.05 0)
+		(at 99.06 146.05 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4235,7 +4323,7 @@
 		(fields_autoplaced yes)
 		(uuid "6b28d3a6-191e-48cb-8e14-cf82919c33fa")
 		(property "Reference" "C6"
-			(at 125.73 144.7799 0)
+			(at 102.87 144.7799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4243,8 +4331,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10n"
-			(at 125.73 147.3199 0)
+		(property "Value" "1u"
+			(at 102.87 147.3199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4253,7 +4341,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 122.8852 149.86 0)
+			(at 100.0252 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4261,8 +4349,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_CCTC-TCC0402X7R103M500AT_C696856.pdf"
-			(at 121.92 146.05 0)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121534_CCTC-TCC0402X5R105M160AT_C7393851.pdf"
+			(at 99.06 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4271,7 +4359,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 121.92 146.05 0)
+			(at 99.06 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4279,8 +4367,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C696856"
-			(at 121.92 146.05 0)
+		(property "LCSC" "C7393851"
+			(at 99.06 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4289,7 +4377,7 @@
 			)
 		)
 		(property "JLC" ""
-			(at 121.92 146.05 0)
+			(at 99.06 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4307,94 +4395,6 @@
 			(project "coin2"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "C6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 52.07 146.05 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "71521879-ed67-4acc-a1d2-5889b93dba81")
-		(property "Reference" "C1"
-			(at 55.88 144.7799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10n"
-			(at 55.88 147.3199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 53.0352 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_CCTC-TCC0402X7R103M500AT_C696856.pdf"
-			(at 52.07 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 52.07 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C696856"
-			(at 52.07 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" "0402"
-			(at 52.07 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "edcaa6f1-70d7-461d-b196-79ad3e7cb6a1")
-		)
-		(pin "1"
-			(uuid "c44799c0-64c6-4ba0-b26d-962e5034c8d0")
-		)
-		(instances
-			(project ""
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -4477,94 +4477,6 @@
 			(project ""
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 95.25 146.05 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7d31a617-a748-4fce-8644-67d1796c7133")
-		(property "Reference" "C4"
-			(at 99.06 144.7799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10n"
-			(at 99.06 147.3199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 96.2152 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_CCTC-TCC0402X7R103M500AT_C696856.pdf"
-			(at 95.25 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 95.25 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C696856"
-			(at 95.25 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" ""
-			(at 95.25 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b7de2e4e-fa59-4b3e-a67a-8dab7a1dc914")
-		)
-		(pin "1"
-			(uuid "38489fa7-a966-41d2-be4d-203ef9a20cca")
-		)
-		(instances
-			(project "coin2"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -5196,94 +5108,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 107.95 146.05 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9e3206a7-3f2c-4eed-95a2-827bdf4e7966")
-		(property "Reference" "C5"
-			(at 111.76 144.7799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10n"
-			(at 111.76 147.3199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 108.9152 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_CCTC-TCC0402X7R103M500AT_C696856.pdf"
-			(at 107.95 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 107.95 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C696856"
-			(at 107.95 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" ""
-			(at 107.95 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "e628213e-7afb-4fd5-83b1-3a7a28f2e94a")
-		)
-		(pin "1"
-			(uuid "728e1b22-0f56-4e7f-b3c7-f5dbddb2b29b")
-		)
-		(instances
-			(project "coin2"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "C5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V0")
 		(at 52.07 49.53 0)
 		(unit 1)
@@ -5344,6 +5168,182 @@
 			(project "coin1"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 68.58 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a9e32300-3cfe-4759-ae8c-cc8ff3805d05")
+		(property "Reference" "C3"
+			(at 72.39 144.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 72.39 147.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 69.5452 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121534_CCTC-TCC0402X5R105M160AT_C7393851.pdf"
+			(at 68.58 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 68.58 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C7393851"
+			(at 68.58 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
+			(at 68.58 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "13d585d3-504b-4d40-856d-479cf381b941")
+		)
+		(pin "1"
+			(uuid "fe2056ff-bf83-493e-8cbc-13f43fc97fdd")
+		)
+		(instances
+			(project "smd0402"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 78.74 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "aa9877b3-44af-4ff1-8e9e-d7dda86aaf65")
+		(property "Reference" "C4"
+			(at 82.55 144.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 82.55 147.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 79.7052 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121534_CCTC-TCC0402X5R105M160AT_C7393851.pdf"
+			(at 78.74 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 78.74 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C7393851"
+			(at 78.74 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
+			(at 78.74 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "dae3c5d2-a005-46e3-97e3-a2337fb46510")
+		)
+		(pin "1"
+			(uuid "60ee7553-fdf3-487b-be2c-2a74d8bf08cc")
+		)
+		(instances
+			(project "smd0402"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -5520,94 +5520,6 @@
 			(project "coin2"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 67.31 146.05 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c3eca366-4058-4ed5-a727-c3ba04cdd720")
-		(property "Reference" "C2"
-			(at 71.12 144.7799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10n"
-			(at 71.12 147.3199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 68.2752 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_CCTC-TCC0402X7R103M500AT_C696856.pdf"
-			(at 67.31 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 67.31 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C696856"
-			(at 67.31 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" ""
-			(at 67.31 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "0b12f1b7-90c3-459c-b2ab-25126a59ab24")
-		)
-		(pin "1"
-			(uuid "4f99720b-2c94-42c3-9f29-c218b3ec31df")
-		)
-		(instances
-			(project "coin2"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -6263,6 +6175,94 @@
 			(project "coin2"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 48.26 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fa382bee-9320-4612-8c17-3f485f64b894")
+		(property "Reference" "C1"
+			(at 52.07 144.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 52.07 147.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 49.2252 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121534_CCTC-TCC0402X5R105M160AT_C7393851.pdf"
+			(at 48.26 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 48.26 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C7393851"
+			(at 48.26 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" ""
+			(at 48.26 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "b71d31a6-e1e3-4e15-bc8e-8160f9d2601d")
+		)
+		(pin "1"
+			(uuid "3e858422-9d7f-4ab8-adc3-26d2773851c2")
+		)
+		(instances
+			(project "smd0402"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "C1")
 					(unit 1)
 				)
 			)

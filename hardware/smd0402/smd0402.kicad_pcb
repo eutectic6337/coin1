@@ -908,7 +908,7 @@
 				)
 			)
 		)
-		(property "Value" "10n"
+		(property "Value" "1u"
 			(at 0 1.16 0)
 			(layer "F.Fab")
 			(uuid "0fb16bd0-604c-4b81-99ef-ec2f8b4d61bd")
@@ -932,7 +932,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_CCTC-TCC0402X7R103M500AT_C696856.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121534_CCTC-TCC0402X5R105M160AT_C7393851.pdf"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -958,7 +958,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C696856"
+		(property "LCSC" "C7393851"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3736,7 +3736,7 @@
 				)
 			)
 		)
-		(property "Value" "10n"
+		(property "Value" "1u"
 			(at 0 1.16 90)
 			(layer "F.Fab")
 			(uuid "6e729f07-82fd-4de2-a95d-70bd2d9696c2")
@@ -3760,7 +3760,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_CCTC-TCC0402X7R103M500AT_C696856.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121534_CCTC-TCC0402X5R105M160AT_C7393851.pdf"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3786,7 +3786,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C696856"
+		(property "LCSC" "C7393851"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3799,7 +3799,7 @@
 				)
 			)
 		)
-		(property "JLC" "0402"
+		(property "JLC" ""
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3813,7 +3813,7 @@
 			)
 		)
 		(property ki_fp_filters "C_*")
-		(path "/71521879-ed67-4acc-a1d2-5889b93dba81")
+		(path "/fa382bee-9320-4612-8c17-3f485f64b894")
 		(sheetname "Root")
 		(sheetfile "smd0402.kicad_sch")
 		(attr smd)
@@ -4272,7 +4272,7 @@
 				)
 			)
 		)
-		(property "Value" "10n"
+		(property "Value" "1u"
 			(at 0 1.16 0)
 			(layer "F.Fab")
 			(uuid "472ce9bd-3758-4414-b1de-6b4a2a23ec69")
@@ -4296,7 +4296,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_CCTC-TCC0402X7R103M500AT_C696856.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121534_CCTC-TCC0402X5R105M160AT_C7393851.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4322,7 +4322,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C696856"
+		(property "LCSC" "C7393851"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4349,7 +4349,7 @@
 			)
 		)
 		(property ki_fp_filters "C_*")
-		(path "/9e3206a7-3f2c-4eed-95a2-827bdf4e7966")
+		(path "/36765a08-6066-49d4-aff7-82d53e790aea")
 		(sheetname "Root")
 		(sheetfile "smd0402.kicad_sch")
 		(attr smd)
@@ -6970,7 +6970,7 @@
 				)
 			)
 		)
-		(property "Value" "10n"
+		(property "Value" "1u"
 			(at 0 1.16 0)
 			(layer "F.Fab")
 			(uuid "67d829e2-ec80-478b-9472-ff91a8dc80fe")
@@ -6994,7 +6994,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_CCTC-TCC0402X7R103M500AT_C696856.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121534_CCTC-TCC0402X5R105M160AT_C7393851.pdf"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7020,7 +7020,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C696856"
+		(property "LCSC" "C7393851"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7047,7 +7047,7 @@
 			)
 		)
 		(property ki_fp_filters "C_*")
-		(path "/7d31a617-a748-4fce-8644-67d1796c7133")
+		(path "/aa9877b3-44af-4ff1-8e9e-d7dda86aaf65")
 		(sheetname "Root")
 		(sheetfile "smd0402.kicad_sch")
 		(attr smd)
@@ -7414,7 +7414,7 @@
 				)
 			)
 		)
-		(property "Value" "10n"
+		(property "Value" "1u"
 			(at 0 1.16 0)
 			(layer "F.Fab")
 			(uuid "32939a1a-3959-492a-aede-c729434d70a5")
@@ -7438,7 +7438,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_CCTC-TCC0402X7R103M500AT_C696856.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121534_CCTC-TCC0402X5R105M160AT_C7393851.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7464,7 +7464,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C696856"
+		(property "LCSC" "C7393851"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7491,7 +7491,7 @@
 			)
 		)
 		(property ki_fp_filters "C_*")
-		(path "/413dd8e8-5cd3-4c8a-8885-434389dddf7d")
+		(path "/a9e32300-3cfe-4759-ae8c-cc8ff3805d05")
 		(sheetname "Root")
 		(sheetfile "smd0402.kicad_sch")
 		(attr smd)
@@ -11435,7 +11435,7 @@
 				)
 			)
 		)
-		(property "Value" "10n"
+		(property "Value" "1u"
 			(at 0 1.16 0)
 			(layer "F.Fab")
 			(uuid "a23aa0cb-f89a-4c55-9366-4d237ee2ec19")
@@ -11459,7 +11459,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_CCTC-TCC0402X7R103M500AT_C696856.pdf"
+		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121534_CCTC-TCC0402X5R105M160AT_C7393851.pdf"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11485,7 +11485,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C696856"
+		(property "LCSC" "C7393851"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11512,7 +11512,7 @@
 			)
 		)
 		(property ki_fp_filters "C_*")
-		(path "/c3eca366-4058-4ed5-a727-c3ba04cdd720")
+		(path "/1aaa5da5-1838-4ef7-9a34-29d4467e9f20")
 		(sheetname "Root")
 		(sheetfile "smd0402.kicad_sch")
 		(attr smd)

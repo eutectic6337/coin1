@@ -465,7 +465,7 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "coin2.net",
+      "netlist": "smd0402.net",
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",

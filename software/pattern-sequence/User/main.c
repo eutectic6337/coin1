@@ -391,6 +391,34 @@ int get_current_time_ms(void)
 }
 
 
+/*
+Remap bits for timer 1. These bits can be read and written by the user.
+It controls the mapping of channels 1 to 4, 1N to 3N, external trigger (ETR)
+and brake input (BKIN) of timer 1 to the GPIO ports.
+
+00: Default mapping (ETR/PC5, CH1/PD2, CH2/PA1, CH3/PC3, CH4/PC4, BKIN/PC2, CH1N/PD0, CH2N/PA2, CH3N/PD1).
+01: Partial mapping (ETR/PC5, CH1/PC6, CH2/PC7, CH3/PC0, CH4/PD3, BKIN/PC1, CH1N/PC3, CH2N/PC4, CH3N/PD1).
+10: Partial mapping (ETR/PD4, CH1/PD2, CH2/PA1, CH3/PC3, CH4/PC4, BKIN/PC2, CH1N/PD0, CH2N/PA2, CH3N/PD1).
+11: Complete mapping (ETR/PC2, CH1/PC4, CH2/PC7, CH3/PC5, CH4/PD4, BKIN/PC1, CH1N/PC3, CH2N/PD2, CH3N/PC6).
+
+ * GPIO_PartialRemap1_TIM1
+ * GPIO_PartialRemap2_TIM1
+ * GPIO_FullRemap_TIM1
+
+Remap bits for timer 2. These bits can be read and written by the user.
+It controls the mapping of Timer 2's channels 1 through 4 and external trigger
+(ETR) on the GPIO ports.
+
+00: Default mapping (CH1/ETR/PD4, CH2/PD3, CH3/PC0, CH4/PD7).
+01: Partial mapping (CH1/ETR/PC5, CH2/PC2, CH3/PD2, CH4/PC1).
+10: Partial mapping (CH1/ETR/PC1, CH2/PD3, CH3/PC0, CH4/PD7).
+11: Complete mapping (CH1/ETR/PC1, CH2/PC7, CH3/PD6, CH4/PD5).
+
+ * GPIO_PartialRemap1_TIM2
+ * GPIO_PartialRemap2_TIM2
+ * GPIO_FullRemap_TIM2
+ */
+
 struct pattern *sequence_start;
 int sequence_length;
 

@@ -21,8 +21,8 @@ int main(void)
 	Delay_Ms(5000);
 	SDI_Printf_Enable();
     printf("SystemClk:%d\r\n", SystemCoreClock);
-    printf( "ChipID:%08x\r\n", DBGMCU_GetCHIPID() );
-    printf("validate TEST\r\n");
+    printf("ChipID:%08x\r\n", DBGMCU_GetCHIPID() );
+    printf("blinkLED TEST\r\n");
 
 	GPIO_Toggle_INIT();
 

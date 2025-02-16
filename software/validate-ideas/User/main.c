@@ -46,6 +46,18 @@ void SysTick_Handler(void)
 	}
 	SysTick->SR = 0;
 }
+//magic numbers used in demo code, not defined in headers (that I can find)
+//CTLR System Count Control
+#define ST_CTLR_SWIE (1u<<31)	// software interrupt enable
+#define ST_CTLR_STRE (1u<<3)	// auto-reload
+#define ST_CTLR_STCLK_MASK	(1u<<2)
+#define ST_CTLR_STCLK_HCLK	(1u<<2)	// use HCLK
+#define ST_CTLR_STCLK_HCLK_8	(0)	// use HCLK/8
+#define ST_CTLR_STIE	(1u<<1)	// counter interrupt enable
+#define ST_CTLR_STE	(1u<<0)	// counter enable
+//SR System Count Status
+#define ST_SR_CNTIF	(1u<<0) // write 0 to clear
+
 
 
 
@@ -180,19 +192,6 @@ void loop(void)
 	loop_LEDout();
 	//loop_sleepwake();
 }
-
-//SysTick
-//CTLR System Count Control
-#define ST_CTLR_SWIE (1u<<31)	// software interrupt enable
-#define ST_CTLR_STRE (1u<<3)	// auto-reload
-#define ST_CTLR_STCLK_MASK	(1u<<2)
-#define ST_CTLR_STCLK_HCLK	(1u<<2)	// use HCLK
-#define ST_CTLR_STCLK_HCLK_8	(0)	// use HCLK/8
-#define ST_CTLR_STIE	(1u<<1)	// counter interrupt enable
-#define ST_CTLR_STE	(1u<<0)	// counter enable
-//SR System Count Status
-#define ST_SR_CNTIF	(1u<<0) // write 0 to clear
-
 
 int main(void)
 {

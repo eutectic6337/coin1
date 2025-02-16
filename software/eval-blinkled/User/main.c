@@ -19,6 +19,10 @@ int main(void)
 	SystemCoreClockUpdate();
 	Delay_Init();
 	Delay_Ms(5000);
+	SDI_Printf_Enable();
+    printf("SystemClk:%d\r\n", SystemCoreClock);
+    printf( "ChipID:%08x\r\n", DBGMCU_GetCHIPID() );
+    printf("validate TEST\r\n");
 
 	GPIO_Toggle_INIT();
 
@@ -27,6 +31,7 @@ int main(void)
 
     while(1)
     {
+    	printf(".\n");
         Delay_Ms(100);
 
         GPIO_WriteBit(GPIOD, GPIO_Pin_3, fLED1 = !fLED1);

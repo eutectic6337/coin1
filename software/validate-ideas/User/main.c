@@ -1,6 +1,6 @@
 /*
- * clock/timing?
- * - use timer interrupt to update microseconds counter
+ * clock/timing
+ * - use SysTick interrupt to update milliseconds counter
  * - locking for exclusive access?
  *
  * Capacitive sensing input: PA2
@@ -18,11 +18,21 @@
 
 #include "debug.h"
 
-int get_lock(void* p)
+int get_readlock(void* p)
+{
+	//FIXME
+	return 1;
+}
+int get_writelock(void* p)
+{
+	//FIXME
+	return 1;
+}
+void giveup_readlock(void* p)
 {
 	//FIXME
 }
-void giveup_lock(void* p)
+void giveup_writelock(void* p)
 {
 	//FIXME
 }
@@ -38,11 +48,17 @@ void SysTick_Handler(void)
 	ticks++;
 	if (ticks > TICKS_PER_MILLISECOND) {
 		ticks = 0;
+
+		while (!get_writelock(&milliseconds)) ;
 		milliseconds++;
 		if (milliseconds > 1000) {
 			milliseconds = 0;
+
+			while (!get_writelock(&seconds)) ;
 			seconds++;
+			giveup_writelock(&seconds);
 		}
+		giveup_writelock(&milliseconds);
 	}
 	SysTick->SR = 0;
 }
@@ -58,7 +74,22 @@ void SysTick_Handler(void)
 //SR System Count Status
 #define ST_SR_CNTIF	(1u<<0) // write 0 to clear
 
+typedef uint64_t timestamp;
 
+timestamp time_now(void)
+{
+	while (!get_readlock(&milliseconds)) ;
+	while (!get_readlock(&seconds)) ;
+
+	timestamp now = seconds;
+	giveup_readlock(&seconds);
+
+	now *= 1000;
+	now += milliseconds;
+	giveup_readlock(&milliseconds);
+
+	return now;
+}
 
 
 void init_capsense(void)
@@ -155,12 +186,25 @@ void init_LEDout(void)
 
     init_TIM1_PWMOut(100, 4800-1, 1);
 }
+
+#define PD3_HIGH_MS 300
+#define PD3_LOW_MS 200
+
+timestamp next_PD3_high;
+timestamp next_PD3_low;
 void loop_LEDout(void)
 {
-	GPIO_WriteBit(GPIOD, GPIO_Pin_3, 1);
-	Delay_Ms(200);
-	GPIO_WriteBit(GPIOD, GPIO_Pin_3, 0);
-	Delay_Ms(300);
+	timestamp now = time_now();
+	if (!next_PD3_low) next_PD3_low = now + PD3_HIGH_MS;
+
+	if (now > next_PD3_high) {
+		GPIO_WriteBit(GPIOD, GPIO_Pin_3, 1);
+		next_PD3_high += PD3_HIGH_MS + PD3_LOW_MS;
+	}
+	if (now > next_PD3_low) {
+		GPIO_WriteBit(GPIOD, GPIO_Pin_3, 0);
+		next_PD3_low += PD3_HIGH_MS + PD3_LOW_MS;
+	}
 }
 
 void init_sleepwake(void)

@@ -27,102 +27,26 @@ void giveup_lock(void* p)
 	//FIXME
 }
 
-u16 micros;//FIXME
-u16 millis;
-u32 seconds;
+#define TICKS_PER_MILLISECOND 100
+u8 ticks;
+u16 milliseconds;
+u32 seconds; // max 4 Gs is more than 130 years
 
-void init_clock(void)
+void SysTick_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
+void SysTick_Handler(void)
 {
-
-}
-void loop_clock(void)
-{
-	if (get_lock(&micros)) {
-		if (++micros > 1000) {
-			micros = 0;
-			giveup_lock(&micros);
-			millis++;
-			if (millis > 1000) {
-				millis = 0;
-				seconds++;
-			}
-		}
-		else {
-			giveup_lock(&micros);
+	ticks++;
+	if (ticks > TICKS_PER_MILLISECOND) {
+		ticks = 0;
+		milliseconds++;
+		if (milliseconds > 1000) {
+			milliseconds = 0;
+			seconds++;
 		}
 	}
-}
-////////
-/*
- *@Note
- *TIMER_INT
- *MODE 1 Timer count triggers update interrupt. Updata_time = psc*arr*RepetitionCounter/system
- *MODE 2 generates an update event and triggers an update interrupt.
- *
- */
-
-
-/* Mode Definition */
-#define MODE1   0
-#define MODE2   1
-
-/* Mode Selection */
-#define MODE MODE1
-//#define MODE MODE2
-
-void TIM1_UP_IRQHandler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
-void TIM1_UP_IRQHandler(void)
-{
-    if(TIM_GetITStatus(TIM1, TIM_IT_Update)==SET)
-    {
-        printf("--------updata\r\n");
-    }
-    TIM_ClearITPendingBit( TIM1, TIM_IT_Update );
+	SysTick->SR = 0;
 }
 
-void TIM1_INT_Init( u16 arr, u16 psc)
-{
-
-    NVIC_InitTypeDef NVIC_InitStructure={0};
-    TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure={0};
-
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1, ENABLE );
-
-    TIM_TimeBaseInitStructure.TIM_Period = arr;
-    TIM_TimeBaseInitStructure.TIM_Prescaler = psc;
-    TIM_TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
-    TIM_TimeBaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
-    TIM_TimeBaseInitStructure.TIM_RepetitionCounter = 50;
-    TIM_TimeBaseInit( TIM1, &TIM_TimeBaseInitStructure);
-
-    TIM_ClearITPendingBit( TIM1, TIM_IT_Update );
-
-    NVIC_InitStructure.NVIC_IRQChannel =TIM1_UP_IRQn;
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority =0;
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority =1;
-    NVIC_InitStructure.NVIC_IRQChannelCmd =ENABLE;
-    NVIC_Init(&NVIC_InitStructure);
-
-    TIM_ITConfig(TIM1, TIM_IT_Update, ENABLE);
-
-}
-
-int main(void)
-{
-
-    TIM1_INT_Init( 100-1, 48000-1);
-#if(MODE==MODE1)
-
-    TIM_Cmd( TIM1, ENABLE );//5S
-
-#elif(MODE==MODE2)
-
-    TIM_GenerateEvent(TIM1, TIM_IT_Update);
-
-#endif
-}
-
-////////
 
 
 void init_capsense(void)
@@ -239,7 +163,6 @@ void loop_sleepwake(void)
 
 void init(void)
 {
-	init_clock();
 	//init_capsensing();
 	init_LEDout();
 	//init_sleepwake();
@@ -250,22 +173,41 @@ void loop(void)
 	static int b = 0;
 	if (++a > 2) {
 		a = 0;
-    	printf("%d\t%lu-%u-%u\r\n", b++,
-    			(unsigned long)seconds, (unsigned)millis, (unsigned)micros);
+    	printf("%d\t%lu-%u\r\n", b++,
+    			(unsigned long)seconds, (unsigned)milliseconds);
 	}
-	loop_clock();
 	//loop_capsense();
 	loop_LEDout();
 	//loop_sleepwake();
 }
 
+//SysTick
+//CTLR System Count Control
+#define ST_CTLR_SWIE (1u<<31)	// software interrupt enable
+#define ST_CTLR_STRE (1u<<3)	// auto-reload
+#define ST_CTLR_STCLK_MASK	(1u<<2)
+#define ST_CTLR_STCLK_HCLK	(1u<<2)	// use HCLK
+#define ST_CTLR_STCLK_HCLK_8	(0)	// use HCLK/8
+#define ST_CTLR_STIE	(1u<<1)	// counter interrupt enable
+#define ST_CTLR_STE	(1u<<0)	// counter enable
+//SR System Count Status
+#define ST_SR_CNTIF	(1u<<0) // write 0 to clear
+
+
 int main(void)
 {
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
 	SystemCoreClockUpdate();
+
+    //SysTick setup
+    NVIC_EnableIRQ(SysTicK_IRQn);
+    SysTick->SR &= ~ST_SR_CNTIF;
+    SysTick->CMP = (SystemCoreClock/1000/TICKS_PER_MILLISECOND)-1;
+    SysTick->CNT = 0;
+    SysTick->CTLR = ST_CTLR_STRE|ST_CTLR_STCLK_HCLK|ST_CTLR_STIE|ST_CTLR_STE;
+
 	Delay_Init();
     Delay_Ms(5000);
-
 	SDI_Printf_Enable();
     printf("SystemClk:%d\r\n", SystemCoreClock);
     printf("ChipID:%08x\r\n", DBGMCU_GetCHIPID() );

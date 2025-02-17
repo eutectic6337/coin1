@@ -49,8 +49,9 @@ volatile u32 SysTick_seconds; // max 4 Gs is more than 130 years
 // millis() reads the incremented systick variable
 // micros() reads the raw SysTick Count, and divides it by the number of
 // ticks per microsecond ( WARN: Wraps every 90 seconds!)
-#define millis() (SysTick_milliseconds)
 #define micros() (SysTick->CNT / SYSTICK_ONE_MICROSECOND)
+#define millis() (SysTick_milliseconds)
+#define seconds() (SysTick_seconds)
 
 void init_SysTick(void)
 {
@@ -97,6 +98,22 @@ void SysTick_Handler(void)
 
 	// Acknowledge interrupt
 	SysTick->SR = 0;
+}
+
+void wait_us(unsigned t)
+{
+	u32 us = micros() + t;
+	while (micros() < us) ;
+}
+void wait_ms(unsigned t)
+{
+	u32 ms = millis() + t;
+	while (millis() < ms) ;
+}
+void wait_s(unsigned t)
+{
+	u32 s = seconds() + t;
+	while (seconds() < s) ;
 }
 
 typedef uint64_t timestamp;
@@ -210,7 +227,7 @@ void init_LEDout(void)
     };
     GPIO_Init(GPIOD, &GPIO_InitStructure);
 
-    init_TIM1_PWMOut(100, 4800-1, 50);
+    init_TIM1_PWMOut(100, 4800-1, 20);
 }
 
 #define PD3_HIGH_MS 3000
@@ -220,7 +237,7 @@ timestamp next_PD3_high;
 timestamp next_PD3_low;
 void loop_LEDout(void)
 {
-	timestamp now = time_now();
+	u32 now = millis();
 	if (!next_PD3_high) next_PD3_low = now;
 	if (!next_PD3_low) next_PD3_low = now + PD3_HIGH_MS;
 
@@ -281,7 +298,7 @@ int main(void)
     init_SysTick();
 
     // various things work better (or at all) if we delay launching real work
-    while (time_now() < 5000);
+    wait_ms(5000);
 
     init();
 

@@ -17,76 +17,102 @@
  */
 
 #include "debug.h"
+//#include <ch32v00x.h>
+#define SYSTEM_CORE_CLOCK (48ul*1000*1000)
 
-int get_readlock(void* p)
-{
-	//FIXME
-	return 1;
-}
-int get_writelock(void* p)
-{
-	//FIXME
-	return 1;
-}
-void giveup_readlock(void* p)
-{
-	//FIXME
-}
-void giveup_writelock(void* p)
-{
-	//FIXME
-}
+/* Borrow from ch32fun:
+ * - interrupt each millisecond
+ * - don't auto-reload
+ */
 
-#define TICKS_PER_MILLISECOND 100
-u8 ticks;
-u16 milliseconds;
-u32 seconds; // max 4 Gs is more than 130 years
+// Number of ticks elapsed per millisecond (48,000 when using 48MHz Clock)
+#define SYSTICK_ONE_MILLISECOND (SYSTEM_CORE_CLOCK / 1000ul)
+// Number of ticks elapsed per microsecond (48 when using 48MHz Clock)
+#define SYSTICK_ONE_MICROSECOND (SYSTEM_CORE_CLOCK / 1000000ul)
+
+//magic numbers used in demo code, not defined in MRS headers (that I can find)
+//CTLR System Count Control
+#define SYSTICK_CTLR_SWIE	(1u<<31)	// software interrupt enable
+#define SYSTICK_CTLR_STRE	(1u <<3)	// auto-reload
+#define SYSTICK_CTLR_STCLK_MASK	(1u <<2)
+#define SYSTICK_CTLR_STCLK	(1u <<2)	// use HCLK
+#define SYSTICK_CTLR_STCLK_8	( 0)	// use HCLK/8
+#define SYSTICK_CTLR_STIE	(1u <<1)	// counter interrupt enable
+#define SYSTICK_CTLR_STE	(1u <<0)	// counter enable
+//SR System Count Status
+#define SYSTICK_SR_CNTIF	(1u <<0) // write 0 to clear
+
+volatile u32 SysTick_milliseconds;
+volatile u32 SysTick_seconds; // max 4 Gs is more than 130 years
+
+// Simple macro functions to give a arduino-like functions to call
+// millis() reads the incremented systick variable
+// micros() reads the raw SysTick Count, and divides it by the number of
+// ticks per microsecond ( WARN: Wraps every 90 seconds!)
+#define millis() (SysTick_milliseconds)
+#define micros() (SysTick->CNT / SYSTICK_ONE_MICROSECOND)
+
+void init_SysTick(void)
+{
+	// Reset any pre-existing configuration
+	SysTick->CTLR = 0;
+
+	// Set the compare register to trigger once per millisecond
+	SysTick->CMP = SYSTICK_ONE_MILLISECOND - 1;
+
+	// Reset the Count Register, and the global counters to 0
+	SysTick->CNT = 0;
+	SysTick_milliseconds = 0;
+	SysTick_seconds = 0;
+    SysTick->SR &= ~SYSTICK_SR_CNTIF;
+
+	// Set the SysTick Configuration
+	// NOTE: By not setting SYSTICK_CTLR_STRE, we maintain compatibility with
+	// busywait delay funtions used by ch32v003_fun.
+	SysTick->CTLR |= SYSTICK_CTLR_STE   |  // Enable Counter
+	                 SYSTICK_CTLR_STIE  |  // Enable Interrupts
+	                 SYSTICK_CTLR_STCLK ;  // Set Clock Source to HCLK/1
+
+	// Enable the SysTick IRQ
+	NVIC_EnableIRQ(SysTicK_IRQn);
+}
 
 void SysTick_Handler(void) __attribute__((interrupt("WCH-Interrupt-fast")));
 void SysTick_Handler(void)
 {
-	ticks++;
-	if (ticks > TICKS_PER_MILLISECOND) {
-		ticks = 0;
+	// Bump the Compare Register for the next trigger
+	// If more than this number of ticks elapse before the trigger is reset,
+	// you may miss your next interrupt trigger
+	// (Make sure the IRQ is lightweight and CMP value is reasonable)
+	SysTick->CMP += SYSTICK_ONE_MILLISECOND;
 
-		while (!get_writelock(&milliseconds)) ;
-		milliseconds++;
-		if (milliseconds > 1000) {
-			milliseconds = 0;
+	// don't need to lock within this handler, because only NMI is higher priority
 
-			while (!get_writelock(&seconds)) ;
-			seconds++;
-			giveup_writelock(&seconds);
-		}
-		giveup_writelock(&milliseconds);
+	// Increment the milliseconds count
+	SysTick_milliseconds++;
+	if (SysTick_milliseconds > 1000) {
+		SysTick_milliseconds = 0;
+		SysTick_seconds++;
 	}
+
+	// Acknowledge interrupt
 	SysTick->SR = 0;
 }
-//magic numbers used in demo code, not defined in headers (that I can find)
-//CTLR System Count Control
-#define ST_CTLR_SWIE (1u<<31)	// software interrupt enable
-#define ST_CTLR_STRE (1u<<3)	// auto-reload
-#define ST_CTLR_STCLK_MASK	(1u<<2)
-#define ST_CTLR_STCLK_HCLK	(1u<<2)	// use HCLK
-#define ST_CTLR_STCLK_HCLK_8	(0)	// use HCLK/8
-#define ST_CTLR_STIE	(1u<<1)	// counter interrupt enable
-#define ST_CTLR_STE	(1u<<0)	// counter enable
-//SR System Count Status
-#define ST_SR_CNTIF	(1u<<0) // write 0 to clear
 
 typedef uint64_t timestamp;
 
 timestamp time_now(void)
 {
-	while (!get_readlock(&milliseconds)) ;
-	while (!get_readlock(&seconds)) ;
-
-	timestamp now = seconds;
-	giveup_readlock(&seconds);
+	__disable_irq();
+	const u32 ticks = SysTick->CNT;
+	const u32 ms = SysTick_milliseconds;
+	timestamp now = SysTick_seconds;
+	__enable_irq();
 
 	now *= 1000;
-	now += milliseconds;
-	giveup_readlock(&milliseconds);
+	now += ms;
+	now *= 1000;
+	now += ticks / SYSTICK_ONE_MICROSECOND;
 
 	return now;
 }
@@ -184,24 +210,25 @@ void init_LEDout(void)
     };
     GPIO_Init(GPIOD, &GPIO_InitStructure);
 
-    init_TIM1_PWMOut(100, 4800-1, 1);
+    init_TIM1_PWMOut(100, 4800-1, 50);
 }
 
-#define PD3_HIGH_MS 300
-#define PD3_LOW_MS 200
+#define PD3_HIGH_MS 3000
+#define PD3_LOW_MS 2000
 
 timestamp next_PD3_high;
 timestamp next_PD3_low;
 void loop_LEDout(void)
 {
 	timestamp now = time_now();
+	if (!next_PD3_high) next_PD3_low = now;
 	if (!next_PD3_low) next_PD3_low = now + PD3_HIGH_MS;
 
-	if (now > next_PD3_high) {
+	if (now >= next_PD3_high) {
 		GPIO_WriteBit(GPIOD, GPIO_Pin_3, 1);
 		next_PD3_high += PD3_HIGH_MS + PD3_LOW_MS;
 	}
-	if (now > next_PD3_low) {
+	if (now >= next_PD3_low) {
 		GPIO_WriteBit(GPIOD, GPIO_Pin_3, 0);
 		next_PD3_low += PD3_HIGH_MS + PD3_LOW_MS;
 	}
@@ -225,13 +252,16 @@ void init(void)
 }
 void loop(void)
 {
+#if 0
+	unsigned long s = SysTick_seconds;
+	unsigned ms = SysTick_milliseconds;
 	static int a = 0;
 	static int b = 0;
 	if (++a > 2) {
 		a = 0;
-    	printf("%d\t%lu-%u\r\n", b++,
-    			(unsigned long)seconds, (unsigned)milliseconds);
+    	printf("%d\t%lu-%u\r\n", b++, s, ms);
 	}
+#endif
 	//loop_capsense();
 	loop_LEDout();
 	//loop_sleepwake();
@@ -241,22 +271,19 @@ int main(void)
 {
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
 	SystemCoreClockUpdate();
-
-    //SysTick setup
-    NVIC_EnableIRQ(SysTicK_IRQn);
-    SysTick->SR &= ~ST_SR_CNTIF;
-    SysTick->CMP = (SystemCoreClock/1000/TICKS_PER_MILLISECOND)-1;
-    SysTick->CNT = 0;
-    SysTick->CTLR = ST_CTLR_STRE|ST_CTLR_STCLK_HCLK|ST_CTLR_STIE|ST_CTLR_STE;
-
-	Delay_Init();
-    Delay_Ms(5000);
+#if 0
 	SDI_Printf_Enable();
     printf("SystemClk:%d\r\n", SystemCoreClock);
     printf("ChipID:%08x\r\n", DBGMCU_GetCHIPID() );
     printf("validate TEST\r\n");
+#endif
 
-	init();
+    init_SysTick();
+
+    // various things work better (or at all) if we delay launching real work
+    while (time_now() < 5000);
+
+    init();
 
     while(1) {
     	loop();

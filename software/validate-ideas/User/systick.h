@@ -13,6 +13,7 @@
  * - don't auto-reload
  */
 
+#include <system_ch32v00x.h>
 // Number of ticks elapsed per millisecond (48,000 when using 48MHz Clock)
 #define SYSTICK_ONE_MILLISECOND (SystemCoreClock / 1000ul)
 // Number of ticks elapsed per microsecond (48 when using 48MHz Clock)

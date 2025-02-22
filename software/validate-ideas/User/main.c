@@ -17,7 +17,11 @@
  * sleep/wakeup
  */
 
-//#include "debug.h"
+#define DEBUG
+#ifdef DEBUG
+#include "debug.h"
+#include <inttypes.h>
+#endif
 #include <ch32v00x.h>
 
 #include "systick.h"
@@ -33,7 +37,7 @@ void init(void)
 }
 void loop(void)
 {
-#if 0
+#ifdef DEBUG
 	unsigned long s = SysTick_seconds;
 	unsigned ms = SysTick_milliseconds;
 	static int a = 0;
@@ -53,10 +57,10 @@ int main(void)
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
 	SystemInit();
 	SystemCoreClockUpdate();
-#if 0
+#ifdef DEBUG
 	SDI_Printf_Enable();
-    printf("SystemClk:%d\r\n", SystemCoreClock);
-    printf("ChipID:%08x\r\n", DBGMCU_GetCHIPID() );
+    printf("SystemClk:%" PRIu32 "\r\n", SystemCoreClock);
+    printf("ChipID:%08" PRIx32 "\r\n", DBGMCU_GetCHIPID() );
     printf("validate TEST\r\n");
 #endif
 

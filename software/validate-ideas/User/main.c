@@ -51,6 +51,7 @@ void loop(void)
 int main(void)
 {
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
+	SystemInit();
 	SystemCoreClockUpdate();
 #if 0
 	SDI_Printf_Enable();

@@ -57,7 +57,11 @@ int main(void)
 	SystemInit();
 	SystemCoreClockUpdate();
 #ifdef DEBUG
+    Delay_Init();
+    Delay_Ms(1000);
+
 	SDI_Printf_Enable(); // uses MRS Delay() so must be before any SysTick stuff
+    printf("\r\n");
     printf("SystemClk:%" PRIu32 "\r\n", SystemCoreClock);
     printf("ChipID:%08" PRIx32 "\r\n", DBGMCU_GetCHIPID() );
     printf("validate TEST\r\n");

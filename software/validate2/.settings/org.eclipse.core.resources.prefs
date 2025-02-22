@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//ch32fun/ch32fun.c=GBK
+encoding//ch32fun/ch32fun.h=GBK
+encoding//ch32fun/ch32fun.ld=GBK
+encoding//ch32fun/ch32fun.mk=GBK
+encoding//extralibs/hsusb_v30x.h=GBK
+encoding//main/Makefile=GBK
+encoding//main/capsense.c=GBK
+encoding//main/funconfig.h=GBK
+encoding//main/pwmleds.c=GBK
+encoding//main/pwmleds.h=GBK
+encoding//main/sleepwake.c=GBK
+encoding//main/validate.c=GBK
+encoding//obj/main/subdir.mk=GBK

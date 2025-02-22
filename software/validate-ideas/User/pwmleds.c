@@ -50,7 +50,7 @@ static void init_TIM1_PWMOut(u16 period, u16 prescaler, u16 pulsewidth)
     TIM_Cmd( TIM1, ENABLE );
 }
 
-void init_LEDout(void)
+void init_pwmleds(void)
 {
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
 
@@ -77,7 +77,7 @@ static timestamp next_PD2_low;
 
 static timestamp next_PD3_high;
 static timestamp next_PD3_low;
-void loop_LEDout(void)
+void loop_pwmleds(void)
 {
 	u32 now = millis();
 	if (!next_PD2_high) next_PD2_high = now;

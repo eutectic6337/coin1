@@ -8,7 +8,7 @@
 #ifndef PWMLEDS_H_
 #define PWMLEDS_H_
 
-void init_LEDout(void);
-void loop_LEDout(void);
+void init_pwmleds(void);
+void loop_pwmleds(void);
 
 #endif /* USER_PWMLEDS_H_ */

@@ -27,8 +27,8 @@
 
 void init(void)
 {
-	//init_capsensing();
-	init_LEDout();
+	//init_capsense();
+	init_pwmleds();
 	//init_sleepwake();
 }
 void loop(void)
@@ -44,7 +44,7 @@ void loop(void)
 	}
 #endif
 	//loop_capsense();
-	loop_LEDout();
+	loop_pwmleds();
 	//loop_sleepwake();
 }
 

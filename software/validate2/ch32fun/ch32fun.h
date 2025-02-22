@@ -361,14 +361,14 @@ typedef enum {RESET = 0, SET = !RESET} FlagStatus, ITStatus;
 #ifndef __ASSEMBLER__
 
 // Enable Global Interrupt
-RV_STATIC_INLINE void __enable_irq()
+RV_STATIC_INLINE void __enable_irq(void)
 {
 	uint32_t result; __ASM volatile( ADD_ARCH_ZICSR "csrr %0," "mstatus": "=r"(result) );
 	result |= 0x88;  __ASM volatile( ADD_ARCH_ZICSR "csrw mstatus, %0" : : "r" (result) );
 }
 
 // Disable Global Interrupt
-RV_STATIC_INLINE void __disable_irq()
+RV_STATIC_INLINE void __disable_irq(void)
 {
 	uint32_t result; __ASM volatile( ADD_ARCH_ZICSR "csrr %0," "mstatus": "=r"(result) );
 	result &= ~0x88; __ASM volatile( ADD_ARCH_ZICSR "csrw mstatus, %0" : : "r" (result) );
@@ -389,7 +389,7 @@ RV_STATIC_INLINE uint32_t __get_cpu_sp(void)
 }
 
 // nop
-RV_STATIC_INLINE void __NOP()
+RV_STATIC_INLINE void __NOP(void)
 {
 	__ASM volatile( "nop" );
 }
@@ -459,7 +459,7 @@ RV_STATIC_INLINE void NVIC_SetPriority(IRQn_Type IRQn, uint8_t priority)
  * Specifying an invalid IRQn_to_keep like 0 will disable all interrupts.
  */
 
-RV_STATIC_INLINE uint32_t NVIC_get_enabled_IRQs()
+RV_STATIC_INLINE uint32_t NVIC_get_enabled_IRQs(void)
 {
 	return ( ((NVIC->ISR[0] >> 2) & 0b11) | ((NVIC->ISR[0] >> 12) << 2) | ((NVIC->ISR[1] & 0b1111111) << 23) );
 }
@@ -875,7 +875,7 @@ void funAnalogInit( void );
 // Be sure to call funAnalogInit first.
 int funAnalogRead( int nAnalogNumber );
 
-void handle_reset()            __attribute__((naked)) __attribute((section(".text.handle_reset"))) __attribute__((used));
+void handle_reset(void)            __attribute__((naked)) __attribute((section(".text.handle_reset"))) __attribute__((used));
 void DefaultIRQHandler( void ) __attribute__((section(".text.vector_handler"))) __attribute__((naked)) __attribute__((used));
 // used to clear the CSS flag in case of clock fail switch
 #if defined(FUNCONF_USE_CLK_SEC) && FUNCONF_USE_CLK_SEC
@@ -902,7 +902,7 @@ static inline void Delay_Tiny( int n ) {
 #endif //defined(__riscv) || defined(__riscv__) || defined( CH32V003FUN_BASE )
 
 // Tricky: We need to make sure main and SystemInit() are preserved.
-int main() __attribute__((used));
+int main(void) __attribute__((used));
 void SystemInit(void);
 
 #ifdef FUNCONF_UART_PRINTF_BAUD

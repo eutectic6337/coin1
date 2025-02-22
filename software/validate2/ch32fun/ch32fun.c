@@ -764,7 +764,7 @@ mini_pprintf(int (*puts)(char*s, int len, void* buf), void* buf, const char *fmt
 void __libc_init_array(void);
 #endif
 
-int main() __attribute__((used));
+int main(void) __attribute__((used));
 void SystemInit( void ) __attribute__((used));
 
 extern uint32_t * _sbss;
@@ -968,8 +968,8 @@ void TIM2_TRG_IRQHandler( void )		__attribute__((section(".text.vector_handler")
 void TIM2_BRK_IRQHandler( void )		__attribute__((section(".text.vector_handler"))) __attribute((weak,alias("DefaultIRQHandler"))) __attribute__((used));
 
 
-void InterruptVector()         __attribute__((naked)) __attribute((section(".init"))) __attribute((weak,alias("InterruptVectorDefault"))) __attribute((naked));
-void InterruptVectorDefault()  __attribute__((naked)) __attribute((section(".init"))) __attribute((naked));
+void InterruptVector(void)         __attribute__((naked)) __attribute((section(".init"))) __attribute((weak,alias("InterruptVectorDefault"))) __attribute((naked));
+void InterruptVectorDefault(void)  __attribute__((naked)) __attribute((section(".init"))) __attribute((naked));
 void handle_reset( void ) __attribute__((section(".text.handle_reset")));
 
 void InterruptVectorDefault( void )
@@ -1158,6 +1158,7 @@ void handle_reset( void )
 
 __attribute__ ((naked)) int setjmp( jmp_buf env )
 {
+	(void)env;//silence -Wunused-parameter
 	asm volatile(
 	// Common registers
 "	sw ra, 0*4(a0)\n"
@@ -1200,6 +1201,7 @@ __attribute__ ((naked)) int setjmp( jmp_buf env )
 
 __attribute__ ((naked)) void longjmp( jmp_buf env, int val )
 {
+	(void)env;(void)val;//silence -Wunused-parameter
     asm volatile(
     // Common registers
 "	lw ra, 0*4(a0)\n"
@@ -1651,7 +1653,7 @@ int funAnalogRead( int nAnalogNumber )
 
 #ifdef CPLUSPLUS
 // This is required to allow pure virtual functions to be defined.
-extern void __cxa_pure_virtual() { while (1); }
+extern void __cxa_pure_virtual(void) { while (1); }
 
 // These magic symbols are provided by the linker.
 extern void (*__preinit_array_start[]) (void) __attribute__((weak));

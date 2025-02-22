@@ -20,9 +20,9 @@
 #define DEBUG
 #ifdef DEBUG
 #include "debug.h"
-#include <inttypes.h>
-#endif
+#else
 #include <ch32v00x.h>
+#endif
 
 #include "systick.h"
 #include "capsense.h"
@@ -38,13 +38,12 @@ void init(void)
 void loop(void)
 {
 #ifdef DEBUG
-	unsigned long s = SysTick_seconds;
-	unsigned ms = SysTick_milliseconds;
-	static int a = 0;
-	static int b = 0;
-	if (++a > 2) {
-		a = 0;
-    	printf("%d\t%lu-%u\r\n", b++, s, ms);
+	const timestamp PRINT_INTERVAL = 1000ul * 1000;
+	static timestamp NEXT_PRINT = 0;
+	timestamp now = time_now();
+	if (now >= NEXT_PRINT) {
+		NEXT_PRINT = now + PRINT_INTERVAL;
+    	printf("%" PRINT_FORMAT_timestamp "\r\n", now);
 	}
 #endif
 	//loop_capsense();
@@ -58,7 +57,7 @@ int main(void)
 	SystemInit();
 	SystemCoreClockUpdate();
 #ifdef DEBUG
-	SDI_Printf_Enable();
+	SDI_Printf_Enable(); // uses MRS Delay() so must be before any SysTick stuff
     printf("SystemClk:%" PRIu32 "\r\n", SystemCoreClock);
     printf("ChipID:%08" PRIx32 "\r\n", DBGMCU_GetCHIPID() );
     printf("validate TEST\r\n");

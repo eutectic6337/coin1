@@ -3,6 +3,7 @@ encoding//Core/core_riscv.h=GBK
 encoding//Debug/debug.c=GBK
 encoding//Debug/debug.h=GBK
 encoding//Peripheral/inc/ch32v00x.h=GBK
+encoding//Peripheral/inc/ch32v00x_dbgmcu.h=GBK
 encoding//Peripheral/inc/ch32v00x_misc.h=GBK
 encoding//Peripheral/src/ch32v00x_dbgmcu.c=GBK
 encoding//Peripheral/src/ch32v00x_misc.c=GBK

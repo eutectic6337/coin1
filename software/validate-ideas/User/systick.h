@@ -61,6 +61,8 @@ do { \
 	while (seconds() < s) ; \
 } while(0)
 
+#include <inttypes.h>
+#define PRINT_FORMAT_timestamp PRIu64
 typedef uint64_t timestamp;
 timestamp time_now(void);
 

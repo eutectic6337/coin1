@@ -1,14 +1,18 @@
-
-MCU=validate2
-Mcu Type=
-Address=
-Target Path=
-Erase All=
-Program=
-Verify=
-Reset=
-Vendor=
+Vendor=WCH
+Toolchain=RISC-V
+Series=CH32L103
+RTOS=NoneOS
+MCU=CH32V003F4P6
 Link=WCH-Link
-Toolchain=
-Series=
-Description=
+PeripheralVersion==1.0
+Description===
+Mcu Type=CH32V00x
+Address=0x08000000
+Target Path=obj/08-validate2.hex
+CLKSpeed=1
+DebugInterfaceMode=-1
+Erase All=true
+Program=true
+Verify=true
+Reset=true
+SDIPrintf=true

@@ -20,3 +20,4 @@ encoding//User/system_ch32v00x.c=GBK
 encoding//User/system_ch32v00x.h=GBK
 encoding//User/systick.c=GBK
 encoding//User/systick.h=GBK
+encoding//obj/08-validate-ideas.hex=GBK

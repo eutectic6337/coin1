@@ -168,7 +168,7 @@ void SDI_Printf_Enable(void)
  * @return  size - Data length
  */
 __attribute__((used)) 
-int _write(int fd, char *buf, int size)
+int _write(int fd, char *buf, int size) //warning: unused parameter 'fd' [-Wunused-parameter]
 {
     int i = 0;
     int writeSize = size;
@@ -232,7 +232,7 @@ void *_sbrk(ptrdiff_t incr)
     static char *curbrk = _end;
 
     if ((curbrk + incr < _end) || (curbrk + incr > _heap_end))
-    return NULL - 1;
+    return NULL - 1;//warning: pointer of type 'void *' used in arithmetic [-Wpointer-arith]
 
     curbrk += incr;
     return curbrk - incr;

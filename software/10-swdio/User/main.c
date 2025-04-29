@@ -10,26 +10,9 @@
  * microcontroller manufactured by Nanjing Qinheng Microelectronics.
  *******************************************************************************/
 
-/*
- *@Note
- *Multiprocessor communication mode routine:
- *Master:USART1_Tx(PD5)\USART1_Rx(PD6).
- *This routine demonstrates that USART1 receives the data sent by CH341 and inverts
- *it and sends it (baud rate 115200).
- *
- *Hardware connection:PD5 -- Rx
- *                     PD6 -- Tx
- *
- */
 
 #include "debug.h"
 
-
-/* Global define */
-
-
-/* Global Variable */
-vu8 val;
 
 /*********************************************************************
  * @fn      USARTx_CFG
@@ -77,28 +60,13 @@ int main(void)
     NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
     SystemCoreClockUpdate();
     Delay_Init();
-#if (SDI_PRINT == SDI_PR_OPEN)
     SDI_Printf_Enable();
-#else
-    USART_Printf_Init(115200);
-#endif
     printf("SystemClk:%ld\r\n",(long)SystemCoreClock);
     printf( "ChipID:%08lx\r\n", (long)DBGMCU_GetCHIPID() );
 
-    USARTx_CFG();
 
     while(1)
     {
 
-        while(USART_GetFlagStatus(USART1, USART_FLAG_RXNE) == RESET)
-        {
-            /* waiting for receiving finish */
-        }
-        val = (USART_ReceiveData(USART1));
-        USART_SendData(USART1, ~val);
-        while(USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET)
-        {
-            /* waiting for sending finish */
-        }
     }
 }

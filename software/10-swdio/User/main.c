@@ -82,8 +82,8 @@ int main(void)
 #else
     USART_Printf_Init(115200);
 #endif
-    printf("SystemClk:%d\r\n",SystemCoreClock);
-    printf( "ChipID:%08x\r\n", DBGMCU_GetCHIPID() );
+    printf("SystemClk:%ld\r\n",(long)SystemCoreClock);
+    printf( "ChipID:%08lx\r\n", (long)DBGMCU_GetCHIPID() );
 
     USARTx_CFG();
 

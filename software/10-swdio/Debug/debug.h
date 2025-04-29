@@ -13,6 +13,9 @@
 #ifndef __DEBUG_H
 #define __DEBUG_H
 
+#ifdef __cplusplus
+ extern "C" {
+#endif
 
 #include <ch32v00x.h>
 #include <stdio.h>
@@ -32,13 +35,18 @@
 #define SDI_PR_CLOSE   0
 #define SDI_PR_OPEN    1
 
-#define SDI_PRINT   SDI_PR_OPEN
+#ifndef SDI_PRINT
+#define SDI_PRINT   SDI_PR_CLOSE
+#endif
 
 void Delay_Init(void);
-void DelaySysTick( uint32_t n );
 void Delay_Us(uint32_t n);
 void Delay_Ms(uint32_t n);
 void USART_Printf_Init(uint32_t baudrate);
 void SDI_Printf_Enable(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __DEBUG_H */

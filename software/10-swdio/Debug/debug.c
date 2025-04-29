@@ -31,22 +31,6 @@ void Delay_Init(void)
     p_ms = (uint16_t)p_us * 1000;
 }
 
-void DelaySysTick( uint32_t n )
-{
-#ifdef CH32V003
-	uint32_t targend = SysTick->CNT + n;
-	while( ((int32_t)( SysTick->CNT - targend )) < 0 );
-#elif defined(CH32V20x) || defined(CH32V30x)
-	uint64_t targend = SysTick->CNT + n;
-	while( ((int64_t)( SysTick->CNT - targend )) < 0 );
-#elif defined(CH32V10x) || defined(CH32X03x)
-	uint32_t targend = SysTick->CNTL + n;
-	while( ((int32_t)( SysTick->CNTL - targend )) < 0 );
-#else
-	#error DelaySysTick not defined.
-#endif
-}
-
 /*********************************************************************
  * @fn      Delay_Us
  *
@@ -116,6 +100,33 @@ void USART_Printf_Init(uint32_t baudrate)
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_30MHz;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
     GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+#elif (DEBUG == DEBUG_UART1_Remap1)
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD | RCC_APB2Periph_USART1 | RCC_APB2Periph_AFIO, ENABLE);
+    GPIO_PinRemapConfig(GPIO_PartialRemap1_USART1, ENABLE);
+
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_30MHz;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+#elif (DEBUG == DEBUG_UART1_Remap2)
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD | RCC_APB2Periph_USART1 | RCC_APB2Periph_AFIO, ENABLE);
+    GPIO_PinRemapConfig(GPIO_PartialRemap2_USART1, ENABLE);
+
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_30MHz;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+#elif (DEBUG == DEBUG_UART1_Remap3)
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC | RCC_APB2Periph_USART1 | RCC_APB2Periph_AFIO, ENABLE);
+    GPIO_PinRemapConfig(GPIO_FullRemap_USART1, ENABLE);
+
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_30MHz;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+    GPIO_Init(GPIOC, &GPIO_InitStructure);
 
 #endif
 
@@ -193,6 +204,14 @@ int _write(int fd, char *buf, int size)
         }
 
     } while (writeSize);
+
+#else
+
+    for(i = 0; i < size; i++){
+        while(USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET);
+        USART_SendData(USART1, *buf++);
+    }
+
 
 #endif
     return writeSize;

@@ -1,26 +1,61 @@
 /*
  * 10-swdio
  */
+//#define NDEBUG
+#define ONOFF_ONLY
 #include "debug.h"
 
 #define NUM_ARRAY_ELEMS(a) ((sizeof a)/(sizeof a[0]))
-
 #define NUM_LEDS 16
+struct pattern {
+	int bright[NUM_LEDS];// percentage of full
+	int time;// milliseconds
+};
+const struct pattern chase[] = {
+	{{100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},//[0]
+	{{100,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,100,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,100,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,100,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,100,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,100,100,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,100,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,100,100,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,100,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,100,100,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,100,  0,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,100,100,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,100,  0,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,100,100,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,  0,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,100,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,  0,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,100,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,  0,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,100,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,  0,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,100,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,  0}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,100}, 100},
+	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100}, 100},
+	{{100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100}, 100},//[31]
+};
+#define SELECTED_SEQUENCE chase
+
+const struct pattern *sequence_start;
+int sequence_length;
+
+int sequence_step;
+int next_step_ms;
+
 
 #define REMAP 00
 #include "CH32V003F4U6.h"
-void pins_CFG(void)
-{
-#if 0
-    GPIO_InitTypeDef GPIO_InitStructure = {
-    	.GPIO_Pin = GPIO_Pin_x,
-    	.GPIO_Mode = GPIO_Mode_Out_PP,
-		.GPIO_Speed = GPIO_Speed_30MHz
-    };
-    GPIO_Init(GPIOx, &GPIO_InitStructure);
-	GPIO_WriteBit(GPIOx, GPIO_Pin_x, value);
-#endif
-}
 void set_pin(unsigned pinID)
 {
 }
@@ -45,9 +80,18 @@ void clr_pin(unsigned pinID)
 #define P7 TIM1_CH1
 #define G8 PC6
 #define P8 TIM1_CH4
+// actual I/O pins used:
+// A 1
+// C 0,1,2,3,4,5,6,7
+// D 0,1,2,3,4,5,7
 
 void set_LED_dutycycle(int led, int duty)
 {
+#ifdef ONOFF_ONLY
+	if (duty >= 50) duty = 100;
+	if (duty < 50) duty = 0;
+#endif
+
 	if (duty < 1 || duty > 99) { // full off, or full on
 		int value = duty > 99;
 
@@ -137,46 +181,95 @@ void set_LED_dutycycle(int led, int duty)
 	}
 }
 
-void USARTx_CFG(void)
+int get_current_time_ms(void)
 {
-    GPIO_InitTypeDef  GPIO_InitStructure = {0};
-    USART_InitTypeDef USART_InitStructure = {0};
+	//FIXME
+	return 0;
+}
 
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD | RCC_APB2Periph_USART1, ENABLE);
+void setup(void)
+{
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
+	SystemCoreClockUpdate();
 
-    /* USART1 TX-->D.5   RX-->D.6 */
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_5;
+#ifndef NDEBUG
+    Delay_Init();
+    SDI_Printf_Enable();
+    printf("SystemClk:%ld\r\n",(long)SystemCoreClock);
+    printf("ChipID:%08lx\r\n", (long)DBGMCU_GetCHIPID() );
+#endif
+
+    RCC_APB2PeriphClockCmd(
+    		RCC_APB2Periph_GPIOA | RCC_APB2Periph_GPIOC | RCC_APB2Periph_GPIOD |
+			RCC_APB2Periph_TIM1 | RCC_APB1Periph_TIM2,
+    		ENABLE);
+
+    GPIO_InitTypeDef GPIO_InitStructure = {0};
+
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_30MHz;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
-    GPIO_Init(GPIOD, &GPIO_InitStructure);
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;
-    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+    GPIO_Init(GPIOA, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin =
+    		GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 |
+    		GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 |
+    		GPIO_Pin_6 | GPIO_Pin_7;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_30MHz;
+    GPIO_Init(GPIOC, &GPIO_InitStructure);
+
+    GPIO_InitStructure.GPIO_Pin =
+    		GPIO_Pin_0 | GPIO_Pin_1 | GPIO_Pin_2 |
+    		GPIO_Pin_3 | GPIO_Pin_4 | GPIO_Pin_5 |
+    		GPIO_Pin_7;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_30MHz;
     GPIO_Init(GPIOD, &GPIO_InitStructure);
 
-    USART_InitStructure.USART_BaudRate = 115200;
-    USART_InitStructure.USART_WordLength = USART_WordLength_8b;
-    USART_InitStructure.USART_StopBits = USART_StopBits_1;
-    USART_InitStructure.USART_Parity = USART_Parity_No;
-    USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
-    USART_InitStructure.USART_Mode = USART_Mode_Tx | USART_Mode_Rx;
+#ifndef ONOFF_ONLY
+	int arr = 100;
+	unsigned psc = 480-1;
+	TIM_TimeBaseInitTypeDef TIM_TimeBaseInitStructure={0};
 
-    USART_Init(USART1, &USART_InitStructure);
-    USART_Cmd(USART1, ENABLE);
+	TIM_TimeBaseInitStructure.TIM_Period = arr;
+	TIM_TimeBaseInitStructure.TIM_Prescaler = psc;
+	TIM_TimeBaseInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+	TIM_TimeBaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
+	TIM_TimeBaseInit(TIM1, &TIM_TimeBaseInitStructure);
+	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseInitStructure);
+#endif
+
+	sequence_start = SELECTED_SEQUENCE;
+	sequence_length = NUM_ARRAY_ELEMS(SELECTED_SEQUENCE);
+}
+void loop(void)
+{
+	if (!sequence_start) return;
+
+	int current_time = get_current_time_ms();
+	if (current_time >= next_step_ms) {
+		if (sequence_step < sequence_length-1) {
+			sequence_step++;
+		}
+		else {
+			sequence_step = 0;
+		}
+
+		const struct pattern *s = sequence_start+sequence_step;
+		next_step_ms = current_time + s->time;
+
+		for (int i = 0; i < NUM_LEDS; i++) {
+			set_LED_dutycycle(i, s->bright[i]);
+		}
+	}
 }
 
 int main(void)
 {
-    NVIC_PriorityGroupConfig(NVIC_PriorityGroup_1);
-    SystemCoreClockUpdate();
-    Delay_Init();
-    SDI_Printf_Enable();
-    printf("SystemClk:%ld\r\n",(long)SystemCoreClock);
-    printf( "ChipID:%08lx\r\n", (long)DBGMCU_GetCHIPID() );
-
-    pins_CFG();
-
+	setup();
     while(1)
     {
-
+    	loop();
     }
 }

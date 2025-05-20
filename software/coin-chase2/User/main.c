@@ -56,10 +56,7 @@ int next_step_ms;
 
 #define REMAP 00
 #include "CH32V003F4U6.h"
-void set_pin(unsigned pinID)
-{
-}
-void clr_pin(unsigned pinID)
+void set_pin(int pinID, int value)
 {
 }
 
@@ -97,84 +94,68 @@ void set_LED_dutycycle(int led, int duty)
 
 	    switch(led) {
 		case 1:
-			if (value) set_pin(P1);
-			else clr_pin(P1);
-			clr_pin(G1);
+			set_pin(P1, value);
+			set_pin(G1, 0);
 			break;
 		case 2:
-			if (value) set_pin(G1);
-			else clr_pin(G1);
-			clr_pin(P1);
+			set_pin(G1, value);
+			set_pin(P1, 0);
 			break;
 		case 3:
-			if (value) set_pin(P2);
-			else clr_pin(P2);
-			clr_pin(G2);
+			set_pin(P2, value);
+			set_pin(G2, 0);
 			break;
 		case 4:
-			if (value) set_pin(G2);
-			else clr_pin(G2);
-			clr_pin(P2);
+			set_pin(G2, value);
+			set_pin(P2, 0);
 			break;
 		case 5:
-			if (value) set_pin(P3);
-			else clr_pin(P3);
-			clr_pin(G3);
+			set_pin(P3, value);
+			set_pin(G3, 0);
 			break;
 		case 6:
-			if (value) set_pin(G3);
-			else clr_pin(G3);
-			clr_pin(P3);
+			set_pin(G3, value);
+			set_pin(P3, 0);
 			break;
 		case 7:
-			if (value) set_pin(P4);
-			else clr_pin(P4);
-			clr_pin(G4);
+			set_pin(P4, value);
+			set_pin(G4, 0);
 			break;
 		case 8:
-			if (value) set_pin(G4);
-			else clr_pin(G4);
-			clr_pin(P4);
+			set_pin(G4, value);
+			set_pin(P4, 0);
 			break;
 		case 9:
-			if (value) set_pin(P5);
-			else clr_pin(P5);
-			clr_pin(G5);
+			set_pin(P5, value);
+			set_pin(G5, 0);
 			break;
 		case 10:
-			if (value) set_pin(G5);
-			else clr_pin(G5);
-			clr_pin(P5);
+			set_pin(G5, value);
+			set_pin(P5, 0);
 			break;
 		case 11:
-			if (value) set_pin(P6);
-			else clr_pin(P6);
-			clr_pin(G6);
+			set_pin(P6, value);
+			set_pin(G6, 0);
 			break;
 		case 12:
-			if (value) set_pin(G6);
-			else clr_pin(G6);
-			clr_pin(P6);
+			set_pin(G6, value);
+			set_pin(P6, 0);
 			break;
 		case 13:
-			if (value) set_pin(P7);
-			else clr_pin(P7);
-			clr_pin(G7);
+			set_pin(P7, value);
+			set_pin(G7, 0);
 			break;
 		case 14:
-			if (value) set_pin(G7);
-			else clr_pin(G7);
-			clr_pin(P7);
+			set_pin(G7, value);
+			set_pin(P7, 0);
 			break;
 		case 15:
-			if (value) set_pin(P8);
-			else clr_pin(P8);
-			clr_pin(G8);
+			set_pin(P8, value);
+			set_pin(G8, 0);
 			break;
 		case 16:
-			if (value) set_pin(G8);
-			else clr_pin(G8);
-			clr_pin(P8);
+			set_pin(G8, value);
+			set_pin(P8, 0);
 			break;
 		}
 		return;

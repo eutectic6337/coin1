@@ -1,12 +1,44 @@
 /*
- * 10-swdio
+ * 10-coin-chase2
  */
+
 //#define NDEBUG
-#define ONOFF_ONLY
+#include <assert.h>
 #include "debug.h"
 
-#define NUM_ARRAY_ELEMS(a) ((sizeof a)/(sizeof a[0]))
+/* code features */
+#define ONOFF_ONLY
 #define NUM_LEDS 16
+
+/* utility */
+#define NUM_ARRAY_ELEMS(a) ((sizeof a)/(sizeof a[0]))
+
+/* hardware layout */
+#define REMAP 00
+#include "CH32V003F4U6.h"
+// 8 pin-pairs driving antiparallel LEDs, mapping per PCB
+#define G1 PC5
+#define P1 TIM1_CH3
+#define G2 PC2
+#define P2 TIM2_CH3
+#define G3 PC1
+#define P3 TIM1_CH2
+#define G4 PD0
+#define P4 TIM2_CH4
+#define G5 PD5
+#define P5 TIM2_CH1
+#define G6 SWIO
+#define P6 TIM2_CH2
+#define G7 PC7
+#define P7 TIM1_CH1
+#define G8 PC6
+#define P8 TIM1_CH4
+// actual I/O pins used:
+// A 1
+// C 0,1,2,3,4,5,6,7
+// D 0,1,2,3,4,5,7
+
+
 struct pattern {
 	int bright[NUM_LEDS];// percentage of full
 	int time;// milliseconds
@@ -54,8 +86,6 @@ int sequence_step;
 int next_step_ms;
 
 
-#define REMAP 00
-#include "CH32V003F4U6.h"
 void set_pin(int pinID, int value)
 {
 	assert(pinID);
@@ -65,27 +95,6 @@ void set_pin(int pinID, int value)
 	GPIO_WriteBit(GPIO_pin[pinID].GPIOx, GPIO_pin[pinID].GPIO_Pin, value);
 }
 
-// 8 pin-pairs, mapping per PCB
-#define G1 PC5
-#define P1 TIM1_CH3
-#define G2 PC2
-#define P2 TIM2_CH3
-#define G3 PC1
-#define P3 TIM1_CH2
-#define G4 PD0
-#define P4 TIM2_CH4
-#define G5 PD5
-#define P5 TIM2_CH1
-#define G6 SWIO
-#define P6 TIM2_CH2
-#define G7 PC7
-#define P7 TIM1_CH1
-#define G8 PC6
-#define P8 TIM1_CH4
-// actual I/O pins used:
-// A 1
-// C 0,1,2,3,4,5,6,7
-// D 0,1,2,3,4,5,7
 
 void set_LED_dutycycle(int led, int duty)
 {
@@ -98,6 +107,7 @@ void set_LED_dutycycle(int led, int duty)
 		int value = duty > 99;
 
 	    switch(led) {
+	    //FIXME: get these into a table
 		case 1:
 			set_pin(P1, value);
 			set_pin(G1, 0);
@@ -204,7 +214,7 @@ void SysTick_Handler(void)
 	SysTick->SR = 0x00000000;
 
 	SysTick_millis++;
-	if (SysTick_mills > 1000ul * 60 * 60 * 24) {
+	if (SysTick_millis > 1000ul * 60 * 60 * 24) {
 		SysTick_millis = 0;
 		SysTick_days++;
 	}

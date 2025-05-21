@@ -58,6 +58,7 @@ int next_step_ms;
 #include "CH32V003F4U6.h"
 void set_pin(int pinID, int value)
 {
+	GPIO_WriteBit(GPIO_pin[pinID].GPIOx, GPIO_pin[pinID].GPIO_Pin, value);
 }
 
 // 8 pin-pairs, mapping per PCB

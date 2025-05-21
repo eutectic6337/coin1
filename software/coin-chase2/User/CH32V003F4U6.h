@@ -8,26 +8,55 @@
 #ifndef USER_CH32V003F4U6_H_
 #define USER_CH32V003F4U6_H_
 
-#define PD7 1
-#define PA1 2
-#define PA2 3
-#define VSS 4
-#define PD0 5
-#define VDD 6
-#define PC0 7
-#define PC1 8
-#define PC2 9
-#define PC3 10
-#define PC4 11
-#define PC5 12
-#define PC6 13
-#define PC7 14
-#define PD1 15
-#define PD2 16
-#define PD3 17
-#define PD4 18
-#define PD5 19
-#define PD6 20
+const struct {
+	GPIO_TypeDef *GPIOx;
+	uint16_t GPIO_Pin;
+} GPIO_pin[] = {
+		{0,0},
+
+		#define PD7 1
+		{GPIOD, GPIO_Pin_7},
+		#define PA1 2
+		{GPIOA, GPIO_Pin_1},
+		#define PA2 3
+		{GPIOA, GPIO_Pin_2},
+		#define VSS 4
+		{0,0},
+		#define PD0 5
+		{GPIOD, GPIO_Pin_0},
+		#define VDD 6
+		{0,0},
+		#define PC0 7
+		{GPIOC, GPIO_Pin_0},
+		#define PC1 8
+		{GPIOC, GPIO_Pin_1},
+		#define PC2 9
+		{GPIOC, GPIO_Pin_2},
+		#define PC3 10
+		{GPIOC, GPIO_Pin_3},
+		#define PC4 11
+		{GPIOC, GPIO_Pin_4},
+		#define PC5 12
+		{GPIOC, GPIO_Pin_5},
+		#define PC6 13
+		{GPIOC, GPIO_Pin_6},
+		#define PC7 14
+		{GPIOC, GPIO_Pin_7},
+		#define PD1 15
+		{GPIOD, GPIO_Pin_1},
+		#define PD2 16
+		{GPIOD, GPIO_Pin_2},
+		#define PD3 17
+		{GPIOD, GPIO_Pin_3},
+		#define PD4 18
+		{GPIOD, GPIO_Pin_4},
+		#define PD5 19
+		{GPIOD, GPIO_Pin_5},
+		#define PD6 20
+		{GPIOD, GPIO_Pin_6},
+
+};
+
 
 #if REMAP == 00
 #define UCK	PD4

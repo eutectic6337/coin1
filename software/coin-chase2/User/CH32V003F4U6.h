@@ -8,6 +8,15 @@
 #ifndef USER_CH32V003F4U6_H_
 #define USER_CH32V003F4U6_H_
 
+//refman 6.5.4.1 System Count Control Register (STK_CTLR)
+#define STK_CTLR_SWIE	(1u<<31)	//trigger software interrupt
+#define STK_CTLR_STRE	(1u<<3)		//auto-reload
+#define STK_CTLR_STCLK	(1u<<2)		//HCLK /1 not /8
+#define STK_CTLR_STIE	(1u<<1)		//counter interrupt enable
+#define STK_CTLR_STE	(1u<<0)		//counter enable
+//refman 6.5.4.2 System Count Status Register (STK_SR)
+#define STK_SR_CNTIF	(1u<<0)		//write 0 => clear comparison
+
 const struct {
 	GPIO_TypeDef *GPIOx;
 	uint16_t GPIO_Pin;

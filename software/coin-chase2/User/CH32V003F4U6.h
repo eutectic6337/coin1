@@ -7,63 +7,74 @@
 
 #ifndef USER_CH32V003F4U6_H_
 #define USER_CH32V003F4U6_H_
+#include <ch32v00x.h>
 
 //refman 6.5.4.1 System Count Control Register (STK_CTLR)
-#define STK_CTLR_SWIE	(1u<<31)	//trigger software interrupt
-#define STK_CTLR_STRE	(1u<<3)		//auto-reload
-#define STK_CTLR_STCLK	(1u<<2)		//HCLK /1 not /8
-#define STK_CTLR_STIE	(1u<<1)		//counter interrupt enable
-#define STK_CTLR_STE	(1u<<0)		//counter enable
-//refman 6.5.4.2 System Count Status Register (STK_SR)
-#define STK_SR_CNTIF	(1u<<0)		//write 0 => clear comparison
+#define	STK_CTLR_SWIE	(1u<<31)	//trigger software interrupt
+#define	STK_CTLR_STRE	(1u<<3)	//auto-reload
+#define	STK_CTLR_STCLK	(1u<<2)	//HCLK /1 not /8
+#define	STK_CTLR_STIE	(1u<<1)	//counter interrupt enable
+#define	STK_CTLR_STE	(1u<<0)	//counter enable
 
-const struct {
+//refman 6.5.4.2 System Count Status Register (STK_SR)
+#define	STK_SR_CNTIF	(1u<<0)	//write 0 => clear comparison
+
+
+enum package_pins {
+	PD7 = 1,
+	PA1,
+	PA2,
+	VSS,
+	PD0,
+
+	VDD,
+	PC0,
+	PC1,
+	PC2,
+	PC3,
+
+	PC4,
+	PC5,
+	PC6,
+	PC7,
+	PD1,
+
+	PD2,
+	PD3,
+	PD4,
+	PD5,
+	PD6,
+};
+struct {
 	GPIO_TypeDef *GPIOx;
 	uint16_t GPIO_Pin;
-} GPIO_pin[] = {
-		{0,0},
+}
+const GPIO_pin[] = {
+		{0,0},//dummy element
 
-		#define PD7 1
 		{GPIOD, GPIO_Pin_7},
-		#define PA1 2
 		{GPIOA, GPIO_Pin_1},
-		#define PA2 3
 		{GPIOA, GPIO_Pin_2},
-		#define VSS 4
 		{0,0},
-		#define PD0 5
 		{GPIOD, GPIO_Pin_0},
-		#define VDD 6
-		{0,0},
-		#define PC0 7
-		{GPIOC, GPIO_Pin_0},
-		#define PC1 8
-		{GPIOC, GPIO_Pin_1},
-		#define PC2 9
-		{GPIOC, GPIO_Pin_2},
-		#define PC3 10
-		{GPIOC, GPIO_Pin_3},
-		#define PC4 11
-		{GPIOC, GPIO_Pin_4},
-		#define PC5 12
-		{GPIOC, GPIO_Pin_5},
-		#define PC6 13
-		{GPIOC, GPIO_Pin_6},
-		#define PC7 14
-		{GPIOC, GPIO_Pin_7},
-		#define PD1 15
-		{GPIOD, GPIO_Pin_1},
-		#define PD2 16
-		{GPIOD, GPIO_Pin_2},
-		#define PD3 17
-		{GPIOD, GPIO_Pin_3},
-		#define PD4 18
-		{GPIOD, GPIO_Pin_4},
-		#define PD5 19
-		{GPIOD, GPIO_Pin_5},
-		#define PD6 20
-		{GPIOD, GPIO_Pin_6},
 
+		{0,0},
+		{GPIOC, GPIO_Pin_0},
+		{GPIOC, GPIO_Pin_1},
+		{GPIOC, GPIO_Pin_2},
+		{GPIOC, GPIO_Pin_3},
+
+		{GPIOC, GPIO_Pin_4},
+		{GPIOC, GPIO_Pin_5},
+		{GPIOC, GPIO_Pin_6},
+		{GPIOC, GPIO_Pin_7},
+		{GPIOD, GPIO_Pin_1},
+
+		{GPIOD, GPIO_Pin_2},
+		{GPIOD, GPIO_Pin_3},
+		{GPIOD, GPIO_Pin_4},
+		{GPIOD, GPIO_Pin_5},
+		{GPIOD, GPIO_Pin_6},
 };
 
 

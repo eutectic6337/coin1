@@ -16,40 +16,21 @@
 #define REMAP 00
 #include "CH32V003F4U6.h"
 // 8 pin-pairs driving antiparallel LEDs, mapping per PCB
-#define G1 PC5
-#define P1 TIM1_CH3
-#define G2 PC2
-#define P2 TIM2_CH3
-#define G3 PC1
-#define P3 TIM1_CH2
-#define G4 PD0
-#define P4 TIM2_CH4
-#define G5 PD5
-#define P5 TIM2_CH1
-#define G6 SWIO
-#define P6 TIM2_CH2
-#define G7 PC7
-#define P7 TIM1_CH1
-#define G8 PC6
-#define P8 TIM1_CH4
+struct {	enum package_pins p1, p2;	}
+const LED_pair_pins[NUM_LEDS/2] = {
+		{PC5, TIM1_CH3},
+		{PC2, TIM2_CH3},
+		{PC1, TIM1_CH2},
+		{PD0, TIM2_CH4},
+		{PD5, TIM2_CH1},
+		{SWIO, TIM2_CH2},
+		{PC7, TIM1_CH1},
+		{PC6, TIM1_CH4},
+};
 // actual I/O pins used:
 // A 1
 // C 0,1,2,3,4,5,6,7
 // D 0,1,2,3,4,5,7
-
-struct {
-	enum package_pins p1, p2;
-}
-const LED_pair_pins[NUM_LEDS/2] = {
-		{G1, P1},
-		{G2, P2},
-		{G3, P3},
-		{G4, P4},
-		{G5, P5},
-		{G6, P6},
-		{G7, P7},
-		{G8, P8},
-};
 
 
 struct pattern {

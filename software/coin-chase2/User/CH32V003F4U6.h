@@ -21,7 +21,7 @@
 
 
 enum package_pins {
-	PD7 = 1,
+	PD7,
 	PA1,
 	PA2,
 	VSS,
@@ -47,15 +47,9 @@ enum package_pins {
 
 	total_package_pins
 };
-struct complete_GPIO_pin {
-	GPIO_TypeDef *GPIOx;
-	uint16_t GPIO_Pin;
-};
-
-extern struct complete_GPIO_pin
-const GPIO_pin[];
 
 void set_pin(int pinID, int value);
+
 
 #if REMAP == 00
 #define UCK	PD4

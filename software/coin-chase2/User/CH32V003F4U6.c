@@ -6,12 +6,14 @@
  */
 #include "CH32V003F4U6.h"
 #include <assert.h>
-#include "utility.h"
 
-struct complete_GPIO_pin
-const GPIO_pin[] = {
-		{0,0},//dummy element
+struct complete_GPIO_pin {
+	GPIO_TypeDef *GPIOx;
+	uint16_t GPIO_Pin;
+};
 
+static struct complete_GPIO_pin
+const GPIO_pin[total_package_pins] = {
 		{GPIOD, GPIO_Pin_7},
 		{GPIOA, GPIO_Pin_1},
 		{GPIOA, GPIO_Pin_2},
@@ -39,8 +41,9 @@ const GPIO_pin[] = {
 
 void set_pin(int pinID, int value)
 {
-	assert(NUM_ARRAY_ELEMS(GPIO_pin) == total_package_pins+1);
-	assert(pinID > 0);
+	assert(total_package_pins == 20);
+
+	assert(pinID >= 0);
 	assert(pinID <= total_package_pins);
 
 	assert(GPIO_pin[pinID].GPIOx);

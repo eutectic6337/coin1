@@ -38,6 +38,20 @@
 // C 0,1,2,3,4,5,6,7
 // D 0,1,2,3,4,5,7
 
+struct {
+	enum package_pins p1, p2;
+}
+const LED_pair_pins[NUM_LEDS/2] = {
+		{G1, P1},
+		{G2, P2},
+		{G3, P3},
+		{G4, P4},
+		{G5, P5},
+		{G6, P6},
+		{G7, P7},
+		{G8, P8},
+};
+
 
 struct pattern {
 	int bright[NUM_LEDS];// percentage of full
@@ -88,7 +102,10 @@ int next_step_ms;
 
 void set_pin(int pinID, int value)
 {
-	assert(pinID);
+	assert(NUM_ARRAY_ELEMS(GPIO_pin) == total_package_pins+1);
+	assert(pinID > 0);
+	assert(pinID <= total_package_pins);
+
 	assert(GPIO_pin[pinID].GPIOx);
 	assert(GPIO_pin[pinID].GPIO_Pin);
 
@@ -98,6 +115,12 @@ void set_pin(int pinID, int value)
 
 void set_LED_dutycycle(int led, int duty)
 {
+	assert(led > 0);
+	assert(led < NUM_LEDS+1);
+
+	assert(duty >= 0);
+	assert(duty <= 100);
+
 #ifdef ONOFF_ONLY
 	if (duty >= 50) duty = 100;
 	if (duty < 50) duty = 0;
@@ -106,75 +129,17 @@ void set_LED_dutycycle(int led, int duty)
 	if (duty < 1 || duty > 99) { // full off, or full on
 		int value = duty > 99;
 
-	    switch(led) {
-	    //FIXME: get these into a table
-		case 1:
-			set_pin(P1, value);
-			set_pin(G1, 0);
-			break;
-		case 2:
-			set_pin(G1, value);
-			set_pin(P1, 0);
-			break;
-		case 3:
-			set_pin(P2, value);
-			set_pin(G2, 0);
-			break;
-		case 4:
-			set_pin(G2, value);
-			set_pin(P2, 0);
-			break;
-		case 5:
-			set_pin(P3, value);
-			set_pin(G3, 0);
-			break;
-		case 6:
-			set_pin(G3, value);
-			set_pin(P3, 0);
-			break;
-		case 7:
-			set_pin(P4, value);
-			set_pin(G4, 0);
-			break;
-		case 8:
-			set_pin(G4, value);
-			set_pin(P4, 0);
-			break;
-		case 9:
-			set_pin(P5, value);
-			set_pin(G5, 0);
-			break;
-		case 10:
-			set_pin(G5, value);
-			set_pin(P5, 0);
-			break;
-		case 11:
-			set_pin(P6, value);
-			set_pin(G6, 0);
-			break;
-		case 12:
-			set_pin(G6, value);
-			set_pin(P6, 0);
-			break;
-		case 13:
-			set_pin(P7, value);
-			set_pin(G7, 0);
-			break;
-		case 14:
-			set_pin(G7, value);
-			set_pin(P7, 0);
-			break;
-		case 15:
-			set_pin(P8, value);
-			set_pin(G8, 0);
-			break;
-		case 16:
-			set_pin(G8, value);
-			set_pin(P8, 0);
-			break;
-		}
+		int oddLED = led & 1;//"odd" per PCB (1-based)
+		int v1 = value * oddLED;
+		int v2 = value * !oddLED;
+
+		led--;
+		set_pin(LED_pair_pins[led/2].p1, v1);
+		set_pin(LED_pair_pins[led/2].p2, v2);
+
 		return;
 	}
+	//FIXME: handle PWM dimming
 }
 
 // SysTick code from ch32fun/systick_irq.h with mlp mods

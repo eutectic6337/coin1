@@ -44,6 +44,8 @@ enum package_pins {
 	PD4,
 	PD5,
 	PD6,
+
+	total_package_pins
 };
 struct {
 	GPIO_TypeDef *GPIOx;

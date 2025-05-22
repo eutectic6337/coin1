@@ -47,38 +47,15 @@ enum package_pins {
 
 	total_package_pins
 };
-struct {
+struct complete_GPIO_pin {
 	GPIO_TypeDef *GPIOx;
 	uint16_t GPIO_Pin;
-}
-const GPIO_pin[] = {
-		{0,0},//dummy element
-
-		{GPIOD, GPIO_Pin_7},
-		{GPIOA, GPIO_Pin_1},
-		{GPIOA, GPIO_Pin_2},
-		{0,0},
-		{GPIOD, GPIO_Pin_0},
-
-		{0,0},
-		{GPIOC, GPIO_Pin_0},
-		{GPIOC, GPIO_Pin_1},
-		{GPIOC, GPIO_Pin_2},
-		{GPIOC, GPIO_Pin_3},
-
-		{GPIOC, GPIO_Pin_4},
-		{GPIOC, GPIO_Pin_5},
-		{GPIOC, GPIO_Pin_6},
-		{GPIOC, GPIO_Pin_7},
-		{GPIOD, GPIO_Pin_1},
-
-		{GPIOD, GPIO_Pin_2},
-		{GPIOD, GPIO_Pin_3},
-		{GPIOD, GPIO_Pin_4},
-		{GPIOD, GPIO_Pin_5},
-		{GPIOD, GPIO_Pin_6},
 };
 
+extern struct complete_GPIO_pin
+const GPIO_pin[];
+
+void set_pin(int pinID, int value);
 
 #if REMAP == 00
 #define UCK	PD4

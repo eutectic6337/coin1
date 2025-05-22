@@ -10,8 +10,7 @@
 #define ONOFF_ONLY
 #define NUM_LEDS 16
 
-/* utility */
-#define NUM_ARRAY_ELEMS(a) ((sizeof a)/(sizeof a[0]))
+#include "utility.h"
 
 /* hardware layout */
 #define REMAP 00
@@ -98,20 +97,6 @@ int sequence_length;
 
 int sequence_step;
 int next_step_ms;
-
-
-void set_pin(int pinID, int value)
-{
-	assert(NUM_ARRAY_ELEMS(GPIO_pin) == total_package_pins+1);
-	assert(pinID > 0);
-	assert(pinID <= total_package_pins);
-
-	assert(GPIO_pin[pinID].GPIOx);
-	assert(GPIO_pin[pinID].GPIO_Pin);
-
-	GPIO_WriteBit(GPIO_pin[pinID].GPIOx, GPIO_pin[pinID].GPIO_Pin, value);
-}
-
 
 void set_LED_dutycycle(int led, int duty)
 {

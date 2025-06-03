@@ -16,7 +16,7 @@
 #define REMAP 00
 #include "CH32V003F4U6.h"
 // 8 pin-pairs driving antiparallel LEDs, mapping per PCB
-struct {	enum package_pins p1, p2;	}
+struct pin_pair {	enum package_pins p1, p2;	}
 const LED_pair_pins[NUM_LEDS/2] = {
 		{PC5, TIM1_CH3},
 		{PC2, TIM2_CH3},

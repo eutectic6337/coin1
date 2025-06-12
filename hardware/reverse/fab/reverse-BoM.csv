@@ -1,5 +1,0 @@
-"Designator","Comment","Datasheet","Footprint","Qty","DNP","LCSC Part Number","JLC"
-"C1","1u","https://www.lcsc.com/datasheet/lcsc_datasheet_2410121534_CCTC-TCC0402X5R105M160AT_C7393851.pdf","Capacitor_SMD:C_0402_1005Metric","1",,"C7393851",
-"D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16","LED","https://www.lcsc.com/datasheet/lcsc_datasheet_2402181505_XINGLIGHT-XL-1005SURC_C965790.pdf","LED_SMD:LED_0402_1005Metric","16",,"C965790",
-"R1,R2,R3,R4,R5,R6,R7,R8","47R","https://www.lcsc.com/datasheet/lcsc_datasheet_2411071710_FOJAN-FRC0402F47R0TS_C2909362.pdf","Resistor_SMD:R_0402_1005Metric","8",,"C2909362",
-"U1","CH32V003F4U6","https://www.wch-ic.com/downloads/CH32V003DS0_PDF.html","Package_DFN_QFN:QFN-20-1EP_3x3mm_P0.4mm_EP1.65x1.65mm","1",,"C5299908",

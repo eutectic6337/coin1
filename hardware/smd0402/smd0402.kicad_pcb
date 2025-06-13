@@ -945,7 +945,6 @@
 		)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "1367e459-66d5-4e35-bc57-eb728af19b60")
 		(at 127 50)
@@ -1001,7 +1000,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -1659,7 +1658,6 @@
 		)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "1f7f1df3-373b-4afc-a43f-ab9403f8bf52")
 		(at 128.387 57.866)
@@ -1715,7 +1713,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -2059,7 +2057,6 @@
 		)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "210163e0-7a8a-4469-b0a1-c7c5659cd931")
 		(at 167.619 64.784)
@@ -2115,7 +2112,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -2807,7 +2804,6 @@
 		(embedded_fonts no)
 	)
 	(footprint ""
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "2bfab648-10a0-49e3-b9f8-f2ff4b705af3")
 		(at 172.2 52.4)
@@ -3113,7 +3109,6 @@
 		)
 	)
 	(footprint ""
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "2f3abe01-fe0e-4b22-9fba-3e2efb4c18b9")
 		(at 127.8 52.4)
@@ -3602,7 +3597,6 @@
 		)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "33cb1766-945b-4110-a950-32e6ea1679aa")
 		(at 167.619 35.2159)
@@ -3658,7 +3652,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -5814,7 +5808,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "4f3c7680-1d90-4af5-b5eb-99b3bcf6446d")
 		(at 146.006 27.3494)
@@ -5870,7 +5863,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -6984,7 +6977,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "668a8b95-1bc2-444b-aef1-14f5d190aa99")
 		(at 161.5 69.919)
@@ -7040,7 +7032,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -7156,7 +7148,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "6d88d172-ee41-4b6b-bba9-d928c9e333cd")
 		(at 128.387 42.1335)
@@ -7212,7 +7203,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -7868,7 +7859,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "834022f2-825a-45e2-a523-e9d5651ae094")
 		(at 138.5 30.0814)
@@ -7924,7 +7914,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -8171,7 +8161,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "8c5820c9-3d32-40bf-9f03-8b4cfaffdfbd")
 		(at 173 50)
@@ -8227,7 +8216,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -8904,7 +8893,6 @@
 		(embedded_fonts no)
 	)
 	(footprint ""
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "94536e20-191b-4f67-8141-67a40569af53")
 		(at 172.2 47.3)
@@ -10135,7 +10123,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "b56302d8-431f-4b27-ae27-c6f1f4ed18b1")
 		(at 171.613 57.866)
@@ -10191,7 +10178,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -10834,7 +10821,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "c20de018-3dcd-4ab1-bcc5-64a1c7955e35")
 		(at 171.613 42.1335)
@@ -10890,7 +10876,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -11006,7 +10992,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "d0e53691-2435-4999-bda7-aca7e2db9884")
 		(at 132.381 35.2159)
@@ -11062,7 +11047,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -11498,7 +11483,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "d3beb478-f9b0-4e77-adc5-a6e658e70552")
 		(at 132.381 64.784)
@@ -11554,7 +11538,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -11642,7 +11626,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "d7ef5a0c-d9eb-4c70-94cb-c8b296d8058b")
 		(at 153.994 27.3494)
@@ -11698,7 +11681,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -11987,7 +11970,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -12715,7 +12698,6 @@
 		(embedded_fonts no)
 	)
 	(footprint ""
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "f11928f6-38f0-4ac5-8890-2d922bf03866")
 		(at 127.8 47.3)
@@ -12780,7 +12762,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "f221a17a-aaa6-47de-9a20-4c89504fa3d2")
 		(at 138.5 69.919)
@@ -12836,7 +12817,7 @@
 				)
 			)
 		)
-		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(attr board_only exclude_from_pos_files exclude_from_bom dnp)
 		(fp_circle
 			(center 0 0)
 			(end 0.4 0)
@@ -13911,7 +13892,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D4.0mm"
-		(locked yes)
 		(layer "B.Cu")
 		(uuid "232971a2-1c62-458e-8ecc-29502b26b401")
 		(at 144.996 53.67 180)
@@ -14733,7 +14713,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D4.0mm"
-		(locked yes)
 		(layer "B.Cu")
 		(uuid "88ab5b9f-df19-41ca-aa85-006dd4dac187")
 		(at 150 64.5 180)
@@ -16146,18 +16125,6 @@
 		)
 		(embedded_fonts no)
 	)
-	(gr_rect
-		(start 129.8 47.3)
-		(end 170.2 52.4)
-		(stroke
-			(width 1)
-			(type solid)
-		)
-		(fill yes)
-		(locked yes)
-		(layer "F.Mask")
-		(uuid "058aa38a-4cee-44f9-bcef-04a005e0ed55")
-	)
 	(gr_circle
 		(center 35 50)
 		(end 40.5 50)
@@ -16190,7 +16157,6 @@
 			(type solid)
 		)
 		(fill yes)
-		(locked yes)
 		(layer "F.SilkS")
 		(uuid "bc0b2c84-4a80-497b-98e6-fc01d532c43f")
 	)
@@ -17501,14 +17467,13 @@
 		(layer "User.4")
 		(uuid "ffb2a12e-a5e9-4821-949e-abbd4978deb4")
 	)
-	(gr_text "limited edition"
-		(locked yes)
+	(gr_text "E PLVRIBVS VNVM"
 		(at 150 50 0)
 		(layer "F.Cu")
 		(uuid "4c615601-daa9-4d0e-82cf-387620ed7cea")
 		(effects
 			(font
-				(size 4 3.5)
+				(size 4 3)
 				(thickness 0.5)
 				(bold yes)
 			)
@@ -19080,7 +19045,6 @@
 		(start 144.996 59.496)
 		(end 150 64.5)
 		(width 4)
-		(locked yes)
 		(layer "B.Cu")
 		(net 3)
 		(uuid "212f9b36-0fbb-407b-b526-b11b02451590")
@@ -19089,7 +19053,6 @@
 		(start 144.996 53.67)
 		(end 144.996 59.496)
 		(width 4)
-		(locked yes)
 		(layer "B.Cu")
 		(net 3)
 		(uuid "28ffffe9-5a4c-4059-aa2d-a469a8033460")
@@ -23145,32 +23108,31 @@
 				(xy 126.55619 57.114137) (xy 126.554777 57.109478) (xy 126.451861 56.744567) (xy 126.294961 56.18824)
 				(xy 126.293747 56.183589) (xy 126.070284 55.252803) (xy 126.069246 55.248066) (xy 126.060538 55.204289)
 				(xy 125.882512 54.309291) (xy 125.88166 54.304518) (xy 125.788261 53.714821) (xy 125.731922 53.359113)
-				(xy 125.731268 53.354385) (xy 125.640112 52.584212) (xy 130.826901 52.584212) (xy 169.173099 52.584212)
-				(xy 169.173099 47.066232) (xy 130.826901 47.066232) (xy 130.826901 52.584212) (xy 125.640112 52.584212)
+				(xy 125.731268 53.354385) (xy 125.640179 52.584779) (xy 130.030214 52.584779) (xy 169.97217 52.584779)
+				(xy 169.97217 47.064173) (xy 130.030214 47.064173) (xy 130.030214 52.584779) (xy 125.640179 52.584779)
 				(xy 125.618752 52.40374) (xy 125.618282 52.398961) (xy 125.603311 52.208735) (xy 125.543179 51.444681)
 				(xy 125.542897 51.439889) (xy 125.505319 50.483459) (xy 125.505223 50.478591) (xy 125.505223 49.521408)
 				(xy 125.505319 49.51654) (xy 125.508277 49.441264) (xy 125.542897 48.560107) (xy 125.543178 48.555321)
-				(xy 125.618284 47.601017) (xy 125.61876 47.596192) (xy 125.620736 47.5795) (xy 125.731268 46.645614)
-				(xy 125.731921 46.640893) (xy 125.881664 45.695453) (xy 125.88251 45.690717) (xy 126.069252 44.751903)
-				(xy 126.070282 44.747207) (xy 126.29375 43.816398) (xy 126.294957 43.811771) (xy 126.55478 42.89051)
-				(xy 126.55619 42.885862) (xy 126.851981 41.975509) (xy 126.853547 41.970991) (xy 127.184872 41.072898)
-				(xy 127.186622 41.068427) (xy 127.552935 40.184067) (xy 127.55485 40.179689) (xy 127.955601 39.310394)
-				(xy 127.957723 39.306021) (xy 128.010979 39.2015) (xy 128.392279 38.453157) (xy 128.394558 38.448895)
-				(xy 128.862258 37.613757) (xy 128.86472 37.609556) (xy 129.364832 36.793447) (xy 129.367449 36.78936)
-				(xy 129.680398 36.320999) (xy 129.89924 35.993477) (xy 129.901994 35.989526) (xy 130.464615 35.215145)
-				(xy 130.467546 35.211274) (xy 131.060139 34.459572) (xy 131.063192 34.455852) (xy 131.684877 33.727953)
-				(xy 131.68804 33.724394) (xy 132.33782 33.021465) (xy 132.341146 33.018007) (xy 133.018007 32.341146)
-				(xy 133.021465 32.33782) (xy 133.724394 31.68804) (xy 133.727953 31.684877) (xy 134.455852 31.063192)
-				(xy 134.459572 31.060139) (xy 135.211285 30.467537) (xy 135.215157 30.464607) (xy 135.409585 30.323347)
-				(xy 135.989526 29.901994) (xy 135.993477 29.89924) (xy 136.789373 29.36744) (xy 136.793447 29.364832)
-				(xy 137.609569 28.864711) (xy 137.613757 28.862258) (xy 138.448895 28.394558) (xy 138.453157 28.392279)
-				(xy 139.306028 27.957719) (xy 139.310402 27.955598) (xy 140.179689 27.55485) (xy 140.184067 27.552935)
-				(xy 141.068427 27.186622) (xy 141.072898 27.184872) (xy 141.970991 26.853547) (xy 141.975509 26.851981)
-				(xy 142.885873 26.556186) (xy 142.89051 26.55478) (xy 143.811771 26.294957) (xy 143.816398 26.29375)
-				(xy 144.747207 26.070282) (xy 144.751903 26.069252) (xy 145.690717 25.88251) (xy 145.695453 25.881664)
-				(xy 146.640893 25.731921) (xy 146.645607 25.731268) (xy 147.596264 25.618751) (xy 147.601017 25.618284)
-				(xy 148.555321 25.543178) (xy 148.560107 25.542897) (xy 149.516541 25.505319) (xy 149.521409 25.505223)
-				(xy 150.478591 25.505223)
+				(xy 125.618284 47.601017) (xy 125.618752 47.596259) (xy 125.731262 46.645657) (xy 125.731921 46.640892)
+				(xy 125.881664 45.695453) (xy 125.88251 45.690717) (xy 126.069252 44.751903) (xy 126.070282 44.747207)
+				(xy 126.29375 43.816398) (xy 126.294957 43.811771) (xy 126.55478 42.89051) (xy 126.55619 42.885862)
+				(xy 126.851981 41.975509) (xy 126.853547 41.970991) (xy 127.184872 41.072898) (xy 127.186622 41.068427)
+				(xy 127.552935 40.184067) (xy 127.55485 40.179689) (xy 127.955601 39.310394) (xy 127.957723 39.306021)
+				(xy 128.010979 39.2015) (xy 128.392279 38.453157) (xy 128.394558 38.448895) (xy 128.862258 37.613757)
+				(xy 128.86472 37.609556) (xy 129.364832 36.793447) (xy 129.367449 36.78936) (xy 129.680398 36.320999)
+				(xy 129.89924 35.993477) (xy 129.901994 35.989526) (xy 130.464615 35.215145) (xy 130.467546 35.211274)
+				(xy 131.060139 34.459572) (xy 131.063192 34.455852) (xy 131.684877 33.727953) (xy 131.68804 33.724394)
+				(xy 132.33782 33.021465) (xy 132.341146 33.018007) (xy 133.018007 32.341146) (xy 133.021465 32.33782)
+				(xy 133.724394 31.68804) (xy 133.727953 31.684877) (xy 134.455852 31.063192) (xy 134.459572 31.060139)
+				(xy 135.211285 30.467537) (xy 135.215157 30.464607) (xy 135.409585 30.323347) (xy 135.989526 29.901994)
+				(xy 135.993477 29.89924) (xy 136.789373 29.36744) (xy 136.793447 29.364832) (xy 137.609569 28.864711)
+				(xy 137.613757 28.862258) (xy 138.448895 28.394558) (xy 138.453157 28.392279) (xy 139.306028 27.957719)
+				(xy 139.310402 27.955598) (xy 140.179689 27.55485) (xy 140.184067 27.552935) (xy 141.068427 27.186622)
+				(xy 141.072898 27.184872) (xy 141.970991 26.853547) (xy 141.975509 26.851981) (xy 142.885873 26.556186)
+				(xy 142.89051 26.55478) (xy 143.811771 26.294957) (xy 143.816398 26.29375) (xy 144.747207 26.070282)
+				(xy 144.751903 26.069252) (xy 145.690717 25.88251) (xy 145.695453 25.881664) (xy 146.640893 25.731921)
+				(xy 146.645607 25.731268) (xy 147.596264 25.618751) (xy 147.601017 25.618284) (xy 148.555321 25.543178)
+				(xy 148.560107 25.542897) (xy 149.516541 25.505319) (xy 149.521409 25.505223) (xy 150.478591 25.505223)
 			)
 		)
 		(filled_polygon

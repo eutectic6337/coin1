@@ -16139,6 +16139,36 @@
 		(uuid "890704ac-7adc-4ab5-bac4-9736b80cecef")
 	)
 	(gr_line
+		(start 61.16 50.13)
+		(end 72.26 47.28)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "8ace3b5f-06b9-45fa-ad27-f667eeb0c198")
+	)
+	(gr_line
+		(start 38.86 50.19)
+		(end 27.82 47.28)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "91f9a8eb-566e-4dd3-8337-664d70abb79e")
+	)
+	(gr_line
+		(start 61.16 50.13)
+		(end 72.21 52.44)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "9b789519-a917-4cf7-b8ab-1cf16e85a494")
+	)
+	(gr_line
 		(start 42.13 39.3)
 		(end 73.076 45.758)
 		(stroke
@@ -16178,6 +16208,16 @@
 		)
 		(layer "F.SilkS")
 		(uuid "b44bd6dd-39cb-4dd3-98fc-130378db3e46")
+	)
+	(gr_line
+		(start 38.86 50.19)
+		(end 27.8 52.41)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "b47f9295-53ee-4360-b4b7-5dc8f18c570d")
 	)
 	(gr_rect
 		(start 145 30)
@@ -16242,6 +16282,16 @@
 		(layer "B.SilkS")
 		(uuid "04848437-3799-4b30-9ea2-0a5f15461b08")
 	)
+	(gr_line
+		(start 138.25 50.08)
+		(end 127.74 47.27)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "0510dc7a-d812-4acf-9334-85bd25946ab5")
+	)
 	(gr_poly
 		(pts
 			(xy 45.135697 47.754938) (xy 44.76152 47.380761) (xy 45.135697 47.006583) (xy 45.509875 47.380761)
@@ -16267,7 +16317,7 @@
 	)
 	(gr_curve
 		(pts
-			(xy 153.095 39.346224) (xy 148.26 59.36) (xy 143.73 63.33) (xy 138.49 69.82)
+			(xy 153.095 39.346224) (xy 151.04 59.39) (xy 143.73 63.33) (xy 138.49 69.82)
 		)
 		(stroke
 			(width 0.1)
@@ -16554,6 +16604,16 @@
 		(layer "B.SilkS")
 		(uuid "4e27ad34-e0ee-4ed0-8b1e-861d65d768e1")
 	)
+	(gr_line
+		(start 161.22 50.08)
+		(end 172.2 47.23)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "51e0c7f8-b5b5-4bc5-ae6b-524c8d2a3fd0")
+	)
 	(gr_poly
 		(pts
 			(xy 46.258229 54.115952) (xy 46.632406 53.741775) (xy 47.006583 54.115952) (xy 46.632406 54.490129)
@@ -16625,6 +16685,16 @@
 		)
 		(layer "B.SilkS")
 		(uuid "62b7859b-214d-4520-9f46-897e9e15edee")
+	)
+	(gr_line
+		(start 138.25 50.08)
+		(end 127.71 52.49)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "631c0741-291c-4f89-97eb-83805f5919cf")
 	)
 	(gr_poly
 		(pts
@@ -16718,6 +16788,16 @@
 		(locked yes)
 		(layer "B.SilkS")
 		(uuid "8d3a8ae4-9320-46eb-98f7-59c3b7d91001")
+	)
+	(gr_line
+		(start 161.22 50.08)
+		(end 172.14 52.4)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "920b31c0-6269-4294-995b-48a35ba74602")
 	)
 	(gr_poly
 		(pts
@@ -17604,6 +17684,17 @@
 			)
 		)
 	)
+	(gr_text "to align use 1.0mm dia pins"
+		(at 50 50 0)
+		(layer "F.SilkS")
+		(uuid "118f445c-e51e-4039-9f15-83d624e1d317")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
 	(gr_text "3. apply solder paste,\n   reflow to thicken pad"
 		(at 52.68 61.62 0)
 		(layer "F.SilkS")
@@ -17642,7 +17733,7 @@
 	)
 	(gr_text "JLCJLCJLCJLC"
 		(locked yes)
-		(at 60 50 0)
+		(at 62 47 0)
 		(layer "F.SilkS")
 		(uuid "cebf98db-ec52-4268-8cc5-617d4fd4d2fd")
 		(effects
@@ -17650,6 +17741,18 @@
 				(size 1 1)
 				(thickness 0.1)
 			)
+		)
+	)
+	(gr_text "to align use 1.0mm dia pins"
+		(at 150 50 0)
+		(layer "B.SilkS")
+		(uuid "20b1f06a-a21a-4f71-a4b2-1301abb572f0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify mirror)
 		)
 	)
 	(gr_text "3V"

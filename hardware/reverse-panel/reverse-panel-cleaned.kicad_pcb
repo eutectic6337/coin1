@@ -10752,7 +10752,7 @@
 		(layer "User.2")
 		(uuid "dac50442-2050-4aaa-a0f7-a0193fad939b")
 	)
-	(gr_text "jlcpcb.com/help/article/How-to-remove-order-number-from-your-PCB\njlcpcb.com/help/article/Panelizing-your-PCB-for-Assembly\njlcpcb.com/help/article/How-to-add-tooling-holes-for-PCB-assembly-order\n"
+	(gr_text "jlcpcb.com/help/article/How-to-remove-order-number-from-your-PCB\njlcpcb.com/help/article/Panelizing-your-PCB-for-Assembly\njlcpcb.com/help/article/How-to-add-edge-rails%2Ffiducials-for-PCB-assembly-order\njlcpcb.com/help/article/How-to-add-tooling-holes-for-PCB-assembly-order\n"
 		(at 131.05 130.01 0)
 		(layer "Cmts.User")
 		(uuid "47b7ae44-0594-4d86-8de8-430d1297dfd5")

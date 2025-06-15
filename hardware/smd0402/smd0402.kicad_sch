@@ -3281,23 +3281,23 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 245.11 41.91 90)
+		(at 245.11 53.34 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "004db495-e32e-4bb5-9319-17a418774262")
-		(property "Reference" "R2"
-			(at 245.11 39.37 90)
+		(uuid "006de2d3-51ee-4934-ad02-70dd29d8a9b0")
+		(property "Reference" "R3"
+			(at 245.11 50.8 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "47R"
-			(at 245.11 41.91 90)
+		(property "Value" "22R"
+			(at 245.11 53.34 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3305,7 +3305,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 245.11 43.688 90)
+			(at 245.11 55.118 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3313,8 +3313,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411071710_FOJAN-FRC0402F47R0TS_C2909362.pdf"
-			(at 245.11 41.91 0)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8602999349706444800"
+			(at 245.11 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3323,7 +3323,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 245.11 41.91 0)
+			(at 245.11 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3331,8 +3331,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2909362"
-			(at 245.11 41.91 0)
+		(property "LCSC" ""
+			(at 245.11 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3340,93 +3340,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" ""
-			(at 245.11 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b4736091-d6b6-4237-8a2c-fe7121edc008")
-		)
-		(pin "2"
-			(uuid "c0e68aa2-3422-41df-8b45-d8fe8f7aeb62")
-		)
-		(instances
-			(project "smd0402"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 245.11 110.49 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "06288d8e-9898-451d-a07f-1c69785238b0")
-		(property "Reference" "R8"
-			(at 245.11 107.95 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "47R"
-			(at 245.11 110.49 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 245.11 112.268 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411071710_FOJAN-FRC0402F47R0TS_C2909362.pdf"
-			(at 245.11 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 245.11 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C2909362"
-			(at 245.11 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" ""
-			(at 245.11 110.49 0)
+		(property "JLC" "C7496803"
+			(at 245.11 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3435,15 +3350,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "fdc369e2-60af-411c-b6f1-0290ece35bae")
+			(uuid "fc006a2c-e825-49ac-bf32-39b52a4de482")
 		)
 		(pin "2"
-			(uuid "c774f817-f78b-4a29-9ec2-4244f67efc1a")
+			(uuid "02e90943-2dc9-4f8d-bc18-07e4b249c7d1")
 		)
 		(instances
 			(project "smd0402"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "R8")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -3598,7 +3513,7 @@
 				)
 			)
 		)
-		(property "Value" "47R"
+		(property "Value" "22R"
 			(at 245.11 30.48 90)
 			(effects
 				(font
@@ -3615,7 +3530,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411071710_FOJAN-FRC0402F47R0TS_C2909362.pdf"
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8602999349706444800"
 			(at 245.11 30.48 0)
 			(effects
 				(font
@@ -3633,7 +3548,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2909362"
+		(property "LCSC" ""
 			(at 245.11 30.48 0)
 			(effects
 				(font
@@ -3642,7 +3557,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" ""
+		(property "JLC" "C7496803"
 			(at 245.11 30.48 0)
 			(effects
 				(font
@@ -3820,6 +3735,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 245.11 64.77 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1dccafb4-8683-4d5a-a84c-30824dee3058")
+		(property "Reference" "R4"
+			(at 245.11 62.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "22R"
+			(at 245.11 64.77 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 245.11 66.548 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8602999349706444800"
+			(at 245.11 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 245.11 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 245.11 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C7496803"
+			(at 245.11 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9543016c-3043-4c06-b818-465e55a105df")
+		)
+		(pin "2"
+			(uuid "7cefeedd-0f90-4643-88cd-41c6606a7796")
+		)
+		(instances
+			(project "smd0402"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 262.89 45.72 270)
 		(unit 1)
@@ -3901,91 +3901,6 @@
 			(project "coin2"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "D4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 245.11 76.2 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2494619d-f7c3-4850-88a9-8bce38935a26")
-		(property "Reference" "R5"
-			(at 245.11 73.66 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "47R"
-			(at 245.11 76.2 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 245.11 77.978 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411071710_FOJAN-FRC0402F47R0TS_C2909362.pdf"
-			(at 245.11 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 245.11 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C2909362"
-			(at 245.11 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" ""
-			(at 245.11 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "92a1fa76-737a-4842-bc96-dc048dd661bb")
-		)
-		(pin "2"
-			(uuid "607bc8ba-4c93-4717-850a-801959bc25f9")
-		)
-		(instances
-			(project "smd0402"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -4709,6 +4624,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 245.11 41.91 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5b288ee2-f50b-4585-8765-bd1e6219943e")
+		(property "Reference" "R2"
+			(at 245.11 39.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "22R"
+			(at 245.11 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 245.11 43.688 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8602999349706444800"
+			(at 245.11 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 245.11 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 245.11 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C7496803"
+			(at 245.11 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "583f246e-93ea-49b9-abb8-8b173c0fd18e")
+		)
+		(pin "2"
+			(uuid "c383ce0d-d6e5-47e8-becd-fde9c59ed3ba")
+		)
+		(instances
+			(project "smd0402"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 262.89 68.58 270)
 		(unit 1)
@@ -4943,91 +4943,6 @@
 			(project "smd0402"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "#PWR011")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 245.11 64.77 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7ba105e3-fb93-46f5-875a-0a2570a3e40c")
-		(property "Reference" "R4"
-			(at 245.11 62.23 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "47R"
-			(at 245.11 64.77 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 245.11 66.548 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411071710_FOJAN-FRC0402F47R0TS_C2909362.pdf"
-			(at 245.11 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 245.11 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C2909362"
-			(at 245.11 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" ""
-			(at 245.11 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "44f00d9e-d260-4456-98a8-ead2bae6c6c8")
-		)
-		(pin "2"
-			(uuid "d785cd29-e0f2-44b4-8532-8c2723053ccf")
-		)
-		(instances
-			(project "smd0402"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -5714,6 +5629,91 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 245.11 99.06 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a8862b0a-29e8-4e9d-9a25-783b8eac8a0a")
+		(property "Reference" "R7"
+			(at 245.11 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "22R"
+			(at 245.11 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 245.11 100.838 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8602999349706444800"
+			(at 245.11 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 245.11 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 245.11 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C7496803"
+			(at 245.11 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b0e2818d-de53-4bf7-be11-695274ca4465")
+		)
+		(pin "2"
+			(uuid "28f3697d-57c8-4a7a-ac6b-ade5e11b46a9")
+		)
+		(instances
+			(project "smd0402"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 208.28 144.78 0)
 		(unit 1)
@@ -5964,23 +5964,23 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 245.11 99.06 90)
+		(at 245.11 87.63 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c6222495-daa2-470d-9d73-717bbbdf9e85")
-		(property "Reference" "R7"
-			(at 245.11 96.52 90)
+		(uuid "c7350d82-5652-4b7e-806f-de1d59bd1c1f")
+		(property "Reference" "R6"
+			(at 245.11 85.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "47R"
-			(at 245.11 99.06 90)
+		(property "Value" "22R"
+			(at 245.11 87.63 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5988,7 +5988,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 245.11 100.838 90)
+			(at 245.11 89.408 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5996,8 +5996,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411071710_FOJAN-FRC0402F47R0TS_C2909362.pdf"
-			(at 245.11 99.06 0)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8602999349706444800"
+			(at 245.11 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6006,7 +6006,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 245.11 99.06 0)
+			(at 245.11 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6014,8 +6014,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2909362"
-			(at 245.11 99.06 0)
+		(property "LCSC" ""
+			(at 245.11 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6023,8 +6023,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" ""
-			(at 245.11 99.06 0)
+		(property "JLC" "C7496803"
+			(at 245.11 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6033,15 +6033,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "032392c5-9fa9-46d7-a237-be9783e645ca")
+			(uuid "59bd7ba2-d1a0-4a06-81ef-a9ba2811ecd6")
 		)
 		(pin "2"
-			(uuid "b0c13634-12af-453f-ad2d-4a29c9e792d1")
+			(uuid "140fddfb-68bd-413a-9ee7-fee744d862fc")
 		)
 		(instances
 			(project "smd0402"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "R7")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -6207,7 +6207,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "WCH CH32V003F4U6"
+		(property "Value" "CH32V003F4U6"
 			(at 174.9141 34.29 0)
 			(effects
 				(font
@@ -6253,7 +6253,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" ""
+		(property "JLC" "C5299908"
 			(at 172.72 52.07 0)
 			(effects
 				(font
@@ -6340,6 +6340,91 @@
 			(project ""
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 245.11 110.49 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e88efeb7-d506-40d0-86d9-451584ba1a94")
+		(property "Reference" "R8"
+			(at 245.11 107.95 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "22R"
+			(at 245.11 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 245.11 112.268 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8602999349706444800"
+			(at 245.11 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 245.11 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
+			(at 245.11 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "C7496803"
+			(at 245.11 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "169662e6-dacc-46ec-b98e-1aee3ab7a3a9")
+		)
+		(pin "2"
+			(uuid "658335d2-2b9c-46cc-bcbe-a23464ca1de9")
+		)
+		(instances
+			(project "smd0402"
+				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -6604,23 +6689,23 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 245.11 53.34 90)
+		(at 245.11 76.2 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f9442c80-4ab7-461a-93db-101153113d36")
-		(property "Reference" "R3"
-			(at 245.11 50.8 90)
+		(uuid "f76485f6-cedb-4144-bec4-522967ba35e0")
+		(property "Reference" "R5"
+			(at 245.11 73.66 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "47R"
-			(at 245.11 53.34 90)
+		(property "Value" "22R"
+			(at 245.11 76.2 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6628,7 +6713,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 245.11 55.118 90)
+			(at 245.11 77.978 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6636,8 +6721,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411071710_FOJAN-FRC0402F47R0TS_C2909362.pdf"
-			(at 245.11 53.34 0)
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8602999349706444800"
+			(at 245.11 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6646,7 +6731,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 245.11 53.34 0)
+			(at 245.11 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6654,8 +6739,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2909362"
-			(at 245.11 53.34 0)
+		(property "LCSC" ""
+			(at 245.11 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6663,8 +6748,8 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" ""
-			(at 245.11 53.34 0)
+		(property "JLC" "C7496803"
+			(at 245.11 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6673,15 +6758,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "20d56104-7bc8-4c56-832e-84fdd95d1987")
+			(uuid "72aa7881-51c7-4470-9c59-775c39dc85dc")
 		)
 		(pin "2"
-			(uuid "3644fcd0-e6a2-4998-95ed-0d03f4def1ba")
+			(uuid "7665f2a9-312b-4b18-8593-dd79e412bc76")
 		)
 		(instances
 			(project "smd0402"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "R3")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -6706,7 +6791,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "1uF"
 			(at 82.55 46.9899 0)
 			(effects
 				(font
@@ -6724,7 +6809,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2410121534_CCTC-TCC0402X5R105M160AT_C7393851.pdf"
+		(property "Datasheet" "https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8579705910383595520"
 			(at 78.74 45.72 0)
 			(effects
 				(font
@@ -6742,7 +6827,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C7393851"
+		(property "LCSC" ""
 			(at 78.74 45.72 0)
 			(effects
 				(font
@@ -6751,7 +6836,7 @@
 				(hide yes)
 			)
 		)
-		(property "JLC" ""
+		(property "JLC" "C25092"
 			(at 78.74 45.72 0)
 			(effects
 				(font
@@ -6770,91 +6855,6 @@
 			(project "smd0402"
 				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
 					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 245.11 87.63 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fbec7f21-efbd-4632-a8ae-1f25d4c6b94d")
-		(property "Reference" "R6"
-			(at 245.11 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "47R"
-			(at 245.11 87.63 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 245.11 89.408 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2411071710_FOJAN-FRC0402F47R0TS_C2909362.pdf"
-			(at 245.11 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 245.11 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C2909362"
-			(at 245.11 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" ""
-			(at 245.11 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bb0dabfd-d4fc-4c39-93f1-3f3716b0623e")
-		)
-		(pin "2"
-			(uuid "6bb1f8b6-2717-4957-9d65-014bdd7408c9")
-		)
-		(instances
-			(project "smd0402"
-				(path "/b4d6c274-8f02-467a-b6b3-fe4c47a31499"
-					(reference "R6")
 					(unit 1)
 				)
 			)

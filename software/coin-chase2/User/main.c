@@ -8,16 +8,16 @@
 
 /* code features */
 #define ONOFF_ONLY
-#define NUM_LEDS 16
 
 #include "utility.h"
+#include "sequence.h" // defines NUM_LEDS_IN_PATTERN
 
 /* hardware layout */
 #define REMAP 00
 #include "CH32V003F4U6.h"
 // 8 pin-pairs driving antiparallel LEDs, mapping per PCB
 struct pin_pair {	enum package_pins p1, p2;	}
-const LED_pair_pins[NUM_LEDS/2] = {
+const LED_pair_pins[NUM_LEDS_IN_PATTERN/2] = {
 		{PC5, TIM1_CH3},
 		{PC2, TIM2_CH3},
 		{PC1, TIM1_CH2},
@@ -33,56 +33,12 @@ const LED_pair_pins[NUM_LEDS/2] = {
 // D 0,1,2,3,4,5,7
 
 
-struct pattern {
-	int bright[NUM_LEDS];// percentage of full
-	int time;// milliseconds
-};
-const struct pattern chase[] = {
-	{{100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},//[0]
-	{{100,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,100,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,100,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,100,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,100,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,100,100,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,100,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,100,100,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,100,  0,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,100,100,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,100,  0,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,100,100,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,100,  0,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,100,100,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,  0,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,100,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,  0,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,100,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,  0,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,100,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,  0,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,100,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,  0}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100,100}, 100},
-	{{  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100}, 100},
-	{{100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,100}, 100},//[31]
-};
-#define SELECTED_SEQUENCE chase
-
-const struct pattern *sequence_start;
-int sequence_length;
-
-int sequence_step;
 int next_step_ms;
 
 void set_LED_dutycycle(int led, int duty)
 {
 	assert(led > 0);
-	assert(led < NUM_LEDS+1);
+	assert(led < NUM_LEDS_IN_PATTERN+1);
 
 	assert(duty >= 0);
 	assert(duty <= 100);
@@ -183,6 +139,7 @@ void setup(void)
 #ifndef NDEBUG
     Delay_Init();
     SDI_Printf_Enable();
+    printf("%s %s\r\n", __DATE__, __TIME__);
     printf("SystemClk:%ld\r\n",(long)SystemCoreClock);
     printf("ChipID:%08lx\r\n", (long)DBGMCU_GetCHIPID() );
 #endif
@@ -230,27 +187,19 @@ void setup(void)
 	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseInitStructure);
 #endif
 
-	sequence_start = SELECTED_SEQUENCE;
-	sequence_length = NUM_ARRAY_ELEMS(SELECTED_SEQUENCE);
 }
+
 void loop(void)
 {
-	if (!sequence_start) return;
-
 	int current_time = millis();
+	printf("%d ms .. %d ms\r\n", current_time, next_step_ms);
 	if (current_time >= next_step_ms) {
-		if (sequence_step < sequence_length-1) {
-			sequence_step++;
-		}
-		else {
-			sequence_step = 0;
-		}
+		struct pattern p = get_next_pattern();
 
-		const struct pattern *s = sequence_start+sequence_step;
-		next_step_ms = current_time + s->time;
+		next_step_ms = current_time + p.time;
 
-		for (int i = 0; i < NUM_LEDS; i++) {
-			set_LED_dutycycle(i, s->bright[i]);
+		for (int i = 0; i < NUM_LEDS_IN_PATTERN; i++) {
+			set_LED_dutycycle(i, p.bright[i]);
 		}
 	}
 }

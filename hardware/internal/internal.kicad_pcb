@@ -86,7 +86,6 @@
 	(net 1 "GND")
 	(net 2 "+3V0")
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "037d325c-8291-4a3e-a7df-d147d5e6cd45")
 		(at 121.613 92.134)
@@ -178,7 +177,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "07498fb1-04cd-4b38-81b9-b604a923b1f0")
 		(at 99.5 98)
@@ -270,7 +268,6 @@
 		(embedded_fonts no)
 	)
 	(footprint ""
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "11114975-b80d-4169-9c55-1f6c8cb7fb69")
 		(at 77.8 102.4)
@@ -335,7 +332,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "137f24a7-cfcc-4b72-a046-873778a955a5")
 		(at 103.993908 85.215884)
@@ -425,7 +421,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "1fe9c9ff-30fa-4aa0-a1d6-1ca090102a22")
 		(at 88.5 114.784115)
@@ -515,7 +510,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "23732bbb-facd-4ffe-b0b8-f75e81b40951")
 		(at 117.619023 107)
@@ -605,7 +599,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "2512cfd3-893a-4d57-a1b5-78dea73ad15d")
 		(at 111.5 114.784115)
@@ -695,7 +688,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "2576bca5-8906-417e-bea9-78eb06e973ef")
 		(at 96.006092 85.215884)
@@ -785,7 +777,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "27e8c01f-4656-4f4a-a219-d0ee65eff841")
 		(at 94.996 102.17)
@@ -878,7 +869,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "31670587-72e1-4ec3-a4c1-5ff7190f9cb9")
 		(at 111.5 85.215884)
@@ -968,7 +958,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "318be6b1-3e94-4642-b11d-e970ee7a4da2")
 		(at 77 100)
@@ -1060,7 +1049,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "37b0e6f8-37c2-4388-bdab-7eeb77d2be38")
 		(at 96.295038 104.42 -120)
@@ -1153,7 +1141,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "3cc3ef4b-59d5-464e-b1b9-acad6b3b9c19")
 		(at 88.5 80.081)
@@ -1245,7 +1232,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "4265be7d-20b6-4682-a7c7-6ac4b49907dc")
 		(at 94.996 105.17 180)
@@ -1338,7 +1324,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "43d191be-c1ec-42ef-adfb-50f49e66ca55")
 		(at 123 100)
@@ -1430,7 +1415,6 @@
 		(embedded_fonts no)
 	)
 	(footprint ""
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "49e88e30-9a0c-46aa-8813-5a5d35330aec")
 		(at 122.2 102.4)
@@ -1495,7 +1479,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "50f52b4b-409e-40db-bf67-a4bcddd7bfc0")
 		(at 88.5 119.919)
@@ -1587,7 +1570,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "56bf396b-7a0a-496c-b9e7-5b3b9af040f7")
 		(at 78.3871 92.134)
@@ -1679,7 +1661,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "5ad1910d-0cb8-4a9f-b217-c72bd9d3800b")
 		(at 103.994 77.349)
@@ -1771,7 +1752,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "5b671d3c-4bc4-4d45-9701-4766ff1f48a3")
 		(at 96.295038 102.92 -60)
@@ -1864,7 +1844,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "70ee327c-5311-4100-b500-25f4f6ac0319")
 		(at 82.381 114.784)
@@ -1956,7 +1935,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "75f23094-9d40-442d-853e-d1a3b84415b2")
 		(at 93.696961 102.92 60)
@@ -2049,7 +2027,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "8b5099b5-ec27-45d6-b21b-30a888852c34")
 		(at 82.381 85.216)
@@ -2141,7 +2118,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "9067b4a3-7425-4cf3-96d1-d854e50e847b")
 		(at 111.5 119.919)
@@ -2233,7 +2209,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "a07fcfd8-9101-4378-8248-44bf37be37d2")
 		(at 117.619 85.216)
@@ -2325,7 +2300,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "a58dc16d-e9a1-4947-80b3-d1ad2e57a621")
 		(at 94.996 103.67)
@@ -2418,7 +2392,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "ac8eb715-0c76-4026-a65f-1abbee6c2819")
 		(at 111.5 80.081)
@@ -2510,7 +2483,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "b5b63185-221e-447c-b137-e3f347cf3b5c")
 		(at 82.380977 107)
@@ -2600,7 +2572,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "b76710f8-1114-482b-9310-f7a38fbcf901")
 		(at 117.619 114.784)
@@ -2692,7 +2663,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "d19c3786-fbb2-44cc-b083-9f4fdc90b479")
 		(at 78.3871 107.866)
@@ -2784,7 +2754,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_D2.0mm_Drill1.0mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "d2d04192-d96a-4c51-8fcc-00e6fcc0efc8")
 		(at 93.696961 104.42 120)
@@ -2877,7 +2846,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "d892e5d9-e86c-480d-8588-0ce68e66455a")
 		(at 121.613 107.866)
@@ -2969,7 +2937,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "dfe95b9a-383d-4bd7-8e07-d8e89a5bc6e8")
 		(at 96.0061 77.349)
@@ -3061,7 +3028,6 @@
 		(embedded_fonts no)
 	)
 	(footprint ""
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "e35ef59f-6291-445c-a160-53708fa1011d")
 		(at 77.8 97.3)
@@ -3126,7 +3092,6 @@
 		(embedded_fonts no)
 	)
 	(footprint ""
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "ebd07db3-f1bb-49fe-8665-20883d016f55")
 		(at 122.2 97.3)
@@ -3191,7 +3156,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_THTPad_3.0x3.0mm_Drill1.5mm"
-		(locked yes)
 		(layer "F.Cu")
 		(uuid "f7f85449-ea60-4096-9003-ed178b341965")
 		(at 88.5 85.215884)
@@ -3281,7 +3245,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D4.0mm"
-		(locked yes)
 		(layer "B.Cu")
 		(uuid "0dafbace-1c5a-4632-afe1-4bdd4153b41c")
 		(at 94.958 92.202 180)
@@ -3374,7 +3337,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D2.0mm"
-		(locked yes)
 		(layer "B.Cu")
 		(uuid "1438bb61-469d-4ab1-8ade-51de21fee26c")
 		(at 114.948 118.11 180)
@@ -3396,6 +3358,7 @@
 		(property "Value" "TestPoint_Pad_D2.0mm"
 			(at 0 -2.05 0)
 			(layer "B.Fab")
+			(hide yes)
 			(uuid "c06df9a4-4825-4db1-b912-4abdbb5b222a")
 			(effects
 				(font
@@ -3456,18 +3419,6 @@
 			(layer "B.CrtYd")
 			(uuid "0c395ef8-6a00-40ba-aa05-b868f8e7d700")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 2 0)
-			(layer "B.Fab")
-			(uuid "2c490a8b-2d3e-4146-b56f-dcae1a0ae307")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(pad "1" smd circle
 			(at 0 0 180)
 			(size 2 2)
@@ -3479,7 +3430,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D2.0mm"
-		(locked yes)
 		(layer "B.Cu")
 		(uuid "1cea4f40-a79a-4a1e-9fee-1f5ed9c40211")
 		(at 100.038 76.454 180)
@@ -3501,6 +3451,7 @@
 		(property "Value" "TestPoint_Pad_D2.0mm"
 			(at 0 -2.05 0)
 			(layer "B.Fab")
+			(hide yes)
 			(uuid "f41df491-a8da-4ced-b1a5-5728040d90e7")
 			(effects
 				(font
@@ -3561,18 +3512,6 @@
 			(layer "B.CrtYd")
 			(uuid "61ae3021-c627-49ef-aae0-560084d76201")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 2 0)
-			(layer "B.Fab")
-			(uuid "ee1b82e5-acd0-4f18-8e2a-5ae4ff595213")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(pad "1" smd circle
 			(at 0 0 180)
 			(size 2 2)
@@ -3584,7 +3523,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D2.0mm"
-		(locked yes)
 		(layer "B.Cu")
 		(uuid "52479928-5882-4496-bd2d-b4b13589ce4f")
 		(at 122.822 105.156 180)
@@ -3606,6 +3544,7 @@
 		(property "Value" "TestPoint_Pad_D2.0mm"
 			(at 0 -2.05 0)
 			(layer "B.Fab")
+			(hide yes)
 			(uuid "79aea42e-8e5f-4901-8e59-0553b9d9b155")
 			(effects
 				(font
@@ -3666,18 +3605,6 @@
 			(layer "B.CrtYd")
 			(uuid "051a3d52-f061-4457-9aa0-37214c5876b5")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 2 0)
-			(layer "B.Fab")
-			(uuid "dbb7656a-3b6c-4727-8640-be1922eb4555")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(pad "1" smd circle
 			(at 0 0 180)
 			(size 2 2)
@@ -3689,7 +3616,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D2.0mm"
-		(locked yes)
 		(layer "B.Cu")
 		(uuid "6749bd55-6193-4155-83b9-de392310d109")
 		(at 85.306 81.788 180)
@@ -3711,6 +3637,7 @@
 		(property "Value" "TestPoint_Pad_D2.0mm"
 			(at 0 -2.05 0)
 			(layer "B.Fab")
+			(hide yes)
 			(uuid "b0c19bd7-9774-44db-a07e-97ffa1b5a3ba")
 			(effects
 				(font
@@ -3771,18 +3698,6 @@
 			(layer "B.CrtYd")
 			(uuid "87ff1779-0cd5-4072-b019-53052e85de19")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 2 0)
-			(layer "B.Fab")
-			(uuid "ed634a2d-b825-4853-9e73-2024a2b18735")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(pad "1" smd circle
 			(at 0 0 180)
 			(size 2 2)
@@ -3794,7 +3709,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D2.0mm"
-		(locked yes)
 		(layer "B.Cu")
 		(uuid "68699cdb-e8e8-46da-aa9f-a5e9e8dc59f9")
 		(at 114.694 81.788 180)
@@ -3816,6 +3730,7 @@
 		(property "Value" "TestPoint_Pad_D2.0mm"
 			(at 0 -2.05 0)
 			(layer "B.Fab")
+			(hide yes)
 			(uuid "e7574b4a-fe7f-494b-9962-80a57b679eef")
 			(effects
 				(font
@@ -3876,18 +3791,6 @@
 			(layer "B.CrtYd")
 			(uuid "feb7597d-6c3d-4012-a595-b2d3ad093c9e")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 2 0)
-			(layer "B.Fab")
-			(uuid "9731fa85-be55-4488-8b2c-77489e12291d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(pad "1" smd circle
 			(at 0 0 180)
 			(size 2 2)
@@ -3899,7 +3802,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D2.0mm"
-		(locked yes)
 		(layer "B.Cu")
 		(uuid "79864e74-12e6-46c3-a1b0-81deaa31e7fa")
 		(at 91.91 77.978 180)
@@ -3921,6 +3823,7 @@
 		(property "Value" "TestPoint_Pad_D2.0mm"
 			(at 0 -2.05 0)
 			(layer "B.Fab")
+			(hide yes)
 			(uuid "502587c4-7e3d-43c6-8226-fc08e1d9201a")
 			(effects
 				(font
@@ -3981,18 +3884,6 @@
 			(layer "B.CrtYd")
 			(uuid "a1e1b7b1-deb2-4d2b-994a-f0b23aeb9666")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 2 0)
-			(layer "B.Fab")
-			(uuid "a288d845-1dbf-42e6-a398-99f738e342d3")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(pad "1" smd circle
 			(at 0 0 180)
 			(size 2 2)
@@ -4004,7 +3895,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D2.0mm"
-		(locked yes)
 		(layer "B.Cu")
 		(uuid "8e027ea4-89fe-4b34-be65-b3e8b1c699a4")
 		(at 123.076 95.758 180)
@@ -4026,6 +3916,7 @@
 		(property "Value" "TestPoint_Pad_D2.0mm"
 			(at 0 -2.05 0)
 			(layer "B.Fab")
+			(hide yes)
 			(uuid "a3fdd2bb-c82b-4407-9643-18f3eea96f9a")
 			(effects
 				(font
@@ -4086,18 +3977,6 @@
 			(layer "B.CrtYd")
 			(uuid "5fe2fec2-b7f8-4361-9aa1-4b52545fc165")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 2 0)
-			(layer "B.Fab")
-			(uuid "1cb1c89f-8e7c-4a14-8451-8d7a58d397e3")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(pad "1" smd circle
 			(at 0 0 180)
 			(size 2 2)
@@ -4109,7 +3988,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D2.0mm"
-		(locked yes)
 		(layer "B.Cu")
 		(uuid "9cbc2853-2e31-47bb-9d79-664a16f579b9")
 		(at 76.924 95.758 180)
@@ -4131,6 +4009,7 @@
 		(property "Value" "TestPoint_Pad_D2.0mm"
 			(at 0 -2.05 0)
 			(layer "B.Fab")
+			(hide yes)
 			(uuid "f000c9e1-e143-47b4-983b-b017f4a3682c")
 			(effects
 				(font
@@ -4191,18 +4070,6 @@
 			(layer "B.CrtYd")
 			(uuid "5fffbfb3-6732-4226-9965-c629ea48369d")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 2 0)
-			(layer "B.Fab")
-			(uuid "a3f607f5-a8dd-49c1-9c2f-5c06cbc78b03")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(pad "1" smd circle
 			(at 0 0 180)
 			(size 2 2)
@@ -4214,7 +4081,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D2.0mm"
-		(locked yes)
 		(layer "B.Cu")
 		(uuid "9eee6e12-e7d3-44c1-93f7-137e89808144")
 		(at 108.09 77.978 180)
@@ -4236,6 +4102,7 @@
 		(property "Value" "TestPoint_Pad_D2.0mm"
 			(at 0 -2.05 0)
 			(layer "B.Fab")
+			(hide yes)
 			(uuid "ca666ab5-f71f-4c67-b132-4e8a0720a234")
 			(effects
 				(font
@@ -4296,18 +4163,6 @@
 			(layer "B.CrtYd")
 			(uuid "fadd247b-00e3-436e-90a9-0fdddbde8104")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 2 0)
-			(layer "B.Fab")
-			(uuid "a4ab6a29-492f-42ae-af38-1c7d2ec9d143")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(pad "1" smd circle
 			(at 0 0 180)
 			(size 2 2)
@@ -4319,7 +4174,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D2.0mm"
-		(locked yes)
 		(layer "B.Cu")
 		(uuid "9fc54007-8646-4733-a654-97eaba0ba921")
 		(at 77.178 105.156 180)
@@ -4341,6 +4195,7 @@
 		(property "Value" "TestPoint_Pad_D2.0mm"
 			(at 0 -2.05 0)
 			(layer "B.Fab")
+			(hide yes)
 			(uuid "3408a577-a34f-4964-845d-dda066ac94bd")
 			(effects
 				(font
@@ -4401,18 +4256,6 @@
 			(layer "B.CrtYd")
 			(uuid "5670223f-f68b-4f27-8f95-4451fdad4a88")
 		)
-		(fp_text user "${REFERENCE}"
-			(at 0 2 0)
-			(layer "B.Fab")
-			(uuid "19fed94e-e415-48d5-8c95-1b03c9be982e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(pad "1" smd circle
 			(at 0 0 180)
 			(size 2 2)
@@ -4424,7 +4267,6 @@
 		(embedded_fonts no)
 	)
 	(footprint "TestPoint:TestPoint_Pad_D2.0mm"
-		(locked yes)
 		(layer "B.Cu")
 		(uuid "a949595d-c103-45e3-8332-1986952d5e22")
 		(at 85.052 118.11 180)
@@ -4446,6 +4288,7 @@
 		(property "Value" "TestPoint_Pad_D2.0mm"
 			(at 0 -2.05 0)
 			(layer "B.Fab")
+			(hide yes)
 			(uuid "17772e64-ebe7-49ad-8efe-84d5c59a175f")
 			(effects
 				(font
@@ -4505,18 +4348,6 @@
 			(fill no)
 			(layer "B.CrtYd")
 			(uuid "4f8c6b9b-34fd-46ad-b216-0d2474c2395d")
-		)
-		(fp_text user "${REFERENCE}"
-			(at 0 2 0)
-			(layer "B.Fab")
-			(uuid "1753b26a-544f-4858-bbc9-c989f00f018a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
 		)
 		(pad "1" smd circle
 			(at 0 0 180)
@@ -4591,7 +4422,6 @@
 		(uuid "885c8139-df59-4513-8879-b59b41952ae6")
 	)
 	(gr_text "JLCJLCJLCJLC"
-		(locked yes)
 		(at 110 98 0)
 		(layer "F.SilkS")
 		(uuid "2fae092e-4800-4a66-a01f-327cffb7c01b")
@@ -4614,7 +4444,6 @@
 		(start 94.7 103.374)
 		(end 94.996 103.67)
 		(width 3)
-		(locked yes)
 		(layer "B.Cu")
 		(net 2)
 		(uuid "31208224-31ea-4512-9fa4-1bdfa4dd7607")
@@ -4623,7 +4452,6 @@
 		(start 94.958 92.202)
 		(end 94.7 92.46)
 		(width 3)
-		(locked yes)
 		(layer "B.Cu")
 		(net 2)
 		(uuid "518d1860-9b6e-4205-82e3-9c647ac596ae")
@@ -4648,7 +4476,6 @@
 		(start 94.996 102.17)
 		(end 94.996 103.67)
 		(width 0.3)
-		(locked yes)
 		(layer "B.Cu")
 		(net 2)
 		(uuid "c6f46f23-ff16-4175-ac11-f005959baf8e")

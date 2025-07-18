@@ -11,6 +11,11 @@
 
 #include <stdlib.h>
 
+#define MIN_TIME 10 //ms
+#define MAX_TIME 1000
+#define MIN_BRIGHT 0 //percent
+#define MAX_BRIGHT 100
+
 struct pattern get_next_pattern(void)
 {
 	struct pattern p = {0};

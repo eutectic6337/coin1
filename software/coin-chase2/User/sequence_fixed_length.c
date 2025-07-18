@@ -6,9 +6,12 @@
  *
  *  LED sequences which can be represented as a fixed-length array of patterns
  */
-
+#if SEQUENCE_FIXED_LENGTH == 1
 #include "sequence.h"
 #define SELECTED_SEQUENCE chase
+
+#include "debug.h"
+#include "utility.h"
 
 const struct pattern chase[] = {
 	{{100,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0}, 100},//[0]
@@ -63,3 +66,6 @@ struct pattern get_next_pattern(void)
 
 	return sequence_start[sequence_step];
 }
+#else
+static int sequence_fixed_length = 0;
+#endif

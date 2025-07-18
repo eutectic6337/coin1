@@ -6,8 +6,11 @@
  *
  *  produce an infinite series of random patterns
  */
+#if SEQUENCE_RANDOM == 1
 #include "sequence.h"
+
 #include <stdlib.h>
+
 struct pattern get_next_pattern(void)
 {
 	struct pattern p = {0};
@@ -17,3 +20,6 @@ struct pattern get_next_pattern(void)
 	}
 	return p;
 }
+#else
+static int sequence_random = 0;
+#endif

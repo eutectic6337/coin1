@@ -189,10 +189,45 @@ void setup(void)
 
 }
 
+#define INNER1 1000
+void usleep(int n)
+{
+	volatile int m;
+	m = n;
+	while (m > 0) {
+		m--;
+		for (volatile int a = 0; a < INNER1; a++) {
+			;
+		}
+	}
+}
+#define INNER2 1000000
+void sleep(int n)
+{
+	volatile int m;
+	m = n;
+	while (m > 0) {
+		m--;
+		for (volatile int a = 0; a < INNER2; a++) {
+			;
+		}
+	}
+}
+
 void loop(void)
 {
 	int current_time = millis();
 	printf("%d ms .. %d ms\r\n", current_time, next_step_ms);
+	usleep(123);
+	//sleep(1);
+	printf("%d ms\r\n", (int)millis());
+	usleep(456);
+	//sleep(2);
+	printf("%d ms\r\n", (int)millis());
+	usleep(789);
+	//sleep(3);
+	printf("%d ms\r\n", (int)millis());
+
 	if (current_time >= next_step_ms) {
 		struct pattern p = get_next_pattern();
 

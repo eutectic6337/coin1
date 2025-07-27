@@ -56,6 +56,15 @@ void set_LED_dutycycle(int led, int duty)
 		int v2 = value * !oddLED;
 
 		led--;
+#ifndef NDEBUG
+		// don't try to adjust pins being used for debug I/O
+		if (LED_pair_pins[led/2].p1 == SWIO
+				|| LED_pair_pins[led/2].p2 == SWIO
+				|| LED_pair_pins[led/2].p1 == NRST
+				|| LED_pair_pins[led/2].p2 == NRST) {
+			return;
+		}
+#endif
 		set_pin(LED_pair_pins[led/2].p1, v1);
 		set_pin(LED_pair_pins[led/2].p2, v2);
 

@@ -148,9 +148,6 @@ void setup(void)
 #ifndef NDEBUG
     Delay_Init();
     SDI_Printf_Enable();
-    printf("%s %s\r\n", __DATE__, __TIME__);
-    printf("SystemClk:%ld\r\n",(long)SystemCoreClock);
-    printf("ChipID:%08lx\r\n", (long)DBGMCU_GetCHIPID() );
 #endif
 
     SysTick_Setup();
@@ -196,6 +193,11 @@ void setup(void)
 	TIM_TimeBaseInit(TIM2, &TIM_TimeBaseInitStructure);
 #endif
 
+#ifndef NDEBUG
+    printf("%s %s\r\n", __DATE__, __TIME__);
+    printf("SystemClk:%ld\r\n",(long)SystemCoreClock);
+    printf("ChipID:%08lx\r\n", (long)DBGMCU_GetCHIPID() );
+#endif
 }
 
 #define INNER1 1000
@@ -226,6 +228,7 @@ void sleep(int n)
 void loop(void)
 {
 	int current_time = millis();
+#ifndef NDEBUG
 	printf("%d ms .. %d ms\r\n", current_time, next_step_ms);
 	usleep(123);
 	//sleep(1);
@@ -236,13 +239,16 @@ void loop(void)
 	usleep(789);
 	//sleep(3);
 	printf("%d ms\r\n", (int)millis());
-
+#endif
 	if (current_time >= next_step_ms) {
 		struct pattern p = get_next_pattern();
 
 		next_step_ms = current_time + p.time;
 
 		for (int i = 0; i < NUM_LEDS_IN_PATTERN; i++) {
+#ifndef NDEBUG
+			printf("set %d to %d%%\r\n", i, p.bright[i]);
+#endif
 			set_LED_dutycycle(i, p.bright[i]);
 		}
 	}

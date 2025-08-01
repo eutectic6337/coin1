@@ -20,7 +20,11 @@ void setup() {
   delay(3000);
 
 	//https://www.eevblog.com/forum/microcontrollers/ch32v003-info/msg5713903/#msg5713903
-	AFIO->PCFR1 = AFIO->PCFR1 & 0xFFFF7FFF; //Sets PA1 & PA2 as I/O by clearing bit 15 
+	AFIO->PCFR1 = AFIO->PCFR1 & 0xFFFF7FFF; //Sets PA1 & PA2 as I/O by clearing bit 15
+
+	//To use PD7 as I/O you have to enable it in WCH Link Utility.
+	//in dropdown textbox near "Enable Soft-Ctrl- iWDG."
+	//option "Disable mul-func, PD7 used for IO function."
 	
 	for (int i = 0; i < NUM_ARRAY_ELEMS(LED_pair_pins); i++) {
 		pinMode(LED_pair_pins[i].p1, OUTPUT);

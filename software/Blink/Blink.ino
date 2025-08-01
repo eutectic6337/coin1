@@ -31,10 +31,12 @@ void setup() {
 void loop() {
  	for (int i = 0; i < NUM_ARRAY_ELEMS(LED_pair_pins); i++) {
 		digitalWrite(LED_pair_pins[i].p2, HIGH);
-    delay(100);
+    delay(1);
 		digitalWrite(LED_pair_pins[i].p1, HIGH);
+		delay(99);
 		digitalWrite(LED_pair_pins[i].p2, LOW);
-    delay(100);
+    delay(1);
 		digitalWrite(LED_pair_pins[i].p1, LOW);
+		delay(99);
   }
 }

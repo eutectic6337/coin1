@@ -18,6 +18,10 @@ const LED_pair_pins[] = {
 
 void setup() {
   delay(3000);
+
+	//https://www.eevblog.com/forum/microcontrollers/ch32v003-info/msg5713903/#msg5713903
+	AFIO->PCFR1 = AFIO->PCFR1 & 0xFFFF7FFF; //Sets PA1 & PA2 as I/O by clearing bit 15 
+	
 	for (int i = 0; i < NUM_ARRAY_ELEMS(LED_pair_pins); i++) {
 		pinMode(LED_pair_pins[i].p1, OUTPUT);
 		pinMode(LED_pair_pins[i].p2, OUTPUT);

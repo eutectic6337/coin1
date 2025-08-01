@@ -18,14 +18,14 @@
 // 8 pin-pairs driving antiparallel LEDs, mapping per PCB
 struct pin_pair {	enum package_pins p1, p2;	}
 const LED_pair_pins[NUM_LEDS_IN_PATTERN/2] = {
-		{PC5, TIM1_CH3},
-		{PC2, TIM2_CH3},
-		{PC1, TIM1_CH2},
-		{PD0, TIM2_CH4},
-		{PD5, TIM2_CH1},
-		{SWIO, TIM2_CH2},
-		{PC7, TIM1_CH1},
-		{PC6, TIM1_CH4},
+		{PC5, PC3/*TIM1_CH3*/},
+		{PC2, PC0/*TIM2_CH3*/},
+		{PC1, PA1/*TIM1_CH2*/},
+		{PD0, PD7/*TIM2_CH4*/},
+		{PD5, PD4/*TIM2_CH1*/},
+		{PD1/*SWIO*/, PD3/*TIM2_CH2*/},
+		{PC7, PD2/*TIM1_CH1*/},
+		{PC6, PC4/*TIM1_CH4*/},
 };
 // actual I/O pins used:
 // A 1

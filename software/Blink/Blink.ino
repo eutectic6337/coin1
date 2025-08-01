@@ -30,19 +30,11 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
  	for (int i = 0; i < NUM_ARRAY_ELEMS(LED_pair_pins); i++) {
-		digitalWrite(LED_pair_pins[i].p1, HIGH);
-    delay(100);
-  }
- 	for (int i = 0; i < NUM_ARRAY_ELEMS(LED_pair_pins); i++) {
 		digitalWrite(LED_pair_pins[i].p2, HIGH);
     delay(100);
-  }
- 	for (int i = 0; i < NUM_ARRAY_ELEMS(LED_pair_pins); i++) {
-		digitalWrite(LED_pair_pins[i].p1, LOW);
-    delay(200);
-  }
- 	for (int i = 0; i < NUM_ARRAY_ELEMS(LED_pair_pins); i++) {
+		digitalWrite(LED_pair_pins[i].p1, HIGH);
 		digitalWrite(LED_pair_pins[i].p2, LOW);
-    delay(200);
+    delay(100);
+		digitalWrite(LED_pair_pins[i].p1, LOW);
   }
 }

@@ -1,6 +1,8 @@
 # coin1
 challenge coin with blinky lights
 
+![pre-DEFCON prototype, from the inside](i/prototype-inside.jpg)
+
 Feature: Using 8 PWM channels to provide dimming function for 16 LEDs
 by connecting pairs in anti-parallel between a PWM pin and a GPIO.
 

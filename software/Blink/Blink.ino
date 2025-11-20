@@ -17,10 +17,15 @@ const LED_pair_pins[] = {
 };
 
 void setup() {
-  delay(3000);
+  delay(1000);
 
 	//https://www.eevblog.com/forum/microcontrollers/ch32v003-info/msg5713903/#msg5713903
 	AFIO->PCFR1 = AFIO->PCFR1 & 0xFFFF7FFF; //Sets PA1 & PA2 as I/O by clearing bit 15
+
+	FLASH_Unlock();
+	FLASH_EraseOptionBytes();
+	FLASH_UserOptionByteConfig(OB_STOP_NoRST, OB_STDBY_NoRST, OB_RST_NoEN, /*OB_PowerON_*/Start_Mode_USER);
+	FLASH_Lock();
 
 	//To use PD7 as I/O you have to enable it in WCH Link Utility.
 	//in dropdown textbox near "Enable Soft-Ctrl- iWDG."

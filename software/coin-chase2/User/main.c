@@ -150,6 +150,12 @@ void setup(void)
     SDI_Printf_Enable();
 #endif
 
+	FLASH_Unlock();
+	FLASH_EraseOptionBytes();
+	FLASH_UserOptionByteConfig(OB_STOP_NoRST, OB_STDBY_NoRST, OB_RST_NoEN, OB_PowerON_Start_Mode_USER);
+	FLASH_Lock();
+
+
     SysTick_Setup();
 
     RCC_APB2PeriphClockCmd(

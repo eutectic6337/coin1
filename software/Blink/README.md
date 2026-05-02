@@ -14,6 +14,12 @@ You will need:
 
 - WCH compiler
 
+  within Arduino IDE, select Tools / Board / Boards Manager
+
+  search for "wch"
+
+  install "CH32 MCU EVT Boards"
+
 - [WCH-Link](https://www.wch.cn/downloads/WCH-LinkUtility_ZIP.html)
  utility program
 

@@ -15,3 +15,5 @@ finished coin to have [relatively] smooth top and bottom
 
 using JLCPCB's serial-number mechanism to put a unique number on each coin
 
+Initial code flashed onto these is
+[a modified version of the Arduino Blink demo](software/Blink).

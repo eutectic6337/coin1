@@ -14,6 +14,12 @@ before moving on to the next.
 
 - WCH compiler
 
+  First, add the unofficial WCH repo: In Arduino IDE > File > Preferences > Additional Board Manager URLs > Click the 'Edit' icon on the far right side of the IDE (It looks like a copy button)
+  Always double check the JSON by clicking 'Click for a list of unofficial board support URLs', but the .json link is listed below:
+  https://raw.githubusercontent.com/openwch/board_manager_files/main/package_ch32v_index.json
+
+  You must install v1.0.0 first or you will run into errors. After that, install v1.0.4. (If you run into issues, run the IDE with elevated privs)
+
   within Arduino IDE, select Tools / Board / Boards Manager
 
   search for "wch"
@@ -38,6 +44,7 @@ before moving on to the next.
 - open this modified Blink sketch in Arduino environment, and compile it by clicking leftmost button "Verify"
 
   find the generated bin file (e.g. /home/user/.cache/arduino/sketches/40EA08CCBD0DF8AB898F31F63E3E5F1E/Blink.ino.bin)
+                              (e.g. C:\Users\USER\AppData\Local\arduino\sketches\40C10A2A9890BEF7BEAD8C7F314D8C2A/sketch_[DATE].ino.bin)
 
 - connect 3V, GND, and SWDIO pins on WCH-LinkE device to 3 pins on PCB clip,
  from right to left respectively, so the pogo pins can contact the pads on the
@@ -66,7 +73,7 @@ before moving on to the next.
 
 - in "MCU Configuration" section
 
-  check "Disable Standby-Mode RST"
+  check "Disable Standby-Mode RST" (Note: Need to clarify whether we're unchecking 'Starting From the Boot Area')
 
   select from dropdown "Disable mul-func,PD7 is used for IO function"
 
